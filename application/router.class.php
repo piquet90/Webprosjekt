@@ -2,123 +2,152 @@
 
 class router {
 
-private $registry;
+	private $registry;
 
 
-private $path;
+	private $path;
 
-private $args = array();
+	private $args = array();
 
-public $file;
+	public $file;
 
-public $controller;
+	public $controller;
 
-public $action; 
-
-
+	public $action; 
 
 
-function __construct($registry) 
-{
-	$this->registry = $registry;
-}
 
-function setPath($path) 
-{
-	if (is_dir($path) == false)
+
+	function __construct($registry) 
 	{
-		throw new Exception ('Invalid controller path: `' . $path . '`');
+		$this->registry = $registry;
 	}
 
-	$this->path = $path;
-}
-
-
-public function loader()
-{
-
-	$this->getController();
-
-
-	if (is_readable($this->file) == false)
+	function setPath($path) 
 	{
-		$this->file = $this->path.'/error404.php';
-		$this->controller = 'error404';
-	}
-
-
-	include $this->file;
-
-
-	$class = $this->controller . 'Controller';
-	$controller = new $class($this->registry);
-
-
-	if (is_callable(array($controller, $this->action)) == false)
-	{
-		$action = 'index';
-	}
-	else
-	{
-		$action = $this->action;
-	}
-
-	$controller->$action();
-}
-
-
-
-private function getController() {
-
-
-	$route = (empty($_GET['rt'])) ? '' : $_GET['rt'];
-
-	if (empty($route))
-	{
-		$route = 'index';
-	}
-	else
-	{
-
-		$parts = explode('/', $route);
-		$this->controller = $parts[0];
-		if(isset( $parts[1]))
+		if (is_dir($path) == false)
 		{
-			$this->action = $parts[1];
+			throw new Exception ('Invalid controller path: `' . $path . '`');
+		}
+
+		$this->path = $path;
+	}
+
+
+	public function loader()
+	{
+		$this->checklogin();
+
+		$this->getController();
+
+
+		if (is_readable($this->file) == false)
+		{
+			$this->file = $this->path.'/error404.php';
+			$this->controller = 'error404';
+		}
+
+
+		include $this->file;
+
+
+		$class = $this->controller . 'Controller';
+		$controller = new $class($this->registry);
+
+
+		if (is_callable(array($controller, $this->action)) == false)
+		{
+			$action = 'index';
+		}
+		else
+		{
+			$action = $this->action;
+		}
+
+		$controller->$action();
+	}
+
+
+
+	private function getController() 
+	{
+
+
+		$route = (empty($_GET['rt'])) ? '' : $_GET['rt'];
+		include $this->path.'/loginController.php';
+		$loginController = new loginController($this->registry);
+
+		if (empty($route))
+		{
+			$route = 'index';
+		}
+		else
+		{
+
+			$parts = explode('/', $route);
+			if(isset($_SESSION['uid']))
+			{
+				$this->controller = $parts[0];
+				if(isset( $parts[1]))
+				{
+					$this->action = $parts[1];
+					$loginController->loggedin();
+				}
+			}
+			else if($parts[0] != 'index')
+			{
+				$this->controller = 'index';
+				$this->action = 'index';
+				$loginController->index();
+			}
+			else
+			{
+				$this->controller = 'index';
+				if(isset( $parts[1]))
+				{
+					$this->action = $parts[1];
+				}
+				$loginController->index();
+			}
+		}
+
+		if (empty($this->controller))
+		{
+			$this->controller = 'index';
+		}
+
+
+		if (empty($this->action))
+		{
+			$this->action = 'index';
+		}
+
+		$this->file = $this->path .'/'. $this->controller . 'Controller.php';
+	}
+
+	private function checklogin()
+	{
+		if(isset($_POST['username'])||isset($_POST['password']))
+		{
+			if(empty($_POST['username']))
+			{
+				// TODO: error please fill username warning on index page
+			}
+			else if(empty($_POST['password']))
+			{
+				// TODO: error please fill password
+			}
+			if(isset($_POST['username'])&&isset($_POST['password']))
+			{
+				$passwordcheck = 
+			}
 		}
 	}
 
-	if (empty($this->controller))
-	{
-		$this->controller = 'index';
-	}
-
-
-	if (empty($this->action))
-	{
-		$this->action = 'index';
-	}
-
-	$this->file = $this->path .'/'. $this->controller . 'Controller.php';
-}
-
-private function loggedIn()
-{
-	$userid = (empty($_SESSION['uid']))?'' : $_SESSION['uid'];
-
-	if(empty($userid))
-	{
-		$this->loggedin = false;
-	}
-	else
-	{
-		$this->loggedin = true;
-		$this->userid = $userid;
-
-	}
-}
-
 
 }
+
+
+
 
 ?>
