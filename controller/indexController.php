@@ -6,6 +6,7 @@ Class indexController Extends baseController {
 public function register()
 {
 	$this->registry->template->appname = 'Silicon Valley Startup';
+	$this->registry->template->loginpath = makePath('index/index');
 
 	$this->registry->template->show('register');
 }
