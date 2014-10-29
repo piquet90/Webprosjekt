@@ -7,6 +7,7 @@ echo <<<_END
 <title>
 Silicon Valley Startup
 </title>
+<link rel="stylesheet" type="text/css" href="$css">
 <meta charset="UTF-8" />
 </head>
 <body>
