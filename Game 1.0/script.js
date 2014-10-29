@@ -1,21 +1,47 @@
 var timer;
+var flyttTimer;
 var tall = 0;
 var points = 0;
+var forrigeknapp = true;
 
 function flyttFigur(event) {
+	if(forrigeknapp) {
+		switch(event.keyCode) {
+		case 37:	flyttTimer = window.setInterval(venstre, 0.1);
+					forrigeknapp = false;
+					break;
+		case 39:	flyttTimer = window.setInterval(hoyre, 0.1);
+					forrigeknapp = false;
+					break;
+		default:
+		}
+	}
+}
+
+function hoyre() {
 	var element = document.getElementById("figur");
-	
+	var x = element.offsetLeft;
+	element.style.left = (x + 2) + "px";
+		
+	sjekkPos();
+}
+
+function venstre() {
+	var element = document.getElementById("figur");
+	var x = element.offsetLeft;
+	element.style.left =  (x - 2) + "px";
+		
+	sjekkPos();
+}
+
+function stoppFlytting(event) {
 	switch(event.keyCode) {
-	case 37:	var x = element.offsetLeft;
-				element.style.left =  (x - 20) + "px";
-				break;
-	case 39:	var x = element.offsetLeft;
-				element.style.left = (x + 20) + "px";
+	case 37:	
+	case 39:	clearInterval(flyttTimer);
+				forrigeknapp = true;
 				break;
 	default:
 	}
-	
-	sjekkPos();
 }
 
 function sjekkPos() {
