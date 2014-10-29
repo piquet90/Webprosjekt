@@ -8,5 +8,19 @@ function queryMysql($query)
   return $result;
 }
 
+function makePath($action)
+{
+	$modrewrite = false;
+	if($modrewrite)
+	{
+		return '$action';
+	}
+	else
+	{
+		return 'index.php?rt='.$action;
+	}
+
+}
+
 
 ?>
