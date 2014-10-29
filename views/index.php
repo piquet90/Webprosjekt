@@ -3,8 +3,12 @@
 
 echo <<<_END
 
+<div id="wrapper">
+
 <h1>$appname</h1>
-<div id="login">
+
+
+
 <h2>LOGG INN</h2>
 <form method="post" action="login.php">
 <input type="text" name="username" placeholder="Brukernavn" value="$user">
@@ -16,6 +20,7 @@ echo <<<_END
 	<li><a href="$registerpath">Bli medlem</a></li>
 	<li><a href="$forgotpath">Glemt passord</a></li>
 </ul>
+
 </div>
 
 _END;
