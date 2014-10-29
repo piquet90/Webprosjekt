@@ -8,6 +8,9 @@ public function index() {
         $this->registry->template->user = '';
         $this->registry->template->error = '';
 
+        $this->registry->template->registerpath = '';
+        $this->registry->template->forgotpath = '';
+
         $this->registry->template->show('index');
 }
 

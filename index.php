@@ -21,5 +21,6 @@
 
 // load controller
  $registry->router->loader();
+ $registry->template->show('footer');
 
 ?>

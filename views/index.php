@@ -13,8 +13,8 @@ echo <<<_END
 <div id="error">$error</div>
 </form>
 <ul>
-	<li><a href="register.php">Bli medlem</a></li>
-	<li><a href="forgot.php">Glemt passord</a></li>
+	<li><a href="$registerpath">Bli medlem</a></li>
+	<li><a href="$forgotpath">Glemt passord</a></li>
 </ul>
 </div>
 
