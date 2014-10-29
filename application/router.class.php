@@ -15,9 +15,7 @@ public $controller;
 
 public $action; 
 
-public $userid;
-public $loginPath;
-public $loggedin;
+
 
 
 function __construct($registry) 
@@ -38,20 +36,6 @@ function setPath($path)
 
 public function loader()
 {
-
-	$this->loggedIn();
-	$this->logginPath = $this->path.'/login'.'Controller.php';
-	include $this->logginPath;
-	$loginController = new loginController($this->registry);
-	if($this->loggedin == true)
-	{
-		$loginController->loggedin($this->userid);
-	}
-	else
-	{
-		$loginController->index();
-	}
-
 
 	$this->getController();
 
