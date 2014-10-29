@@ -1,6 +1,53 @@
 body {
+background:#ccc;
+font-size:16px;
+}
+
+#wrapper {
+
 width:60%;
 margin:0 auto;
 font-family:'Verdana', sans-serif;
 line-height:1.3rem;
+background:#FFF;
+box-sizing:border-box;
+padding:1rem;
+}
+
+h1 {
+
+text-align:center;
+margin:4rem 0 4rem 0;
+
+
+}
+
+#innhold {
+width:14.33rem;
+margin:0 auto;
+height:auto;
+margin-top:5rem;
+margin-bottom:5rem;
+font-size:18px;
+
+}
+
+#innhold a {
+text-decoration:none;
+color:#800000;
+}
+
+#innhold ul{
+margin:0;
+padding:0;
+}
+
+#toppen {
+
+text-align:center;
+}
+
+#toppen a {
+text-decoration:none;
+color:#800000;
 }
