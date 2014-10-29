@@ -12,13 +12,14 @@ line-height:1.3rem;
 background:#FFF;
 box-sizing:border-box;
 padding:1rem;
+border-radius:10px;
 }
 
 h1 {
 
 text-align:center;
 margin:4rem 0 4rem 0;
-
+text-decoration:underline;
 
 }
 
@@ -50,4 +51,9 @@ text-align:center;
 #toppen a {
 text-decoration:none;
 color:#800000;
+}
+
+img {
+display:block;
+margin:0 auto;
 }
