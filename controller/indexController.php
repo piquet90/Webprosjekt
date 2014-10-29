@@ -2,6 +2,14 @@
 
 Class indexController Extends baseController {
 
+
+public function register()
+{
+	$this->registry->template->appname = 'Silicon Valley Startup';
+	
+	$this->registry->template->show('register');
+}
+
 public function index() {
 
         $this->registry->template->appname = 'Silicon Valley Startup';
