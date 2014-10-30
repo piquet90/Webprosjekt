@@ -7,6 +7,7 @@ Class loginController Extends baseController {
 	public function loggedin()
 	{
 		$this->registry->template->css = 'style/'.'style2.css';
+		$this->registry->template->logout = 'logout.php';
 		$this->registry->template->show('headerloggedin');
 
 	}

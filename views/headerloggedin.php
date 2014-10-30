@@ -21,7 +21,7 @@ Silicon Valley Startup
 	<li><a href="#">link 3</a></li>
 	<li><a href="#">link 4</a></li>
 	<li><a href="#">link 5</a></li>
-	<li><a href="#">link 6</a></li>
+	<li><a href="$logout">Logout</a></li>
 </ul>
 </div>
 _END;
