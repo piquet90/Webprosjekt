@@ -74,45 +74,60 @@ class router {
 
 
 		$route = (empty($_GET['rt'])) ? '' : $_GET['rt'];
+
+		// load check loginstatus and set correct header
 		include $this->path.'/loginController.php';
 		$loginController = new loginController($this->registry);
-
-		if (empty($route))
+		if(isset($_SESSION['uid']))
 		{
-			$route = 'index';
+			$loginController->loggedin();
 		}
 		else
 		{
+			$loginController->index();
+		}
+		///////////////////////////////////////////////////
 
-			$parts = explode('/', $route);
+		if (empty($route))
+		{
 			if(isset($_SESSION['uid']))
 			{
-				$this->controller = $parts[0];
-				if(isset( $parts[1]))
-				{
-					$this->action = $parts[1];
-					$loginController->loggedin();
-				}
-			}
-			else if($parts[0] != 'index')
-			{
-				$this->controller = 'index';
-				$this->action = 'index';
-				$loginController->index();
+				$route = 'main';
 			}
 			else
 			{
-				$this->controller = 'index';
-				if(isset( $parts[1]))
-				{
-					$this->action = $parts[1];
-				}
-				$loginController->index();
+				$route = 'index';
 			}
 		}
+		$parts = explode('/', $route);
+		if(isset($_SESSION['uid']))
+		{
+			$this->controller = $parts[0];
+			if(isset( $parts[1]))
+			{
+				$this->action = $parts[1];
+			}
+		}
+		else if($parts[0] != 'index')
+		{
+			$this->controller = 'index';
+			$this->action = 'index';
+			$loginController->index();
+		}
+		else
+		{
+			$this->controller = 'index';
+			if(isset( $parts[1]))
+			{
+				$this->action = $parts[1];
+			}
+			$loginController->index();
+		}
+		
 
 		if (empty($this->controller))
 		{
+
 			$this->controller = 'index';
 		}
 

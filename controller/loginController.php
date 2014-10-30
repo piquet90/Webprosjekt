@@ -4,8 +4,10 @@ Class loginController Extends baseController {
 
 
 
-	public function loggedin($userid)
+	public function loggedin()
 	{
+		$this->registry->template->css = 'style/'.'style2.css';
+		$this->registry->template->show('headerloggedin');
 
 	}
 

@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+/*Cascading style sheet for login-screen*/
+
+html { 
+	background:url(Img/background.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	font-family:"Glegoo", sans-serif;
+	font-size:15px;
+}
+
+body{
+	margin-top:3rem;
+}
+
+#wrapper {
+	width: 70%;
+	min-width:900px;
+	max-width:1000px;
+	margin: 0 auto;
+}
+
+#frame{
+	width:70%;
+	min-width:40rem;
+	height:12.5rem;
+	background-color:rgba(50, 50, 50, 0.975);
+	color:#11dd99;
+	padding:1rem 0 1rem 0;
+	margin:0 auto;
+	border:#fff 0px solid;
+    border-radius:1rem;
+	text-align:center;
+	line-height:2.3rem;
+}
+
+#frame a{
+	color:#11dd99;
+	text-decoration:none;
+	font-size:0.85rem;
+	padding:0 0.5rem 0 0.5rem;
+}
+
+#frame a:hover{
+	text-decoration:underline;
+}
+
+h1 {
+	padding:0;
+	margin:0;
+	font-size:2.5rem;
+	font-family:'Glegoo',sans-serif;
+	text-align:center;
+	color:#11dd99;
+	text-shadow:0px 4px #008866;
+	letter-spacing:4px;
+	margin-bottom:1.5em;
+	font-weight:bold;
+}
+
+h2 {
+	padding:0;
+	margin:0;
+	line-height:3rem;
+	font-size:1.3rem;
+	font-family:"Glegoo", sans-serif;
+	letter-spacing:0.35rem;
+	font-weight:100;
+	text-align:center;
+	margin-bottom:1rem;
+}

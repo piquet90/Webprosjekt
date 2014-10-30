@@ -3,6 +3,9 @@
 // error reporting on
  error_reporting(E_ALL);
 
+// start session()
+ session_start();
+
 // define sitepath constant
  $site_path = realpath(dirname(__FILE__));
  define ('__SITE_PATH', $site_path);
