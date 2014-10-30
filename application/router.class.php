@@ -137,9 +137,13 @@ class router {
 			{
 				// TODO: error please fill password
 			}
-			if(isset($_POST['username'])&&isset($_POST['password']))
+			else if(isset($_POST['username'])&&isset($_POST['password']))
 			{
-				$passwordcheck = 
+				$isloggedin = loginUser($_POST['username'], $_POST['password']);
+				if($isloggedin != false)
+				{
+					$_SESSION['uid'] = $isloggedin;
+				}
 			}
 		}
 	}

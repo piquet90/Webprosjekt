@@ -17,7 +17,7 @@ echo <<<_END
 
 <h2>LOGG INN</h2>
 
-<form method="post" action="login.php">
+<form method="post" action="index.php">
 <input type="text" name="username" placeholder="Brukernavn" value="$user">
 <input type="password" name="password" placeholder="Passord">
 <input type="submit" value="Log in">
