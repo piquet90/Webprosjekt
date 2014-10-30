@@ -1,6 +1,6 @@
 <?php
 session_start();
-$string = "opgra295";
+$string = "123";
 $hash = hash('ripemd128', $string);
 echo $hash;
 
