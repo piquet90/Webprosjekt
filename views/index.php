@@ -3,24 +3,21 @@
 
 echo <<<_END
 
+
+<div id="hello"></div>
+
 <div id="wrapper">
-
 <h1>$appname</h1>
-
-
-
-
-
 
 
 <div id="frame">
 
 <h2>LOGG INN</h2>
 
-<form method="post" action="index.php">
+<center><form method="post" action="index.php">
 <input type="text" name="username" placeholder="Brukernavn" value="$user">
 <input type="password" name="password" placeholder="Passord">
-<input type="submit" value="Log in">
+<input type="submit" value="Logg inn">
 <div id="error">$error</div>
 </form>
 
@@ -28,11 +25,13 @@ echo <<<_END
 	> | <a href="$forgotpath">Glemt passord</a
 	> | <a href="">FAQ</a
 	> | <a href="">Kontakt oss</a></p>
-	
-</ul>
-
+</ul></center>
 </div>
 
+
+
+
+<div id="src">IMAGE <a href="">SOURCE</a></div>
 
 </div>
 

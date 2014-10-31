@@ -14,15 +14,65 @@ Silicon Valley Startup
 <meta charset="UTF-8" />
 </head>
 <body>
+
+<h1>Silicon Valley Startup</h1>
+
+<div id="wrapper">
+
 <div id="topbar">
 <ul>
-	<li><a href="#">link 1</a></li>
-	<li><a href="#">link 2</a></li>
-	<li><a href="#">link 3</a></li>
-	<li><a href="#">link 4</a></li>
-	<li><a href="#">link 5</a></li>
-	<li><a href="$logout">Logout</a></li>
+	<li><a href="">Oppdrag</a></li
+	><li><a href="">Småjobber</a></li
+	><li><a href="">Kjøp utstyr</a></li
+	><li><a href="">Firmaer</a></li
+	><li><a href="">Spillstatistikk</a></li
+	><li><a href="$logout">Logg ut</a></li>
 </ul>
 </div>
+
+
+
+<div id="navbar">
+<div class="userImg" profilepicture></div>
+<ul>
+
+	<li class="user"><strong><a href="">Navn</strong></a></li>
+	<li class="cell">Level</li>
+	<li class="cell"><strong>Konto</strong><br> 189 813 913 111</li>
+	<li><strong>Firma</strong><br><a href="">Microsoft</a></li>
+	<li class="cell">Daglig leder</li>
+
+	<li class=""><strong>EXP:</strong> xp</li>
+</ul>
+</div>
+
+<div id="main" class="scroll">
+<p>dkmdgfmkgfmk</p>
+<br>
+<p>dkmdgfmkgfmk</p>
+<br>
+<p>dkmdgfmkgfmk</p>
+<br>
+<p>dkmdgfmkgfmk</p>
+<br>
+<p>dkmdgfmkgfmk</p>
+<br>
+<p>dkmdgfmkgfmk</p>
+<br>
+<p>dkmdgfmkgfmk</p>
+<br>
+<p>dkmdgfmkgfmk</p>
+<br>
+
+
+
+
+
+
+
+</div>
+
+
+</div> <!--end of wrapper-->
 _END;
 ?>
