@@ -15,7 +15,7 @@ Silicon Valley Startup
 </head>
 <body>
 
-<h1>Silicon Valley Startup</h1>
+<h1>SILICON VALLEY STARTUP</h1>
 
 <div id="wrapper">
 
@@ -36,13 +36,13 @@ Silicon Valley Startup
 <div class="userImg" profilepicture style="background:url(img/agent-smith.jpg) no-repeat center;"></div>
 <ul>
 
-	<li class="user"><strong><a href="">Navn</strong></a></li>
-	<li class="cell">Level</li>
-	<li class="cell"><strong>Konto</strong><br> 189 813 913 111</li>
-	<li><strong>Firma</strong><br><a href="">Microsoft</a></li>
-	<li class="cell">Daglig leder</li>
+	<li class="user"><strong><a href="">Mr. Smith</strong></a></li>
+	<li class="cell">Nybegynner</li>
+	<li class="cell"><strong>Konto</strong> <br>68 000</li>
+	<li><strong>Firma</strong><br><a href="">Egils Backend AS</a></li>
+	<li class="cell">Assistent</li>
 
-	<li class=""><strong>EXP:</strong> xp</li>
+	<li class=""><strong>Erfaringspoeng<br></strong> 900 / 1200</li>
 </ul>
 </div>
 _END;
