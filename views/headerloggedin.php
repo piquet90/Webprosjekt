@@ -33,7 +33,7 @@ Silicon Valley Startup
 
 
 <div id="navbar">
-<div class="userImg" profilepicture></div>
+<div class="userImg" profilepicture style="background:url(img/agent-smith.jpg);"></div>
 <ul>
 
 	<li class="user"><strong><a href="">Navn</strong></a></li>
