@@ -29,7 +29,8 @@ body{
 .cell{border-bottom:2px dotted #2e4e43;padding-bottom:1rem;margin-bottom:1rem;}
 
 .userImg{
-	background:url(img/user.png);
+	background:url(img/user.png) no-repeat center fixed;
+	
 	width:125px;
 	height:125px;
 	margin:0 auto;
