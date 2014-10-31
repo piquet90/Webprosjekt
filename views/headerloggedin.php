@@ -45,6 +45,6 @@ Silicon Valley Startup
 	<li class=""><strong>EXP:</strong> xp</li>
 </ul>
 </div>
-</div> <!--end of wrapper-->
 _END;
+// </div> <!--end of wrapper--> moved to footer.php
 ?>
