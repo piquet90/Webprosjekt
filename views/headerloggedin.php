@@ -45,34 +45,6 @@ Silicon Valley Startup
 	<li class=""><strong>EXP:</strong> xp</li>
 </ul>
 </div>
-
-<div id="main" class="scroll">
-<p>dkmdgfmkgfmk</p>
-<br>
-<p>dkmdgfmkgfmk</p>
-<br>
-<p>dkmdgfmkgfmk</p>
-<br>
-<p>dkmdgfmkgfmk</p>
-<br>
-<p>dkmdgfmkgfmk</p>
-<br>
-<p>dkmdgfmkgfmk</p>
-<br>
-<p>dkmdgfmkgfmk</p>
-<br>
-<p>dkmdgfmkgfmk</p>
-<br>
-
-
-
-
-
-
-
-</div>
-
-
 </div> <!--end of wrapper-->
 _END;
 ?>
