@@ -12,10 +12,10 @@ Class indexController Extends baseController {
 
         if(isset($_POST['firstname'])||isset($_POST['lastname'])||isset($_POST['username'])||isset($_POST['email'])||isset($_POST['password1'])||isset($_POST['password2']))
         {
-            $firstname = sanitizeString($_POST['firstname']);
-            $lastname = sanitizeString($_POST['lastname']);
-            $username = sanitizeString($_POST['username']);
-            $email = sanitizeString($_POST['email']);
+            $firstname = strtolower(sanitizeString($_POST['firstname']));
+            $lastname = strtolower(sanitizeString($_POST['lastname']));
+            $username = strtolower(sanitizeString($_POST['username']));
+            $email = strtolower(sanitizeString($_POST['email']));
             $password1 = sanitizeString($_POST['password1']);
             $password2 = sanitizeString($_POST['password2']);
 
