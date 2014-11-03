@@ -102,10 +102,18 @@ class router {
 		$parts = explode('/', $route);
 		if(isset($_SESSION['uid']))
 		{
-			$this->controller = $parts[0];
-			if(isset( $parts[1]))
+			if($parts[0]=='index')
 			{
-				$this->action = $parts[1];
+				$this->controller = 'main';
+				$this->action = 'index';
+			}
+			else
+			{
+				$this->controller = $parts[0];
+				if(isset( $parts[1]))
+				{
+					$this->action = $parts[1];
+				}
 			}
 		}
 		else if($parts[0] != 'index')
