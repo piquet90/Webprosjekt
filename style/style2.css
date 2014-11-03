@@ -95,6 +95,7 @@ body{
 	font-family:'Glegoo',sans-serif;
 	width:19%;
 	min-width:13rem;
+	min-height: 35rem;
 	margin: 0 auto;
 	background-color:rgba(50, 50, 50, 0.97);
 	color:#11dd99;
