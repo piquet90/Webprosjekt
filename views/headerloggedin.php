@@ -21,7 +21,7 @@ Silicon Valley Startup
 
 <div id="topbar">
 <ul>
-	<li><a href="">Oppdrag</a></li
+	<li><a href="$mainpage">Hovedside</a></li
 	><li><a href="">Småjobber</a></li
 	><li><a href="">Kjøp utstyr</a></li
 	><li><a href="">Firmaer</a></li
@@ -36,7 +36,7 @@ Silicon Valley Startup
 <div class="userImg" profilepicture style="background:url(img/agent-smith.jpg) no-repeat center;"></div>
 <ul>
 
-	<li class="user"><strong><a href="">Mr. Smith</strong></a></li>
+	<li class="user"><strong><a href="">$username</strong></a></li>
 	<li class="cell">Nybegynner</li>
 	<li class="cell"><strong>Konto</strong> <br>68 000</li>
 	<li><strong>Firma</strong><br><a href="">Egils Backend AS</a></li>
