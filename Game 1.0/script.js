@@ -70,6 +70,7 @@ function sjekkPos() {
 }
 
 function start() {
+	points = 0;
 	document.getElementById("start").disabled = true;
 	document.getElementById("dot1").style.left = Math.floor(Math.random() * 790) + "px";
 	window.setTimeout(lagdiv, 1000);
