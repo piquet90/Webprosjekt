@@ -1,9 +1,11 @@
-var timer1;
-var timer2;
 var flyttTimer;
 var points = 0;
 var forrigeknapp = true;
 var knapp = 0;
+var timere = [];
+var timereFall;
+var divTeller = 0;
+var tid = 1000;
 
 function flyttFigur(event) {
 	switch(event.keyCode) {
@@ -29,7 +31,7 @@ function hoyre() {
 	var element = document.getElementById("figur");
 	for(var i = 0; i < 5; i++) {
 		var x = element.offsetLeft;
-		element.style.left = (x + 1) + "px";
+		element.style.left = (x + 2) + "px";
 	}
 		
 	sjekkPos();
@@ -39,7 +41,7 @@ function venstre() {
 	var element = document.getElementById("figur");
 	for(var i = 0; i < 5; i++) {
 		var x = element.offsetLeft;
-		element.style.left =  (x - 1) + "px";
+		element.style.left =  (x - 2) + "px";
 	}
 	
 	sjekkPos();
@@ -73,25 +75,28 @@ function start() {
 	points = 0;
 	document.getElementById("start").disabled = true;
 	document.getElementById("dot1").style.left = Math.floor(Math.random() * 790) + "px";
-	window.setTimeout(lagdiv, 1000);
-	timer1 = window.setInterval(function() {fall("dot1")}, 100);
+	timere[divTeller] = window.setInterval(function() {fall("dot1")}, 1);
 }
 
 function lagdiv() {
+	divTeller++;
+	var id = "dot" + (divTeller + 1);
 	var div = document.createElement("div");
 	div.setAttribute("class", "dot");
-	div.setAttribute("id", "dot2");
+	div.setAttribute("id", id);
 	document.getElementById("ramme").appendChild(div);
-	timer2 = window.setInterval(function() {fall("dot2")}, 100);
+	timere[divTeller] = window.setInterval(function() {fall(id)}, 1);
 }
 
 function fall(id) {
 	var element = document.getElementById(id);
 	var elementF = document.getElementById("figur");
-	var tall = element.offsetTop;
-	tall += 20;
 	var txt = "";
-	element.style.top = tall + "px";
+	var tall = element.offsetTop;
+	for(var i = 0; i < 2; i++) {
+		tall += 1;
+		element.style.top = tall + "px";
+	}
 	if(element.offsetTop >= 400) {
 		var maxL = elementF.offsetLeft;
 		var maxR = maxL + elementF.offsetWidth;
@@ -99,14 +104,18 @@ function fall(id) {
 		var dotR = dotL + element.offsetWidth;
 		if(dotR > maxL && dotL < maxR) {
 			points += 10;
-			element.style.top = "-20px";
+			element.style.top = (Math.floor(Math.random() * -500) -20) + "px";
 			element.style.left = Math.floor(Math.random() * 790) + "px";
+			if(points%50 == 0) {
+				tid = Math.floor(Math.random() * 500) + 2200;
+				window.setTimeout(lagdiv, tid);
+			}
 		}
 		else {
-			clearInterval(timer1);
-			clearInterval(timer2);
-			document.getElementById("dot2").style.top = "-20px";
-			document.getElementById("dot1").style.top = "-20px";
+			for(var i = 0; i < timere.length; i++) {
+				document.getElementById("dot" + (i + 1)).style.top = "-20px";
+				clearInterval(timere[i]);
+			}
 			txt = "GAME OVER. Din score: ";
 			document.getElementById("start").disabled = false;
 			document.getElementById("start").innerHTML = "Prøv igjen!";
