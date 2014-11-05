@@ -7,22 +7,29 @@ var startTid = [];
 var timeOut;
 var timereFall;
 var divTeller = 0;
-var tid = 1000;
+var tid = 1300;
+var fart = 4;
+var space = true;
+var freeze = false;
 
 function flyttFigur(event) {
 	switch(event.keyCode) {
-	case 37:	if(forrigeknapp || knapp == 0) {
+	case 37:	if(freeze && (forrigeknapp || knapp == 0)) {
 					clearInterval(flyttTimer);
 					flyttTimer = window.setInterval(venstre, 0.1);
 					forrigeknapp = false;
 					knapp = 1;
 				}
 				break;
-	case 39:	if(forrigeknapp || knapp == 1) {
+	case 39:	if(freeze && (forrigeknapp || knapp == 1)) {
 					clearInterval(flyttTimer);
 					flyttTimer = window.setInterval(hoyre, 0.1);
 					forrigeknapp = false;
 					knapp = 0;
+				}
+				break;
+	case 32:	if(space) {
+					start();
 				}
 				break;
 	default:
@@ -31,9 +38,9 @@ function flyttFigur(event) {
 
 function hoyre() {
 	var element = document.getElementById("figur");
-	for(var i = 0; i < 4; i++) {
+	for(var i = 0; i < fart; i++) {
 		var x = element.offsetLeft;
-		element.style.left = (x + 2) + "px";
+		element.style.left = (x + 1) + "px";
 	}
 		
 	sjekkPos();
@@ -41,9 +48,9 @@ function hoyre() {
 
 function venstre() {
 	var element = document.getElementById("figur");
-	for(var i = 0; i < 4; i++) {
+	for(var i = 0; i < fart; i++) {
 		var x = element.offsetLeft;
-		element.style.left =  (x - 2) + "px";
+		element.style.left =  (x - 1) + "px";
 	}
 	
 	sjekkPos();
@@ -74,6 +81,10 @@ function sjekkPos() {
 }
 
 function start() {
+	space = false;
+	freeze = true;
+	fart = 4;
+	tid = 1300;
 	var c = document.getElementById("melding");
 	var ctx = c.getContext("2d");
 	ctx.clearRect(0, 0, c.width, c.height);
@@ -113,14 +124,9 @@ function fall(id, index) {
 			poeng();
 			element.style.top = "-20px";
 			element.style.left = Math.floor(Math.random() * 790) + "px";
-			if(points%50 == 0) {
-				tid = 2500;
-				for(var i = 0; i < startTid.length; i++) {
-					var naaTid = (new Date()).getTime();
-					if(naaTid <= (startTid[i] + 1500) && naaTid >= (startTid[i] - 1500)) {
-						tid = 1000;
-					}
-				}
+			if(points%150 == 0) {
+				fart += 2;
+				tid += 1400;
 				timeOut = window.setTimeout(lagdiv, tid);
 				startTid[index] = (new Date()).getTime();
 			}
@@ -135,6 +141,10 @@ function fall(id, index) {
 			document.getElementById("start").disabled = false;
 			document.getElementById("start").innerHTML = "Prøv igjen!";
 			divTeller = 0;
+			clearInterval(flyttTimer);
+			freeze = false;
+			elementF.style.left = "350px";
+			space = true;
 		}
 	}
 }
@@ -157,8 +167,8 @@ function poeng() {
 	var c = document.getElementById("poeng");
 	var ctx = c.getContext("2d");
 	ctx.clearRect(0, 0, c.width, c.height);
-	ctx.font = "30px Arial";
-	ctx.fillText(tekst,200,50);
+	ctx.font = "30px 'Black Ops One'";
+	ctx.fillText(tekst, 175, 50);
 }
 
 function gameOver() {
@@ -166,6 +176,6 @@ function gameOver() {
 	var c = document.getElementById("melding");
 	var ctx = c.getContext("2d");
 	ctx.clearRect(0, 0, c.width, c.height);
-	ctx.font = "30px Verdana";
-	ctx.fillText(tekst,0,100);
+	ctx.font = "30px 'Black Ops One'";
+	ctx.fillText(tekst, 100, 100);
 }

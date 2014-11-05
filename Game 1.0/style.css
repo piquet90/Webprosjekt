@@ -1,5 +1,6 @@
 body {
 	font-size:16px;
+	font-family: 'Black Ops One';
 }
 
 #wrapper {
@@ -31,7 +32,7 @@ body {
 #figur {
 	position:absolute;
 	top:0;
-	left:375px;
+	left:350px;
 	width:100px;
 	height:10px;
 	background-color:brown;
@@ -49,10 +50,10 @@ body {
 }
 
 #melding {
-	position:absolute;
+	position:relative;
+	left:150px;
 	top:500;
 	padding:0;
-	left:275px;
 	width:400px;
 	height:200px;
 	z-index:3;
