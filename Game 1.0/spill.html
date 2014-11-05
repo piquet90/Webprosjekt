@@ -7,9 +7,11 @@
 		<script src="script.js" type="text/javascript"></script>
 		<title>Spill!</title>
 	</head>
-	<body onkeydown="flyttFigur(event)" onkeyup="stoppFlytting(event)">
+	<body onkeydown="flyttFigur(event)" onkeyup="stoppFlytting(event)" onload="poeng()">
 		<div id="wrapper">
 			<div id="ramme">
+			<canvas id="poeng">Your browser does not support the HTML5 canvas tag.</canvas>
+			<canvas id="melding">Your browser does not support the HTML5 canvas tag.</canvas>
 				<div id="bakke">
 					<div id="figur">
 					</div>

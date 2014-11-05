@@ -25,7 +25,7 @@ body {
 	width:800px;
 	height:100px;
 	background-color:black;
-	z-index:4;
+	z-index:5;
 }
 
 #figur {
@@ -35,7 +35,27 @@ body {
 	width:100px;
 	height:10px;
 	background-color:brown;
-	z-index:5;
+	z-index:6;
+}
+
+#poeng {
+	position:absolute;
+	top:0;
+	padding:0;
+	left:600px;
+	width:200px;
+	height:100px;
+	z-index:3;
+}
+
+#melding {
+	position:absolute;
+	top:500;
+	padding:0;
+	left:275px;
+	width:400px;
+	height:200px;
+	z-index:3;
 }
 
 .dot {
@@ -45,5 +65,5 @@ body {
 	width:10px;
 	height:10px;
 	background-color:blue;
-	z-index:3;
+	z-index:4;
 }
