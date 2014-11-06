@@ -132,8 +132,13 @@ Class indexController Extends baseController {
             $password = hash('ripemd128', $password1);
         }
 
-        $query = "INSERT INTO users (username, password, fornavn, etternavn, email) VALUES ('$username', '$password', '$firstname', '$lastname', '$email')";
-        queryMysql($query);
+        $saldo = '1000';
+        $xp = '1';
+        $hwlevel = '1';
+        $coid = 'Solo Developer';
+
+        $query = "INSERT INTO users (username, password, fornavn, etternavn, email, saldo, xp, hwlevel, coid) VALUES ('$username', '$password', '$firstname', '$lastname', '$email', '$saldo', '$xp', '$hwlevel', '$coid')";
+        $result = queryMysql($query);
 
         return true;
 

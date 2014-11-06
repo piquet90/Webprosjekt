@@ -24,7 +24,7 @@ Silicon Valley Startup
 <div id="topbar">
 <ul>
 	<li><a href="$mainpage">Hovedside</a></li
-	><li><a href="">Småjobber</a></li
+	><li><a href="$jobs">Småjobber</a></li
 	><li><a href="$hardware">Hardware</a></li
 	><li><a href="">Firmaer</a></li
 	><li><a href="">Spillstatistikk</a></li
@@ -41,9 +41,7 @@ Silicon Valley Startup
 	<li class="user"><strong><a href="">$username</strong></a></li>
 	<li class="cell">Nybegynner</li>
 	<li class="cell"><strong>Konto</strong> <br>$saldo</li>
-	<li><strong>Firma</strong><br><a href="">Egils Backend AS</a></li>
-	<li class="cell">Assistent</li>
-
+	<li class="cell"><strong>Firma</strong><br><a href="">$coid</a></li>
 	<li class=""><strong>Erfaringspoeng<br></strong> $xp</li>
 </ul>
 </div>

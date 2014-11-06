@@ -18,20 +18,14 @@ Class loginController Extends baseController {
 		$row = $result->fetch_array(MYSQLI_ASSOC);
 
 		$this->registry->template->username = ucfirst($row['username']);
-
-
-		$query = "SELECT * FROM userxp WHERE uid='$uid'";
-		$result = queryMysql($query);
-
-		$row = $result->fetch_array(MYSQLI_ASSOC);
-
-
 		$this->registry->template->saldo = $row['saldo'];
 		$this->registry->template->xp = $row['xp'];
+		$this->registry->template->coid = $row['coid'];
 
 
 		$this->registry->template->mainpage = makePath("main/index");
 		$this->registry->template->hardware = makePath("hardware/index");
+		$this->registry->template->jobs = makePath("jobs/index");
 
 		$this->registry->template->show('headerloggedin');
 
