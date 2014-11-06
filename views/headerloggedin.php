@@ -23,8 +23,8 @@ Silicon Valley Startup
 	<li><a href="$mainpage">Hovedside</a></li
 	><li><a href="$jobs">Jobber</a></li
 	><li><a href="$hardware">Hardware</a></li
-	><li><a href="">Firmaer</a></li
-	><li><a href="">Spillstatistikk</a></li
+	><li><a href="$company">Firmaer</a></li
+	><li><a href="$stats">Spillstatistikk</a></li
 	><li><a href="$logout">Logg ut</a></li>
 </ul>
 </div>
