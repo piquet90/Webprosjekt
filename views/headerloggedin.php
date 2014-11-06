@@ -18,9 +18,6 @@ Silicon Valley Startup
 
 
 <div id="wrapper">
-
-<h1>SILICON VALLEY STARTUP</h1>
-
 <div id="topbar">
 <ul>
 	<li><a href="$mainpage">Hovedside</a></li
@@ -40,9 +37,9 @@ Silicon Valley Startup
 
 	<li class="user"><strong><a href="">$username</strong></a></li>
 	<li class="cell">Nybegynner</li>
-	<li class="cell"><strong>Konto</strong> <br>$saldo</li>
+	<li class="cell"><strong>Konto</strong> <br>$$saldo</li>
 	<li class="cell"><strong>Firma</strong><br><a href="">$coid</a></li>
-	<li class=""><strong>Erfaringspoeng<br></strong> $xp</li>
+	<li class=""><strong>Erfaringspoeng<br></strong> $xp xp</li>
 </ul>
 </div>
 _END;
