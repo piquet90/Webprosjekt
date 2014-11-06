@@ -57,6 +57,7 @@ Class indexController Extends baseController {
         if(isset($_SESSION['loginerror']))
         {
             $this->registry->template->error = $_SESSION['loginerror'];
+            unset($_SESSION['loginerror']);
         }
 
         $this->registry->template->registerpath = makePath('index/register');

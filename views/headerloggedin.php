@@ -21,7 +21,7 @@ Silicon Valley Startup
 <div id="topbar">
 <ul>
 	<li><a href="$mainpage">Hovedside</a></li
-	><li><a href="$jobs">Småjobber</a></li
+	><li><a href="$jobs">Jobber</a></li
 	><li><a href="$hardware">Hardware</a></li
 	><li><a href="">Firmaer</a></li
 	><li><a href="">Spillstatistikk</a></li
