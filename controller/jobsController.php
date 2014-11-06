@@ -3,6 +3,7 @@
 Class jobsController Extends baseController {
 
 	private $uid;
+	private $simplexp = 2;
 	public function simple()
 	{
 		$this->uid = $_SESSION['uid'];
@@ -17,8 +18,21 @@ Class jobsController Extends baseController {
 		{
 			$now = time();
 
+			// set time for job for use with cooldown
 			$query = "UPDATE jobs SET simple='$now' WHERE uid='$this->uid'";
 			queryMysql($query);
+
+			// get current XP
+			$query = "SELECT * FROM users WHERE uid='$this->uid'";
+			$result =queryMysql($query);
+			$row = $result->fetch_assoc();
+
+			$xp = $row['xp']+$this->simplexp;
+
+			// set time for job for use with cooldown
+			$query = "UPDATE users SET xp='$xp' WHERE uid='$this->uid'";
+			queryMysql($query);
+
 		}
 		$this->index();
 	}
