@@ -9,8 +9,25 @@ var timereFall;
 var divTeller = 0;
 var tid = 1300;
 var fart = 4;
+var pluss = 2;
+var fallSp = 2;
+var tidP = 1400;
 var space = true;
 var freeze = false;
+
+function load() {
+	poeng();
+	if(!!navigator.userAgent.match(/Trident.*rv[ :]*11\./)) {
+		fart = fart/2;
+		pluss = pluss/2;
+		fallSp = fallSp/2;
+		tidP = tidP/2;
+		document.getElementById("tekst").innerHTML = "JA!";
+	}
+	else {
+		document.getElementById("tekst").innerHTML = "NEI!";
+	}
+}
 
 function flyttFigur(event) {
 	switch(event.keyCode) {
@@ -92,7 +109,7 @@ function start() {
 	poeng();
 	document.getElementById("start").disabled = true;
 	document.getElementById("dot1").style.left = Math.floor(Math.random() * 790) + "px";
-	timere[divTeller] = window.setInterval(function() {fall("dot1", divTeller)}, 1);
+	timere[divTeller] = window.setInterval(function() {fall("dot1")}, 1);
 }
 
 function lagdiv() {
@@ -102,15 +119,15 @@ function lagdiv() {
 	div.setAttribute("class", "dot");
 	div.setAttribute("id", id);
 	document.getElementById("ramme").appendChild(div);
-	timere[divTeller] = window.setInterval(function() {fall(id, divTeller)}, 1);
+	timere[divTeller] = window.setInterval(function() {fall(id)}, 1);
 }
 
-function fall(id, index) {
+function fall(id) {
 	var element = document.getElementById(id);
 	var elementF = document.getElementById("figur");
 	var txt = "";
 	var tall = element.offsetTop;
-	for(var i = 0; i < 2; i++) {
+	for(var i = 0; i < fallSp; i++) {
 		tall += 1;
 		element.style.top = tall + "px";
 	}
@@ -125,10 +142,9 @@ function fall(id, index) {
 			element.style.top = "-20px";
 			element.style.left = Math.floor(Math.random() * 790) + "px";
 			if(points%150 == 0) {
-				fart += 2;
-				tid += 1400;
+				fart += pluss;
+				tid += tidP;
 				timeOut = window.setTimeout(lagdiv, tid);
-				startTid[index] = (new Date()).getTime();
 			}
 		}
 		else {
