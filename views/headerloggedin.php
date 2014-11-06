@@ -25,7 +25,7 @@ Silicon Valley Startup
 <ul>
 	<li><a href="$mainpage">Hovedside</a></li
 	><li><a href="">Småjobber</a></li
-	><li><a href="">Kjøp utstyr</a></li
+	><li><a href="$hardware">Hardware</a></li
 	><li><a href="">Firmaer</a></li
 	><li><a href="">Spillstatistikk</a></li
 	><li><a href="$logout">Logg ut</a></li>
@@ -40,11 +40,11 @@ Silicon Valley Startup
 
 	<li class="user"><strong><a href="">$username</strong></a></li>
 	<li class="cell">Nybegynner</li>
-	<li class="cell"><strong>Konto</strong> <br>68 000</li>
+	<li class="cell"><strong>Konto</strong> <br>$saldo</li>
 	<li><strong>Firma</strong><br><a href="">Egils Backend AS</a></li>
 	<li class="cell">Assistent</li>
 
-	<li class=""><strong>Erfaringspoeng<br></strong> 900 / 1200</li>
+	<li class=""><strong>Erfaringspoeng<br></strong> $xp</li>
 </ul>
 </div>
 _END;

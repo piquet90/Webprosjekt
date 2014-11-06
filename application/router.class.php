@@ -154,11 +154,11 @@ class router {
 		{
 			if(empty($_POST['username']))
 			{
-				// TODO: error please fill username warning on index page
+				$this->registry->loginerror = "Username is empty";
 			}
 			else if(empty($_POST['password']))
 			{
-				// TODO: error please fill password
+				$this->registry->loginerror = "Username is empty";
 			}
 			else if(isset($_POST['username'])&&isset($_POST['password']))
 			{
