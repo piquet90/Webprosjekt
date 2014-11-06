@@ -10,12 +10,16 @@ Class statsController Extends baseController {
 
 		$result = queryMysql($query);
 		$users = "";
+		$number = $result->num_rows;
 
 		while($row = $result->fetch_assoc()) 
 		{
         	$users .= ucfirst($row['username'])."<br />";
    		}
 
+
+
+   		$this->registry->template->usernumber = $number;
    		$this->registry->template->users = $users;
 
 
