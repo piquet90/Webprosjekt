@@ -4,6 +4,7 @@ Class jobsController Extends baseController {
 
 	private $uid;
 	private $simplexp = 2;
+	private $simplecash = 100;
 	public function simple()
 	{
 		$this->uid = $_SESSION['uid'];
@@ -28,9 +29,10 @@ Class jobsController Extends baseController {
 			$row = $result->fetch_assoc();
 
 			$xp = $row['xp']+$this->simplexp;
+			$balance = $row['saldo']+$this->simplecash;
 
 			// set time for job for use with cooldown
-			$query = "UPDATE users SET xp='$xp' WHERE uid='$this->uid'";
+			$query = "UPDATE users SET xp='$xp', saldo='$balance' WHERE uid='$this->uid'";
 			queryMysql($query);
 
 		}
