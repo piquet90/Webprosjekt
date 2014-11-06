@@ -58,7 +58,8 @@ body{
 	padding:0;
 	color:#11dd99;
 	text-decoration:none;
-	padding:1rem 2rem 1rem 2.5rem;
+	padding:1rem 4% 1rem 4%;;
+	/*padding:1rem 2rem 1rem 2.5rem;*/
 	-o-transition:.2s;
  	-ms-transition:.2s;
   	-moz-transition:.2s;
