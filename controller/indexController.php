@@ -24,6 +24,12 @@ Class indexController Extends baseController {
 
             if($register == true)
             {
+                        $this->registry->template->user = $_POST['username'];
+                        $this->registry->template->error = 'Registration success!';
+                        $this->registry->template->registerpath = makePath('index/register');
+                        $this->registry->template->forgotpath = makePath('index/forgot');
+
+                $this->registry->template->show('index');
 
             }
             else
