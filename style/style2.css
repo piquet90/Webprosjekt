@@ -140,8 +140,8 @@ body{
 	box-sizing:border-box;
 	padding:1.5rem 3rem 1.5rem 3rem;
 	height:65vh;
-	/*max-height:65vh;
-	min-height:40rem;*/
+	/*max-height:65vh; */
+	min-height:35rem;
 }
 
 #main a {
