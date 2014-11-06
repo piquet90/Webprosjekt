@@ -54,6 +54,10 @@ Class indexController Extends baseController {
         $this->registry->template->appname = 'Silicon Valley Startup';
         $this->registry->template->user = '';
         $this->registry->template->error = '';
+        if(isset($_SESSION['loginerror']))
+        {
+            $this->registry->template->error = $_SESSION['loginerror'];
+        }
 
         $this->registry->template->registerpath = makePath('index/register');
         $this->registry->template->forgotpath = makePath('index/forgot');

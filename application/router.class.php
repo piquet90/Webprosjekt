@@ -154,11 +154,11 @@ class router {
 		{
 			if(empty($_POST['username']))
 			{
-				$this->registry->loginerror = "Username is empty";
+				$_SESSION['loginerror'] = "Username is empty";
 			}
 			else if(empty($_POST['password']))
 			{
-				$this->registry->loginerror = "Username is empty";
+				$_SESSION['loginerror'] = "Please enter a password";
 			}
 			else if(isset($_POST['username'])&&isset($_POST['password']))
 			{
@@ -166,6 +166,10 @@ class router {
 				if($isloggedin != false)
 				{
 					$_SESSION['uid'] = $isloggedin;
+				}
+				else
+				{
+					$_SESSION['loginerror'] = "Wrong username or password.";
 				}
 			}
 		}
