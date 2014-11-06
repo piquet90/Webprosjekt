@@ -139,8 +139,8 @@ function fall(id) {
 		if(dotR > maxL && dotL < maxR) {
 			points += 10;
 			poeng();
-			element.style.top = "-20px";
-			element.style.left = Math.floor(Math.random() * 790) + "px";
+			element.style.top = "-66px";
+			element.style.left = Math.floor(Math.random() * 767) + "px";
 			if(points%150 == 0) {
 				fart += pluss;
 				tid += tidP;
@@ -149,7 +149,7 @@ function fall(id) {
 		}
 		else {
 			for(var i = 0; i < timere.length; i++) {
-				document.getElementById("dot" + (i + 1)).style.top = "-20px";
+				document.getElementById("dot" + (i + 1)).style.top = "-66px";
 				clearInterval(timere[i]);
 			}
 			clearInterval(timeOut);
@@ -184,6 +184,7 @@ function poeng() {
 	var ctx = c.getContext("2d");
 	ctx.clearRect(0, 0, c.width, c.height);
 	ctx.font = "30px 'Black Ops One'";
+	ctx.fillStyle = "white";
 	ctx.fillText(tekst, 175, 50);
 }
 
@@ -193,5 +194,6 @@ function gameOver() {
 	var ctx = c.getContext("2d");
 	ctx.clearRect(0, 0, c.width, c.height);
 	ctx.font = "30px 'Black Ops One'";
+	ctx.fillStyle = "white";
 	ctx.fillText(tekst, 100, 100);
 }

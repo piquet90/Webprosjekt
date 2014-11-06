@@ -1,6 +1,6 @@
 body {
 	font-size:16px;
-	font-family: 'Black Ops One';
+	font-family:'Black Ops One';
 }
 
 #wrapper {
@@ -15,7 +15,7 @@ body {
 	position:relative;
 	width:800px;
 	height:500px;	
-	background-color:green;
+	background-image:url(background.jpg);
 	overflow:hidden;
 	z-index:2;
 }
@@ -31,7 +31,7 @@ body {
 
 #figur {
 	position:absolute;
-	top:0;
+	top:400px;
 	left:350px;
 	width:100px;
 	height:10px;
@@ -62,9 +62,9 @@ body {
 .dot {
 	position:absolute;
 	left:400px;
-	top:-20px;
-	width:10px;
-	height:10px;
-	background-color:blue;
+	top:-66px;
+	width:33px;
+	height:33px;
+	background-image:url(fotball2.png);
 	z-index:4;
 }
