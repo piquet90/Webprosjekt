@@ -13,7 +13,7 @@ function update() {
 	var min = (sek % 3600) / 60;
 	var restSek = (sek % 3600) % 60;
 	document.getElementById("teller").innerHTML = "Hours: " + Math.floor(timer) + "<br />Minutes: " + Math.floor(min) + "<br />Seconds: " + Math.floor(restSek);
-	if(sek == 0) {
+	if(sek <= 0) {
 		clearInterval(interval);
 	}
 }
