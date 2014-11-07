@@ -12,6 +12,7 @@ echo <<<_END
 <li></li>
 </ol>
 </div>
+<script src="countdown/script.js"></script>
 
 _END;
 
