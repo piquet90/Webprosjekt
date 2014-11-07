@@ -15,8 +15,9 @@ function update() {
 	var timer = sek / 3600;
 	var min = (sek % 3600) / 60;
 	var restSek = (sek % 3600) % 60;
-	document.getElementById("teller").innerHTML = "Hours: " + Math.floor(timer) + " Minutes: " + Math.floor(min) + " Seconds: " + Math.floor(restSek);
+	document.getElementById("teller").innerHTML = Math.floor(timer) + ":" + Math.floor(min) + ":" + Math.floor(restSek);
 	if(sek <= 0) {
 		clearInterval(interval);
+		document.getElementById("teller").innerHTML = '<a href="index.php?rt=jobs/simple">Simple Job</a>';
 	}
 }
