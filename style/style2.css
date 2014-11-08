@@ -201,16 +201,23 @@ h3{
 	padding: 1%;
 	display: inline-block;
 	width: 40%;
-	border: solid 1px;
+	border: dotted 1px;
 
 
+}
+.product h4 {
+	margin: 0;
 }
 .product img {
 	width: 25%;
 	float: left;
 	margin: 2%;
-	border: solid;
+	border: solid 1px;
 
+}
+.product span {
+	font-size: 80%;
+	
 }
 .product input {
 	float: right;
