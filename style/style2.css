@@ -196,6 +196,25 @@ h3{
 	margin-bottom:1.5rem;
 }
 
+.product {
+	margin: 1%;
+	padding: 1%;
+	display: inline-block;
+	width: 40%;
+	border: solid 1px;
+
+
+}
+.product img {
+	width: 25%;
+	float: left;
+	margin: 2%;
+	border: solid;
+
+}
+.product input {
+	float: right;
+}
 
 
 ::-webkit-scrollbar{background:#333;width:0.65rem;}
