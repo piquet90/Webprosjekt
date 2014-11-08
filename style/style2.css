@@ -139,7 +139,7 @@ body{
 	border-bottom-left-radius:1rem;
 	border-top-left-radius:1rem;
 	box-sizing:border-box;
-	padding:1.5rem 3rem 1.5rem 3rem;
+	padding:3%;
 	height:65vh;
 	/*max-height:65vh; */
 	min-height:35rem;
@@ -196,14 +196,18 @@ h3{
 	margin-bottom:1.5rem;
 }
 
+
+
+
 .product {
-	margin: 1em;
+	display: inline-block;
+	margin: 2%;
 	padding: 1rem;
 	display: inline-block;
 	width: 40%;
 	border: dotted 1px;
 	font-size: 80%;
-	height: 10rem;
+	height: 8rem;
 
 
 }
@@ -214,7 +218,7 @@ h3{
 	margin: 0;
 }
 .product img {
-	width: 25%;
+	width: 40%;
 	float: left;
 	margin: 2%;
 	border: solid 1px;
