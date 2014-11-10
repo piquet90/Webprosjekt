@@ -62,7 +62,7 @@ Class jobsController Extends baseController {
 		}
 		else
 		{
-			$this->registry->template->simple = 'Simple Job on cooldown. Time to next: <div id="teller">'.($this->getCooldown(240)-$diff).' </div>';
+			$this->registry->template->simple = 'Simple Job on cooldown. Time to next: <div id="teller">'.($this->getCooldown(240)-$diff).' </div><script>tell("teller");</script>';
 		}
 
 		$this->registry->template->show('jobs');
