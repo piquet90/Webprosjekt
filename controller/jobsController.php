@@ -3,24 +3,33 @@
 Class jobsController Extends baseController {
 
 	private $uid;
+
 	private $simplexp = 2;
 	private $simplecash = 100;
-	public function simple()
-	{
-		$this->uid = $_SESSION['uid'];
+	private $simpleCooldown = 240;
 
+	private $mediumxp = 8;
+	private $mediumcash = 400;
+	private $mediumCooldown = 480;
+
+	private $hardxp = 32;
+	private $hardcash = 1600;
+	private $hardCooldown = 960;
+
+	private function job($type)
+	{
 		$row = $this->exists()->fetch_assoc();
 
-		$diff = time()-$row['simple'];
+		$diff = time()-$row[$type];
 
-		$cooldown = $this->getCooldown(240);
+		$cooldown = $this->getCooldown($this->{$type."Cooldown"});
 
 		if($diff>$cooldown)
 		{
 			$now = time();
 
 			// set time for job for use with cooldown
-			$query = "UPDATE jobs SET simple='$now' WHERE uid='$this->uid'";
+			$query = "UPDATE jobs SET $type='$now' WHERE uid='$this->uid'";
 			queryMysql($query);
 
 			// get current XP
@@ -28,14 +37,28 @@ Class jobsController Extends baseController {
 			$result =queryMysql($query);
 			$row = $result->fetch_assoc();
 
-			$xp = $row['xp']+$this->simplexp;
-			$balance = $row['saldo']+$this->simplecash;
+			$xp = $row['xp']+$this->{$type."xp"};
+			$balance = $row['saldo']+$this->{$type."cash"};
 
 			// set time for job for use with cooldown
 			$query = "UPDATE users SET xp='$xp', saldo='$balance' WHERE uid='$this->uid'";
 			queryMysql($query);
 
 		}
+
+	}
+	public function simple()
+	{
+		$this->uid = $_SESSION['uid'];
+
+		$this->job("simple");
+		$this->index();
+	}
+	public function medium()
+	{
+		$this->uid = $_SESSION['uid'];
+
+		$this->job("medium");
 		$this->index();
 	}
 
@@ -49,23 +72,33 @@ Class jobsController Extends baseController {
 		*/
 		$this->uid = $_SESSION['uid'];
 
-
 		$row = $this->exists()->fetch_assoc();
 
 
-		$now = time();
-		$diff = $now-$row['simple'];
+		$this->onCooldown("simple", $row);
+		$this->onCooldown("medium", $row);
+		// $this->onCooldown("hard", $row);
 
-		if($diff>$this->getCooldown(240))
+
+		$this->registry->template->show('jobs');
+	}
+
+	private function onCooldown($type, $r)
+	{
+		$row = $r;
+		$now = time();
+		$diff = $now-$row[$type];
+
+		if($diff>$this->getCooldown($this->{$type."Cooldown"}))
 		{
-			$this->registry->template->simple = '<a href="'.makePath('jobs/simple').'">Simple Job</a>';
+			$this->registry->template->{$type} = 'Simple Job';
+			$this->registry->template->{$type."path"} = makePath('jobs/simple');
 		}
 		else
 		{
-			$this->registry->template->simple = 'Simple Job on cooldown. Time to next: <div id="teller">'.($this->getCooldown(240)-$diff).' </div><script>tell("teller", "plass1");</script>';
+			$this->registry->template->{$type} = '<div id="teller">'.($this->getCooldown(240)-$diff).' </div><script>tell("teller", "plass1");</script>';
+			$this->registry->template->{$type."path"} = "";
 		}
-
-		$this->registry->template->show('jobs');
 	}
 
 	private function simpleJob()
@@ -107,7 +140,6 @@ Class jobsController Extends baseController {
 
 
 	}
-
 }
 
 ?>
