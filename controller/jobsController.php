@@ -91,7 +91,7 @@ Class jobsController Extends baseController {
 
 		if($diff>$this->getCooldown($this->{$type."Cooldown"}))
 		{
-			$this->registry->template->{$type} = 'Simple Job';
+			$this->registry->template->{$type} = $type.' Job';
 			$this->registry->template->{$type."path"} = makePath('jobs/simple');
 		}
 		else
