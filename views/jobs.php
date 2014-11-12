@@ -31,15 +31,19 @@ function update(id, plass) {
 }
 </script>
 <div id="main" class="scroll">
-<h3>Jobs</h3>
-<p>Her kommer det jobber som man kan gjøre</p>
 
-<ol>
-<li id="plass1">$simple</li>
-<li id="plass2"><div id="teller2">26000</div><script>tell("teller2", "plass2");</script></li>
-<li></li>
-<li></li>
-</ol>
+<div id="space"></div>
+
+<div class="desc"><h4>Enkel jobb</h4> Cooldown 4 minutter. Du kan få max 1 dollar og trenger ikke noe hardware</div>
+<div class="buttonOuter"><a href="$simplepath"><div class="buttonInner">$simple</div></a></div>
+
+<div class="desc"><h4>Medium jobb</h4> Cooldown 8 minutter. Du kan få max 10 dollar og må være i hardware-level 3 eller høyere</div>
+<div class="buttonOuter"><a href="$mediumpath"><div class="buttonInner">$medium</div></a></div>
+
+<div class="desc"><h4>Vanskelig jobb</h4> Cooldown 10 minutter. Du kan få max 100 dollar og du må være i hardware-level 5 eller høyere</div>
+<div class="buttonOuter"><a href="$hardpath"><div class="buttonInner">$hard</div></a></div>
+
+
 </div>
 
 _END;
