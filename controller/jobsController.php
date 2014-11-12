@@ -61,6 +61,13 @@ Class jobsController Extends baseController {
 		$this->job("medium");
 		$this->index();
 	}
+	public function hard()
+	{
+		$this->uid = $_SESSION['uid'];
+
+		$this->job("hard");
+		$this->index();
+	}
 
 	public function index() 
 	{
@@ -96,7 +103,7 @@ Class jobsController Extends baseController {
 		}
 		else
 		{
-			$this->registry->template->{$type} = '<div id="teller">'.($this->getCooldown(240)-$diff).' </div><script>tell("teller", "plass1");</script>';
+			$this->registry->template->{$type} = '<div id="teller">'.($this->getCooldown($this->{$type."Cooldown"})-$diff).' </div><script>tell("teller", "plass1");</script>';
 			$this->registry->template->{$type."path"} = makePath('jobs/index');
 		}
 	}
