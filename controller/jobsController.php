@@ -97,7 +97,7 @@ Class jobsController Extends baseController {
 		else
 		{
 			$this->registry->template->{$type} = '<div id="teller">'.($this->getCooldown(240)-$diff).' </div><script>tell("teller", "plass1");</script>';
-			$this->registry->template->{$type."path"} = "";
+			$this->registry->template->{$type."path"} = makePath('jobs/index');
 		}
 	}
 
