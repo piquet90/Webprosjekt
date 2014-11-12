@@ -140,7 +140,7 @@ Class jobsController Extends baseController {
 
 		$row = $result->fetch_assoc();
 		
-		$hardware = 1-(($row['hwlevel']*5)/100);
+		$hardware = 1-(($row['hwlevel']*10)/100);
 
 		$cd = $time * $hardware;
 

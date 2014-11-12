@@ -16,8 +16,8 @@ echo <<<_END
 <img src="img/computer1.jpg" />
 <p>Laptop from your moms basement. No cooldown on jobs</p>
 <form action="$formpath" method="post"> 
-<input type="hidden" name="hwlvl" value="$hwl1" />
-<input type="submit" value="$hw1" $hw1disabled>
+<input type="hidden" name="hwlvl" value="$hwl0" />
+<input type="submit" value="$hw0" $hw0disabled>
 </form>
 </div>
 
