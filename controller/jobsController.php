@@ -77,7 +77,7 @@ Class jobsController Extends baseController {
 
 		$this->onCooldown("simple", $row);
 		$this->onCooldown("medium", $row);
-		// $this->onCooldown("hard", $row);
+		$this->onCooldown("hard", $row);
 
 
 		$this->registry->template->show('jobs');
@@ -101,10 +101,11 @@ Class jobsController Extends baseController {
 		}
 	}
 
-	private function simpleJob()
+	// do i even use this?
+	/* private function simpleJob()
 	{
 		makePath('jobs/simple');
-	}
+	} */
 
 	private function exists()
 	{
