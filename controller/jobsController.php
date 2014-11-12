@@ -103,7 +103,7 @@ Class jobsController Extends baseController {
 		}
 		else
 		{
-			$this->registry->template->{$type} = '<div id="teller' . $nr . '">'.($this->getCooldown($this->{$type."Cooldown"})-$diff).' </div><script>tell("teller' . $nr . '");</script>';
+			$this->registry->template->{$type} = '<div id="teller' . $nr . '">' . ($this->getCooldown($this->{$type."Cooldown"})-$diff).'</div><script>tell("teller' . $nr . '");</script>';
 			$this->registry->template->{$type."path"} = makePath('jobs/index');
 		}
 	}
