@@ -82,15 +82,15 @@ Class jobsController Extends baseController {
 		$row = $this->exists()->fetch_assoc();
 
 
-		$this->onCooldown("simple", $row);
-		$this->onCooldown("medium", $row);
-		$this->onCooldown("hard", $row);
+		$this->onCooldown("simple", 1, $row);
+		$this->onCooldown("medium", 2, $row);
+		$this->onCooldown("hard", 3, $row);
 
 
 		$this->registry->template->show('jobs');
 	}
 
-	private function onCooldown($type, $r)
+	private function onCooldown($type, $nr, $r)
 	{
 		$row = $r;
 		$now = time();
@@ -103,7 +103,7 @@ Class jobsController Extends baseController {
 		}
 		else
 		{
-			$this->registry->template->{$type} = '<div id="teller">'.($this->getCooldown($this->{$type."Cooldown"})-$diff).' </div><script>tell("teller", "plass1");</script>';
+			$this->registry->template->{$type} = '<div id="teller' . $nr . '">'.($this->getCooldown($this->{$type."Cooldown"})-$diff).' </div><script>tell("teller' . $nr . '");</script>';
 			$this->registry->template->{$type."path"} = makePath('jobs/index');
 		}
 	}

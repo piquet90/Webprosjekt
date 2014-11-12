@@ -5,15 +5,15 @@ echo <<<_END
 var sekunder = [];
 var interval = [];
 
-function tell(navn, plass) {
+function tell(navn) {
 	var sek = sekunder[navn]
 	sek = document.getElementById(navn).innerHTML;
 	sekunder[navn] = parseInt(sek, 10);
-	update(navn, plass);
-	interval[navn] = window.setInterval(function() {update(navn, plass);}, 1000);
+	update(navn);
+	interval[navn] = window.setInterval(function() {update(navn);}, 1000);
 }
 
-function update(id, plass) {
+function update(id) {
 	sekunder[id]--;
 	var sek = sekunder[id];
 	var timer = sek / 3600;
@@ -26,7 +26,6 @@ function update(id, plass) {
 	if(sek <= 0) {
 		clearInterval(interval[id]);
 		document.getElementById(id).innerHTML = "";
-		document.getElementById(plass).innerHTML = '<a href="index.php?rt=jobs/simple">Simple Job</a>';
 	}
 }
 </script>
