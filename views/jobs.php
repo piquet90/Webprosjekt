@@ -25,7 +25,7 @@ function update(id) {
 	document.getElementById(id).innerHTML = ("0" + timer).slice(-2) + ":" + ("0" + min).slice(-2) + ":" + ("0" + restSek).slice(-2);
 	if(sek == 0) {
 		clearInterval(interval[id]);
-		window.setTimeout(function() {window.location.href = "index.php?rt=jobs/index";}, 1500);
+		window.setTimeout(function() {window.location.href = "index.php?rt=jobs/index";}, 2000);
 	}
 }
 </script>
