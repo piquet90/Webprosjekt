@@ -1,5 +1,6 @@
 <?php
 
+
 echo <<<_END
 <!DOCTYPE html>
 <html>
@@ -23,9 +24,9 @@ Silicon Valley Startup
 	<li><a href="$mainpage">Hovedside</a></li
 	><li><a href="$jobs">Jobber</a></li
 	><li><a href="$hardware">Hardware</a></li
-	><li><a href="$company">Firmaer</a></li
+	><li><a href="$company">Firma</a></li
 	><li><a href="$stats">Spillstatistikk</a></li
-	><li><a href="$logout">Logg ut</a></li>
+	><li><a href="$logout"><strong>Logg ut</strong></a></li>
 </ul>
 </div>
 
