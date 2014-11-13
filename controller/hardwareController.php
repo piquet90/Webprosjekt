@@ -54,7 +54,7 @@ Class hardwareController Extends baseController {
 		$row = $result->fetch_assoc();
 		if($row['saldo']>$hwlvl[$lvl])
 		{
-			$newlvl = $row['hwlevel']+$lvl;
+			$newlvl = $lvl;
 			$newSaldo = $row['saldo']-$hwlvl[$lvl];
 			$query = "UPDATE users SET saldo='$newSaldo', hwlevel='$newlvl' WHERE uid='$uid'";
 			queryMysql($query);
