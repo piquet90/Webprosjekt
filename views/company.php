@@ -35,9 +35,7 @@ function f(){
 <div class="cLogo"></div>
 <h5>Firmanavn <a href="javascript:void(0)" onclick="f()"> ansatte </a></h5> 
 
-<p>Masse informasjon om firmaet hurra hurra hipp hipp Masse informasjon
-om firmaet hurra hurra hipp hippMasse informasjon om firmaet hurra hurra
-hipp hippMasse informasjon om firmaet hurra hurra hipphipp</p>
+<p>Kort beskrivelse av firmaet</p>
 
 </div>
 <div id="f"> </div>
@@ -58,9 +56,7 @@ hipp hippMasse informasjon om firmaet hurra hurra hipphipp</p>
 <div class="cLogo"></div>
 <h5>Firmanavn</h5>
 
-<p>Masse informasjon om firmaet hurra hurra hipp hipp Masse informasjon
-om firmaet hurra hurra hipp hippMasse informasjon om firmaet hurra hurra
-hipp hippMasse informasjon om firmaet hurra hurra hipphipp</p>
+<p>Kort beskrivelse av firmaet</p>
 
 </div>
 <div id="f"> </div>
@@ -73,9 +69,7 @@ hipp hippMasse informasjon om firmaet hurra hurra hipphipp</p>
 <div class="cLogo"></div>
 <h5>Firmanavn</h5> 
 
-<p>Masse informasjon om firmaet hurra hurra hipp hipp Masse informasjon
-om firmaet hurra hurra hipp hippMasse informasjon om firmaet hurra hurra
-hipp hippMasse informasjon om firmaet hurra hurra hipphipp</p>
+<p>Kort beskrivelse av firmaet</p>
 
 </div>
 <div id="f"> </div>
@@ -87,9 +81,7 @@ hipp hippMasse informasjon om firmaet hurra hurra hipphipp</p>
 <div class="cLogo"></div>
 <h5>Firmanavn</h5> 
 
-<p>Masse informasjon om firmaet hurra hurra hipp hipp Masse informasjon
-om firmaet hurra hurra hipp hippMasse informasjon om firmaet hurra hurra
-hipp hippMasse informasjon om firmaet hurra hurra hipphipp</p>
+<p>Kort beskrivelse av firmaet</p>
 
 </div>
 <div id="f"> </div>

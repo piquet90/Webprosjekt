@@ -306,7 +306,7 @@ input[type=submit]:disabled {
 }
 
 #yourCompany{
-	border-left:0.65rem solid #11dd99;
+	border-left:0.5rem solid #11dd99;
 }
 
 .company {
