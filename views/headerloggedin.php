@@ -16,8 +16,6 @@ Silicon Valley Startup
 </head>
 <body>
 
-
-
 <div id="wrapper">
 <div id="topbar">
 <ul>

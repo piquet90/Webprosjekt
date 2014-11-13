@@ -39,7 +39,7 @@ function update(id) {
 <div class="desc"><h4>Medium jobb</h4> Cooldown 8 minutter. Du kan få max 10 dollar og må være i hardware-level 3 eller høyere</div>
 <div class="buttonOuter"><a href="$mediumpath"><div class="buttonInner">$medium</div></a></div>
 
-<div class="desc"><h4>Vanskelig jobb</h4> Cooldown 10 minutter. Du kan få max 100 dollar og du må være i hardware-level 5 eller høyere</div>
+<div class="desc"><h4>Vanskelig jobb</h4> Cooldown 16 minutter. Du kan få max 100 dollar og du må være i hardware-level 5 eller høyere</div>
 <div class="buttonOuter"><a href="$hardpath"><div class="buttonInner">$hard</div></a></div>
 
 

@@ -4,7 +4,7 @@ echo <<<_END
 <div id="main" class="scroll">
 
 <!-- hwlvl1 -->
-<div class="product">
+<div id="productInfo" class="product">
 <h4>Hardware</h4>
 <p>Here you can upgrade your computer for a shorter cooldown on jobs and unlocking harder jobs</p>
 </div>
@@ -14,7 +14,7 @@ echo <<<_END
 <div class="product">
 <h4>IBM 4Kilo</h4>
 <img src="img/computer1.jpg" />
-<p>Laptop from your moms basement. No cooldown on jobs</p>
+<p>Laptop from your moms basement. Can you even code on this?</p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl0" />
 <input type="submit" value="$hw0" $hw0disabled>
