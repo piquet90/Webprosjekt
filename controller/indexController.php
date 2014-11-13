@@ -145,7 +145,7 @@ Class indexController Extends baseController {
 
         $saldo = '1000';
         $xp = '1';
-        $hwlevel = '1';
+        $hwlevel = '0';
         $coid = 'Solo Developer';
 
         $query = "INSERT INTO users (username, password, fornavn, etternavn, email, saldo, xp, hwlevel, coid) VALUES ('$username', '$password', '$firstname', '$lastname', '$email', '$saldo', '$xp', '$hwlevel', '$coid')";
