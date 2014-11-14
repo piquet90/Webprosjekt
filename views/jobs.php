@@ -24,6 +24,7 @@ function update(id) {
 	restSek = Math.floor(restSek);
 	document.getElementById(id).innerHTML = ("0" + timer).slice(-2) + ":" + ("0" + min).slice(-2) + ":" + ("0" + restSek).slice(-2);
 	if(sek == 0) {
+		document.getElementById(id).innerHTML = "00:00:00";
 		clearInterval(interval[id]);
 		window.setTimeout(function() {window.location.href = "index.php?rt=jobs/index";}, 2000);
 	}
