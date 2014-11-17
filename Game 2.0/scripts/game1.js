@@ -1,3 +1,5 @@
+var run = true;
+
 var canvas = document.getElementById("ramme");
 var ctx = canvas.getContext("2d");
 canvas.width = 800;
@@ -55,6 +57,7 @@ addEventListener("keyup", function (e) {
 var gameOver = function () {
 	goal.x = canvas.width / 2;
 	resetBall();
+	run = false;
 };
 
 var resetBall = function () {
@@ -63,25 +66,37 @@ var resetBall = function () {
 }
 
 var update = function(modifier) {
-	if(37 in keysDown) {
-		goal.x -= goal.speed * modifier;
-	}
-	if(39 in keysDown) {
-		goal.x += goal.speed * modifier;
-	}
-	
-	ball.y += ball.speed * modifier;
-	
-	if((ball.y - 33) >= 500) {
-		if(ball.x >= goal.x && (ball.x + 33) <= (goal.x + 128)) {
-			points += 10;
-			resetBall();
+	if(run) {
+		if(37 in keysDown) {
+			goal.x -= goal.speed * modifier;
 		}
-		else {
-			gameOver();
+		if(39 in keysDown) {
+			goal.x += goal.speed * modifier;
+		}
+	
+		ball.y += ball.speed * modifier;
+	
+		if((ball.y - 33) >= 500) {
+			if(ball.x >= goal.x && (ball.x + 33) <= (goal.x + 128)) {
+				points += 10;
+				resetBall();
+			}
+			else {
+				gameOver();
+			}
+		}
+	}
+	else {
+		if(32 in keysDown) {
+			start();
 		}
 	}
 };
+
+var start = function () {
+	points = 0;
+	run = true;	
+}
 
 var updatePoints = function () {
 	var tekst = "00000";
@@ -102,28 +117,33 @@ var updatePoints = function () {
 };
 
 var draw = function() {
-	if(bgReady) {
-		ctx.drawImage(bgImage, 0, 0);
-	}
+	if(run) {
+		if(bgReady) {
+			ctx.drawImage(bgImage, 0, 0);
+		}
 	
-	if(goalReady) {
-		ctx.drawImage(goalImage, goal.x, goal.y);
-	}
+		if(goalReady) {
+			ctx.drawImage(goalImage, goal.x, goal.y);
+		}
 	
-	if(ballReady) {
-		ctx.drawImage(ballImage, ball.x, ball.y);
-	}
+		if(ballReady) {
+			ctx.drawImage(ballImage, ball.x, ball.y);
+		}
 	
-	updatePoints();
+		updatePoints();
+	}
+	else {
+		
+	}
 };
 
 var main = function () {
 	var now = Date.now();
 	var dif = now - then;
-	
+
 	update(dif / 1000);
 	draw();
-	
+
 	then = now;
 	
 	requestAnimationFrame(main);
