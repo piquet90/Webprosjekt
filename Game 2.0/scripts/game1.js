@@ -28,16 +28,16 @@ var goal = {
 	speed: 400,
 	x: canvas.width / 2,
 	y: canvas.height - 100,
-	height: goalImage.height,
-	width: goalImage.width
+	height: goalImage.clientHeight,
+	width: goalImage.clientWidth
 };
 
 var ball = {
 	speed: 256,
 	x: 0,
 	y: 0,
-	height: ballImage.height,
-	width: ballImage.width
+	height: ballImage.clientHeight,
+	width: ballImage.clientWidth
 };
 
 var points = 0;
@@ -54,10 +54,13 @@ addEventListener("keyup", function (e) {
 
 var gameOver = function () {
 	goal.x = canvas.width / 2;
-	
+	resetBall();
+};
+
+var resetBall = function () {
 	ball.x = Math.random() * canvas.width;
 	ball.y = -33;
-};
+}
 
 var update = function(modifier) {
 	if(37 in keysDown) {
@@ -69,14 +72,10 @@ var update = function(modifier) {
 	
 	ball.y += ball.speed * modifier;
 	
-	if((ball.y - ball.height) >= 500) {
-		var maxL = goal.x;
-		var maxR = maxL + goal.width;
-		var dotL = ball.x;
-		var dotR = dotL + ball.width;
-		if(dotR > maxL && dotL < maxR) {
+	if((ball.y - 33) >= 500) {
+		if(ball.x >= goal.x && (ball.x + 33) <= (goal.x + 128)) {
 			points += 10;
-			ball.height = -33;
+			resetBall();
 		}
 		else {
 			gameOver();
@@ -99,7 +98,7 @@ var updatePoints = function () {
 	}
 	ctx.font = "30px 'Black Ops One'";
 	ctx.fillStyle = "white";
-	ctx.fillText(tekst, 175, 50);
+	ctx.fillText(tekst, 650, 50);
 };
 
 var draw = function() {
