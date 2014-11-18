@@ -27,14 +27,11 @@ Silicon Valley Startup
 	><li><a href="$logout"><strong>Logg ut</strong></a></li>
 </ul>
 </div>
-
-
-
 <div id="navbar">
-<div class="userImg" profilepicture style="background:url(img/agentsmith.jpg) no-repeat center;"></div>
+<div class="userImg" style="background:url(img/agentsmith.jpg) no-repeat center;"></div>
 <ul>
 
-	<li class="user"><strong><a href="">$username</strong></a></li>
+	<li class="user"><a href=""><strong>$username</strong></a></li>
 	<li class="cell">Nybegynner</li>
 	<li class="cell"><strong>Konto</strong> <br>$$saldo</li>
 	<li class="cell"><strong>Firma</strong><br><a href="">$coid</a></li>
