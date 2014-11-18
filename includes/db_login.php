@@ -1,8 +1,8 @@
 <?php
 
-$db_host = 'localhost';
-$db_database = 'itw_db';
-$db_username = 'root';
-$db_password = '';
+$db_host = 'db4free.net';
+$db_database = 'it_wars';
+$db_username = 'rudi';
+$db_password = 'rudi123';
 
 ?>
