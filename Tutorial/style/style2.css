@@ -17,9 +17,12 @@ body{
 }
 
 #wrapper {
+	position:static;
 	width:65%;
 	min-width:62rem;
-	margin: 0 auto;
+	margin:0 auto;
+	overflow:auto;
+	padding:0;
 }
 
 .user{margin-bottom:0rem;width:100%;}
@@ -49,6 +52,7 @@ body{
 }
 
 #topbar {
+	position:relative;
 	display: block;
 	box-sizing:border-box;
 	padding:1rem;
@@ -59,6 +63,7 @@ body{
 	border:#fff 0px solid;
 	border-radius:1rem;
 	text-align:center;
+	z-index:3;
 }
 
 #topbar a {
@@ -102,6 +107,7 @@ body{
 
 
 #navbar {
+	position:relative;
 	float: right;
 	font-family:'Glegoo',sans-serif;
 	width:19%;
@@ -119,6 +125,7 @@ body{
 	
 	border-top-right-radius:1rem;
 	border-bottom-right-radius:1rem;
+	z-index:5;
 }
 
 @media (min-width:120rem){
@@ -145,6 +152,7 @@ body{
 }
 
 #main {
+	position:relative;
 	float:left;
 	width:76%;
 	background-color:rgba(50, 50, 50, 0.97);
@@ -157,6 +165,7 @@ body{
 	height:65vh;
 	/*max-height:65vh; */
 	min-height:35rem;
+	z-index:7;
 }
 
 @media (min-width:120rem){
