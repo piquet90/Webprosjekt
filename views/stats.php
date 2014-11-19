@@ -28,23 +28,20 @@ Jørgen, <div class="firmaeier">Erik</div>, Johan Erik Samuelsen, Somaliano, bø
 
 <div id="left" class="stats"><h7>Sist registrerte</h7>
 <br><br>
-<p>$users</p>
-<p>$users</p>
+<p>$newestUsers</p>
 </div>
 
 
 
 <div class="stats"><h7>10 rikeste</h7>
 <br><br>
-<p>$users</p>
-<p>$users</p>
+<p>$richestUsers</p>
 </div>
 
 
 <div id="right" class="stats"><h7>10 høyest rank</h7>
 <br><br>
-<p>$users</p>
-<p>$users</p>
+<p>$mostxp</p>
 </div>
 
 _END;
