@@ -63,7 +63,7 @@ body{
 	border:#fff 0px solid;
 	border-radius:1rem;
 	text-align:center;
-	z-index:3;
+	z-index:1;
 }
 
 #topbar a {
@@ -125,7 +125,7 @@ body{
 	
 	border-top-right-radius:1rem;
 	border-bottom-right-radius:1rem;
-	z-index:5;
+	z-index:1;
 }
 
 @media (min-width:120rem){
@@ -165,7 +165,7 @@ body{
 	height:65vh;
 	/*max-height:65vh; */
 	min-height:35rem;
-	z-index:7;
+	z-index:1;
 }
 
 @media (min-width:120rem){
