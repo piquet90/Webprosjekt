@@ -26,29 +26,29 @@ var goalImage = new Image();
 goalImage.onload = function () {
 	goalReady = true;
 };
-goalImage.src = "images/CharlieMaal.png";
+goalImage.src = "images/goal.png";
 
 var ballReady = false;
 var ballImage = new Image();
 ballImage.onload = function () {
 	ballReady = true;
 };
-ballImage.src = "images/fotball.png";
+ballImage.src = "images/football.png";
 
 var goal = {
 	speed: 400,
+	height: 72,
+	width: 128,
 	x: canvas.width / 2,
-	y: canvas.height - 100,
-	height: goalImage.clientHeight,
-	width: goalImage.clientWidth
+	y: canvas.height - 72
 };
 
 var ball = {
 	speed: 256,
 	x: 0,
 	y: 0,
-	height: ballImage.clientHeight,
-	width: ballImage.clientWidth
+	height: 33,
+	width: 33
 };
 
 var points = 0;
@@ -64,7 +64,7 @@ addEventListener("keyup", function (e) {
 }, false);
 
 var gameOver = function () {
-	goal.x = canvas.width / 2;
+	goal.x = ((canvas.width / 2) - (goal.width / 2));
 	resetBall();
 	document.getElementById("knapp").style.visibility = "visible";
 	run = false;
@@ -72,7 +72,7 @@ var gameOver = function () {
 
 var resetBall = function () {
 	ball.x = Math.random() * canvas.width;
-	ball.y = -33;
+	ball.y = -ball.height;
 };
 
 var update = function(modifier) {
@@ -86,8 +86,8 @@ var update = function(modifier) {
 
 		ball.y += ball.speed * modifier;
 
-		if((ball.y - 33) >= 500) {
-			if(ball.x >= goal.x && (ball.x + 33) <= (goal.x + 128)) {
+		if(ball.y >= 500) {
+			if(ball.x >= goal.x && (ball.x + ball.width) <= (goal.x + goal.width)) {
 				points += 10;
 				resetBall();
 			}
