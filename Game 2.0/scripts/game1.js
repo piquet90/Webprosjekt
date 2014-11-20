@@ -26,7 +26,7 @@ var goalImage = new Image();
 goalImage.onload = function () {
 	goalReady = true;
 };
-goalImage.src = "images/BetaMaal.png";
+goalImage.src = "images/CharlieMaal.png";
 
 var ballReady = false;
 var ballImage = new Image();
