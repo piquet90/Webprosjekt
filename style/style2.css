@@ -9,7 +9,7 @@ html {
   	-o-background-size: cover;
   	background-size: cover;
 	font-family:"Glegoo", sans-serif;
-	font-size:15px;
+	font-size:19px;
 }
 
 body{
@@ -320,13 +320,14 @@ input[type=submit]:disabled {
 
 .product {
 	float:left;
-	padding: 1.1rem;
+	
 	box-sizing:border-box;
-	width: 48%;
+	padding:1.1rem;
+	width: 45.55%;
 	font-size:0.9rem;
 	height:13rem;
 	background:#282828;
-	margin-bottom:2rem;
+	
 }
 
 .productspace {
