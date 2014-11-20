@@ -2,8 +2,8 @@
 
 /*Cascading style sheet for login-screen*/
 
-html {
-	background:green;
+html { 
+	background:url(Img/background.jpg) no-repeat center center fixed; 
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -320,13 +320,14 @@ input[type=submit]:disabled {
 
 .product {
 	float:left;
-	padding: 1.1rem;
+	
 	box-sizing:border-box;
-	width: 48%;
+	padding:1.1rem;
+	width: 45.55%;
 	font-size:0.9rem;
 	height:13rem;
 	background:#282828;
-	margin-bottom:2rem;
+	
 }
 
 .productspace {
