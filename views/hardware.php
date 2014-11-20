@@ -9,6 +9,8 @@ echo <<<_END
 <p>Here you can upgrade your computer for a shorter cooldown on jobs and unlocking harder jobs</p>
 </div>
 
+<div class="productspace"> </div>
+
 
 <!-- hwlvl0 -->
 <div class="product">
@@ -21,7 +23,6 @@ echo <<<_END
 </form>
 </div>
 
-
 <!-- hwlvl1 -->
 <div class="product">
 <h4>Asia LAPTOP FLEXI - $1500</h4>
@@ -33,16 +34,19 @@ echo <<<_END
 </form>
 </div>
 
+<div class="productspace"> </div>
+
 
 <!-- hwlvl2 -->
 <div class="product">
 <h4>Amsung - $4500</h4>
-<p>The great amsung. Due to discontinuation of Amsung laptops, this option is no longer available</p>
+<p>Lagger akkurat liten nok til å være brukbar. +15% boost!</p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl2" />
 <input type="submit" value="$hw2" $hw2disabled>
 </form>
 </div>
+
 
 <!-- hwlvl3 -->
 <div class="product">
@@ -54,6 +58,9 @@ echo <<<_END
 <input type="submit" value="$hw3" $hw3disabled>
 </form>
 </div>
+
+
+<div class="productspace"> </div>
 
 <!-- hwlvl4 -->
 <div class="product">
@@ -76,6 +83,8 @@ echo <<<_END
 <input type="submit" value="$hw5" $hw5disabled>
 </form>
 </div>
+
+<div class="productspace"> </div>
 
 <!-- hwlvl6 -->
 <div class="product">

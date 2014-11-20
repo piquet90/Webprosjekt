@@ -8,9 +8,16 @@ echo <<<_END
 <title>
 Silicon Valley Startup
 </title>
-<link rel="stylesheet" type="text/css" href="$css">
 
 <link href='http://fonts.googleapis.com/css?family=Glegoo' rel='stylesheet' type='text/css'>
+
+<link rel="stylesheet" media="screen and (min-width:900px)" href="$css" />
+<link rel="stylesheet" media="screen and (min-width: 700px) and (max-width: 900px)" type="text/css" href="style/style3.css" />
+<link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 700px)" type="text/css" href="style/style4.css" />
+<link rel="stylesheet" media="only screen and (min-devicewidth: 320px) and (max-width: 480px)" type="text/css" href="style/styleMobile.css" />
+
+
+
 
 <meta charset="UTF-8" />
 </head>
@@ -19,12 +26,13 @@ Silicon Valley Startup
 <div id="wrapper">
 <div id="topbar">
 <ul>
-	<li><a href="$mainpage">Hovedside</a></li
-	><li><a href="$jobs">Jobber</a></li
-	><li><a href="$hardware">Hardware</a></li
-	><li><a href="$company">Firma</a></li
-	><li><a href="$stats">Spillstatistikk</a></li
-	><li><a href="$logout"><strong>Logg ut</strong></a></li>
+	<li><a href="$mainpage" class="l">LOGO</a></li
+	><li><a href="$jobs" class="l">Jobber</a></li
+	><li><a href="$hardware" class="l">Hardware</a></li
+	><li><a href="$company" class="l">Firma</a></li
+	><li><a href="$stats" class="l">Spillstatistikk</a></li
+	><li><a href="$mainpage" class="l">Minispill</a></li
+	><li><a href="$logout" class="r"><strong>Logg ut</strong></a></li>
 </ul>
 </div>
 <div id="navbar">

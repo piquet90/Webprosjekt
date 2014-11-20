@@ -2,8 +2,8 @@
 
 /*Cascading style sheet for login-screen*/
 
-html { 
-	background:url(Img/background.jpg) no-repeat center center fixed; 
+html {
+	background:yellow;
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
