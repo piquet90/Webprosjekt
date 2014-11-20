@@ -73,6 +73,7 @@ function doJob() {
 function countDown() {
 	tell("simple", 10);
 	document.getElementById("textBox").innerHTML += "<br\><br\>Vi har satt opp hardware levelen din, så jobben vil nå bare ta 10 sekunder.";
+	document.getElementById("simple").onclick = function() {};
 }
 
 function reward() {

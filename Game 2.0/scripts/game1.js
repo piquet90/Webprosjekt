@@ -4,14 +4,6 @@ var text = {
 	line2: ""
 };
 
-var button = {
-	text: "",
-	width: 0,
-	height: 0
-};
-
-var buttonPress;
-
 var mousePosition = {
 	x: 0,
 	y: 0
@@ -71,23 +63,10 @@ addEventListener("keyup", function (e) {
 	delete keysDown[e.keyCode];
 }, false);
 
-addEventListener("mousemove", function (e) {
-	var frame = canvas.getBoundingClientRect(); //Får top, bottom, left and right av canvas
-	mousePosition.x = e.clientX - frame.left;
-	mousePosition.y = e.clientY - frame.top;
-}, false);
-
-if (event.which === null) { /* IE case */
-	buttonPress = (event.button < 2) ? "LEFT" : ((event.button == 4) ? "MIDDLE" : "RIGHT");
-}
-
-else { /* All others */
-	buttonPress = (event.which < 2) ? "LEFT" : ((event.which == 2) ? "MIDDLE" : "RIGHT");
-}
-
 var gameOver = function () {
 	goal.x = canvas.width / 2;
 	resetBall();
+	document.getElementById("knapp").style.visibility = "visible";
 	run = false;
 };
 
@@ -120,29 +99,16 @@ var update = function(modifier) {
 	else {
 		text.line1 = "GAME OVER!";
 		text.line2 = "Score: " + points;
-		button.text = "Try again";
-
 		if(32 in keysDown) {
 			start();
-		}
-		if(buttonPress == "LEFT")
-		{
-			var posL = (canvas.width / 2) - button.width;
-			var posR = (canvas.width / 2) + button.width;
-			var posT = 300;
-			var posB = 300 + button.height;
-			if(mousePosition.x >= posL && mousePosition.x <= posR && mousePosition.y >= posT && mousePosition.y <= posB)
-			{
-				buttonPress = "";
-				start();
-			}
 		}
 	}
 };
 
 var start = function () {
 	points = 0;
-	run = true;
+	document.getElementById("knapp").style.visibility = "hidden";
+	run = true;	
 };
 
 var updatePoints = function () {
@@ -173,15 +139,6 @@ var updateText = function () {
 	ctx.fillText(text.line2, canvas.width / 2, 200);
 };
 
-var updateButton = function () {
-	ctx.font = "40px 'Black Ops One'";
-	ctx.textAlign = "center";
-	ctx.fillStyle = "white";
-	button.width = ctx.measureText(button.text);
-	button.height = 40 * 1.5;
-	ctx.fillText(button.text, canvas.width / 2, 300);
-};
-
 var draw = function() {
 		if(bgReady) {
 			ctx.drawImage(bgImage, 0, 0);
@@ -199,7 +156,6 @@ var draw = function() {
 
 		if(!run) {
 			updateText();
-			updateButton();
 		}
 };
 
