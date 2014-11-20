@@ -40,7 +40,7 @@ echo <<<_END
 <!-- hwlvl2 -->
 <div class="product">
 <h4>Amsung - $4500</h4>
-<p>Lagger akkurat liten nok til å være brukbar. +15% boost!</p>
+<p>Lagger akkurat lite nok til å være brukbar. +15% boost!</p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl2" />
 <input type="submit" value="$hw2" $hw2disabled>

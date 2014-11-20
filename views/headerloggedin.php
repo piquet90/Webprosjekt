@@ -24,7 +24,7 @@ Silicon Valley Startup
 <div id="wrapper">
 <div id="topbar">
 <ul>
-	<li><a href="$mainpage" class="l">LOGO</a></li
+	<li><a href="$mainpage" class="l">Hjem</a></li
 	><li><a href="$jobs" class="l">Jobber</a></li
 	><li><a href="$hardware" class="l">Hardware</a></li
 	><li><a href="$company" class="l">Firma</a></li
