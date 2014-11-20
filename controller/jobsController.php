@@ -4,17 +4,21 @@ Class jobsController Extends baseController {
 
 	private $uid;
 
+
 	private $simplexp = 2;
 	private $simplecash = 100;
 	private $simpleCooldown = 240;
+	private $simplehwlevel = 0;
 
 	private $mediumxp = 8;
 	private $mediumcash = 400;
 	private $mediumCooldown = 480;
+	private $mediumhwlevel = 3;
 
 	private $hardxp = 32;
 	private $hardcash = 1600;
 	private $hardCooldown = 960;
+	private $hardhwlevel = 5;
 
 	private function job($type)
 	{
@@ -28,21 +32,29 @@ Class jobsController Extends baseController {
 		{
 			$now = time();
 
-			// set time for job for use with cooldown
-			$query = "UPDATE jobs SET $type='$now' WHERE uid='$this->uid'";
-			queryMysql($query);
-
 			// get current XP
 			$query = "SELECT * FROM users WHERE uid='$this->uid'";
 			$result =queryMysql($query);
 			$row = $result->fetch_assoc();
+			if($row['hwlevel']<$this->{$type."hwlevel"})
+			{
 
-			$xp = $row['xp']+$this->{$type."xp"};
-			$balance = $row['saldo']+$this->{$type."cash"};
+			}
+			else
+			{
+				$xp = $row['xp']+$this->{$type."xp"};
+				$balance = $row['saldo']+$this->{$type."cash"};
 
-			// set time for job for use with cooldown
-			$query = "UPDATE users SET xp='$xp', saldo='$balance' WHERE uid='$this->uid'";
-			queryMysql($query);
+				// set time for job for use with cooldown
+				$query = "UPDATE jobs SET $type='$now' WHERE uid='$this->uid'";
+				queryMysql($query);
+
+
+
+				// set time for job for use with cooldown
+				$query = "UPDATE users SET xp='$xp', saldo='$balance' WHERE uid='$this->uid'";
+				queryMysql($query);
+			}
 
 		}
 
@@ -50,7 +62,6 @@ Class jobsController Extends baseController {
 	public function simple()
 	{
 		$this->uid = $_SESSION['uid'];
-
 		$this->job("simple");
 		$this->index();
 	}
@@ -71,12 +82,6 @@ Class jobsController Extends baseController {
 
 	public function index() 
 	{
-		/*
-		$query = "SELECT * FROM userxp WHERE uid='$uid'";
-		$result = queryMysql($query);
-
-		$row = $result->fetch_array(MYSQLI_ASSOC);
-		*/
 		$this->uid = $_SESSION['uid'];
 
 		$row = $this->exists()->fetch_assoc();
@@ -95,8 +100,15 @@ Class jobsController Extends baseController {
 		$row = $r;
 		$now = time();
 		$diff = $now-$row[$type];
-
-		if($diff>$this->getCooldown($this->{$type."Cooldown"}))
+		$query = "SELECT * FROM users WHERE uid='$this->uid'";
+		$result =queryMysql($query);
+		$row = $result->fetch_assoc();
+		if($row['hwlevel']<$this->{$type."hwlevel"})
+		{
+			$this->registry->template->{$type} = 'Upgrade to unlock';
+			$this->registry->template->{$type."path"} = makePath('jobs/index');
+		}
+		else if($diff>$this->getCooldown($this->{$type."Cooldown"}))
 		{
 			$this->registry->template->{$type} = ucfirst($type).' Job';
 			$this->registry->template->{$type."path"} = makePath('jobs/'.$type);
@@ -107,12 +119,6 @@ Class jobsController Extends baseController {
 			$this->registry->template->{$type."path"} = makePath('jobs/index');
 		}
 	}
-
-	// do i even use this?
-	/* private function simpleJob()
-	{
-		makePath('jobs/simple');
-	} */
 
 	private function exists()
 	{
