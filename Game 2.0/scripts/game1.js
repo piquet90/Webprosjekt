@@ -34,7 +34,7 @@ var goalImage = new Image();
 goalImage.onload = function () {
 	goalReady = true;
 };
-goalImage.src = "images/goal.png";
+goalImage.src = "images/BetaMaal.png";
 
 var ballReady = false;
 var ballImage = new Image();
@@ -104,9 +104,9 @@ var update = function(modifier) {
 		if(39 in keysDown) {
 			goal.x += goal.speed * modifier;
 		}
-	
+
 		ball.y += ball.speed * modifier;
-	
+
 		if((ball.y - 33) >= 500) {
 			if(ball.x >= goal.x && (ball.x + 33) <= (goal.x + 128)) {
 				points += 10;
@@ -121,7 +121,7 @@ var update = function(modifier) {
 		text.line1 = "GAME OVER!";
 		text.line2 = "Score: " + points;
 		button.text = "Try again";
-		
+
 		if(32 in keysDown) {
 			start();
 		}
@@ -142,7 +142,7 @@ var update = function(modifier) {
 
 var start = function () {
 	points = 0;
-	run = true;	
+	run = true;
 };
 
 var updatePoints = function () {
@@ -168,7 +168,7 @@ var updateText = function () {
 	ctx.textAlign = "center";
 	ctx.fillStyle = "white";
 	ctx.fillText(text.line1, canvas.width / 2, 150);
-	
+
 	ctx.font = "30px 'Black Ops One'";
 	ctx.fillText(text.line2, canvas.width / 2, 200);
 };
@@ -186,17 +186,17 @@ var draw = function() {
 		if(bgReady) {
 			ctx.drawImage(bgImage, 0, 0);
 		}
-		
+
 		if(ballReady) {
 			ctx.drawImage(ballImage, ball.x, ball.y);
 		}
-	
+
 		if(goalReady) {
 			ctx.drawImage(goalImage, goal.x, goal.y);
 		}
-	
+
 		updatePoints();
-		
+
 		if(!run) {
 			updateText();
 			updateButton();
@@ -211,7 +211,7 @@ var main = function () {
 	draw();
 
 	then = now;
-	
+
 	requestAnimationFrame(main);
 };
 
