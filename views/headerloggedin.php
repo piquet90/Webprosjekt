@@ -11,9 +11,11 @@ Silicon Valley Startup
 
 <link href='http://fonts.googleapis.com/css?family=Glegoo' rel='stylesheet' type='text/css'>
 
-<link rel="stylesheet" media="screen and (min-width:900px)" href="$css" />
-<link rel="stylesheet" media="screen and (min-width: 700px) and (max-width: 900px)" type="text/css" href="style/style3.css" />
-<link rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 700px)" type="text/css" href="style/style4.css" />
+<link rel="stylesheet" media="screen and (min-width:1920px)" href="$css" />
+<link rel="stylesheet" media="screen and (min-width:1367px) and (max-width:1919px)" type="text/css" href="style/style3.css" />
+<link rel="stylesheet" media="screen and (min-width:1024px) and (max-width:1366px)" type="text/css" href="style/style4.css" />
+<link rel="stylesheet" media="screen and (min-width:800px) and (max-width:1023px)" type="text/css" href="style/style4.css" />
+<link rel="stylesheet" media="screen and (max-width:799px)" type="text/css" href="style/style4.css" />
 <link rel="stylesheet" media="only screen and (min-devicewidth: 320px) and (max-width: 480px)" type="text/css" href="style/styleMobile.css" />
 
 
