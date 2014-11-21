@@ -29,7 +29,7 @@ Silicon Valley Startup
 	><li><a href="$hardware" class="l">Hardware</a></li
 	><li><a href="$company" class="l">Firma</a></li
 	><li><a href="$stats" class="l">Spillstatistikk</a></li
-	><li><a href="$mainpage" class="l">Minispill</a></li
+	><li><a href="$minigame" class="l">Minispill</a></li
 	><li><a href="$logout" class="r"><strong>Logg ut</strong></a></li>
 </ul>
 </div>
