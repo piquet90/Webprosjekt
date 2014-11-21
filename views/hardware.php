@@ -25,6 +25,7 @@ echo <<<_END
 </div>
 
 
+
 <!-- hwlvl1 -->
 <div class="product">
 <h4>Asia LAPTOP FLEXI - $1500</h4>
@@ -36,37 +37,41 @@ echo <<<_END
 </form>
 </div>
 
+
 <div class="pspace"> </div>
 
 
 <!-- hwlvl2 -->
 <div class="product">
 <h4>Amsung - $4500</h4>
-<p>The great amsung. Due to discontinuation of Amsung laptops, this option is no longer available</p>
+<p>Lagger akkurat lite nok til å være brukbar. +20% boost!</p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl2" />
 <input type="submit" value="$hw2" $hw2disabled>
 </form>
 </div>
 
+
 <!-- hwlvl3 -->
 <div class="product">
 <h4>Dell Latitude - $9000</h4>
 <img src="img/computer3.jpg" />
-<p>A really average laptop. 25% reduced cooldown on jobs.</p>
+<p>A really average laptop. 30% reduced cooldown on jobs.</p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl3" />
 <input type="submit" value="$hw3" $hw3disabled>
 </form>
 </div>
 
+
 <div class="pspace"> </div>
+
 
 <!-- hwlvl4 -->
 <div class="product">
 <h4>Lenovo Thinkpad - $18000</h4>
 <img src="img/computer4.jpg" />
-<p>The classic Lenovo Thinkpad. 30% reduced cooldown on jobs.</p>
+<p>The classic Lenovo Thinkpad. 40% reduced cooldown on jobs.</p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl4" />
 <input type="submit" value="$hw4" $hw4disabled>
@@ -86,7 +91,11 @@ echo <<<_END
 </form>
 </div>
 
+
+
 <div class="pspace"> </div>
+
+
 
 <!-- hwlvl6 -->
 <div class="product">

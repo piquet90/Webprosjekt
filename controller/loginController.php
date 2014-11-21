@@ -28,6 +28,7 @@ Class loginController Extends baseController {
 		$this->registry->template->jobs = makePath("jobs/index");
 		$this->registry->template->stats = makePath("stats/index");
 		$this->registry->template->company = makePath("company/index");
+		$this->registry->template->minigame = makePath("minigame/index");
 
 		$this->registry->template->show('headerloggedin');
 

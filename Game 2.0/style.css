@@ -1,6 +1,28 @@
+body {
+	font-family:"Black Ops One", sans-serif;
+}
+
 #wrapper {
 	position:relative;
 	margin:0 auto;
 	width:800px;
 	height:auto;
+}
+
+#ramme {
+	position:absolute;
+	z-index:1;
+}
+
+#knapp {
+	position:absolute;
+	height:50px;
+	width:250px;
+	z-index:2;
+	top:310px;
+	left:275px;
+	color:white;
+	font-size:40px;
+	text-align:center;
+	cursor:pointer;
 }

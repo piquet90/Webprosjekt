@@ -1,16 +1,10 @@
-var run = true;
+var run = false;
+var speed = true;
 var text = {
 	line1: "",
-	line2: ""
+	line2: "",
+	line3: ""
 };
-
-var button = {
-	text: "",
-	width: 0,
-	height: 0
-};
-
-var buttonPress;
 
 var mousePosition = {
 	x: 0,
@@ -41,22 +35,22 @@ var ballImage = new Image();
 ballImage.onload = function () {
 	ballReady = true;
 };
-ballImage.src = "images/fotball.png";
+ballImage.src = "images/football.png";
 
 var goal = {
 	speed: 400,
-	x: canvas.width / 2,
-	y: canvas.height - 100,
-	height: goalImage.clientHeight,
-	width: goalImage.clientWidth
+	height: 72,
+	width: 128,
+	x: 0,
+	y: canvas.height - 72
 };
 
 var ball = {
 	speed: 256,
 	x: 0,
 	y: 0,
-	height: ballImage.clientHeight,
-	width: ballImage.clientWidth
+	height: 33,
+	width: 33
 };
 
 var points = 0;
@@ -71,44 +65,63 @@ addEventListener("keyup", function (e) {
 	delete keysDown[e.keyCode];
 }, false);
 
-addEventListener("mousemove", function (e) {
-	var frame = canvas.getBoundingClientRect(); //Får top, bottom, left and right av canvas
-	mousePosition.x = e.clientX - frame.left;
-	mousePosition.y = e.clientY - frame.top;
-}, false);
-
-if (event.which === null) { /* IE case */
-	buttonPress = (event.button < 2) ? "LEFT" : ((event.button == 4) ? "MIDDLE" : "RIGHT");
-}
-
-else { /* All others */
-	buttonPress = (event.which < 2) ? "LEFT" : ((event.which == 2) ? "MIDDLE" : "RIGHT");
-}
-
 var gameOver = function () {
-	goal.x = canvas.width / 2;
+	resetGoal();
 	resetBall();
+	document.getElementById("knapp").style.visibility = "visible";
+	text.line1 = "GAME OVER!";
+	text.line3 = "Score: " + points;
+	text.line2 = "";
+	document.getElementById("knapp").innerHTML = "Try again!";
 	run = false;
+	goal.speed = 400;
+	ball.speed = 256;
+};
+
+var startSpill = function () {
+	resetGoal();
+	resetBall();
+	text.line1 = "Goalscorer!";
+	text.line2 = "Control the goal";
+	text.line3 = "and catch the ball!";
+};
+
+var resetGoal = function () {
+	goal.x = ((canvas.width / 2) - (goal.width / 2));
 };
 
 var resetBall = function () {
-	ball.x = Math.random() * canvas.width;
-	ball.y = -33;
+	ball.x = 2 + (Math.random() * (canvas.width - ball.width - 4));
+	ball.y = -ball.height;
 };
 
 var update = function(modifier) {
 	if(run) {
 		if(37 in keysDown) {
-			goal.x -= goal.speed * modifier;
+			if(goal.x > 0) {
+				goal.x -= goal.speed * modifier;
+			}
 		}
 		if(39 in keysDown) {
-			goal.x += goal.speed * modifier;
+			if((goal.x + goal.width) < canvas.width) {
+				goal.x += goal.speed * modifier;
+			}
 		}
-	
+
+		if(speed && points != 0 && points % 100 == 0) {
+			ball.speed += 100;
+			goal.speed += 100;
+			speed = false;
+		}
+		
+		if(points % 100 != 0) {
+			speed = true;
+		}
+
 		ball.y += ball.speed * modifier;
-	
-		if((ball.y - 33) >= 500) {
-			if(ball.x >= goal.x && (ball.x + 33) <= (goal.x + 128)) {
+
+		if((ball.y + ball.height) >= canvas.height) {
+			if(ball.x >= goal.x && (ball.x + ball.width) <= (goal.x + goal.width)) {
 				points += 10;
 				resetBall();
 			}
@@ -118,30 +131,15 @@ var update = function(modifier) {
 		}
 	}
 	else {
-		text.line1 = "GAME OVER!";
-		text.line2 = "Score: " + points;
-		button.text = "Try again";
-		
 		if(32 in keysDown) {
 			start();
-		}
-		if(buttonPress == "LEFT")
-		{
-			var posL = (canvas.width / 2) - button.width;
-			var posR = (canvas.width / 2) + button.width;
-			var posT = 300;
-			var posB = 300 + button.height;
-			if(mousePosition.x >= posL && mousePosition.x <= posR && mousePosition.y >= posT && mousePosition.y <= posB)
-			{
-				buttonPress = "";
-				start();
-			}
 		}
 	}
 };
 
 var start = function () {
 	points = 0;
+	document.getElementById("knapp").style.visibility = "hidden";
 	run = true;	
 };
 
@@ -164,42 +162,45 @@ var updatePoints = function () {
 };
 
 var updateText = function () {
+	ctx.fillStyle = "rgba(160, 160, 160, 0.2)";
+	ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+	ctx.fillStyle = "rgba(0, 153, 0, 0.7)";
+	ctx.strokeStyle = "rgba(0, 153, 0, 0.7)";
+	ctx.lineJoin = "round";
+	ctx.lineWidth = 20;
+	ctx.strokeRect(195, 80, 400, 300);
+	ctx.fillRect(205, 90, 380, 280);
+	
 	ctx.font = "50px 'Black Ops One'";
 	ctx.textAlign = "center";
 	ctx.fillStyle = "white";
 	ctx.fillText(text.line1, canvas.width / 2, 150);
-	
+
 	ctx.font = "30px 'Black Ops One'";
 	ctx.fillText(text.line2, canvas.width / 2, 200);
-};
-
-var updateButton = function () {
-	ctx.font = "40px 'Black Ops One'";
-	ctx.textAlign = "center";
-	ctx.fillStyle = "white";
-	button.width = ctx.measureText(button.text);
-	button.height = 40 * 1.5;
-	ctx.fillText(button.text, canvas.width / 2, 300);
+	
+	ctx.font = "30px 'Black Ops One'";
+	ctx.fillText(text.line3, canvas.width / 2, 250);
 };
 
 var draw = function() {
 		if(bgReady) {
 			ctx.drawImage(bgImage, 0, 0);
 		}
-		
+
 		if(ballReady) {
 			ctx.drawImage(ballImage, ball.x, ball.y);
 		}
-	
+
 		if(goalReady) {
 			ctx.drawImage(goalImage, goal.x, goal.y);
 		}
-	
+
 		updatePoints();
-		
+
 		if(!run) {
 			updateText();
-			updateButton();
 		}
 };
 
@@ -211,11 +212,12 @@ var main = function () {
 	draw();
 
 	then = now;
-	
+
 	requestAnimationFrame(main);
 };
 
 requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.mozRequestAnimationFrame;
 
+startSpill();
 var then = Date.now();
 main();
