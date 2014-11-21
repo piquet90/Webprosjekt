@@ -40,7 +40,7 @@ echo <<<_END
 <!-- hwlvl2 -->
 <div class="product">
 <h4>Amsung - $4500</h4>
-<p>Lagger akkurat lite nok til å være brukbar. +15% boost!</p>
+<p>Lagger akkurat lite nok til å være brukbar. +20% boost!</p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl2" />
 <input type="submit" value="$hw2" $hw2disabled>
@@ -52,7 +52,7 @@ echo <<<_END
 <div class="product">
 <h4>Dell Latitude - $9000</h4>
 <img src="img/computer3.jpg" />
-<p>A really average laptop. 25% reduced cooldown on jobs.</p>
+<p>A really average laptop. 30% reduced cooldown on jobs.</p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl3" />
 <input type="submit" value="$hw3" $hw3disabled>
@@ -66,7 +66,7 @@ echo <<<_END
 <div class="product">
 <h4>Lenovo Thinkpad - $18000</h4>
 <img src="img/computer4.jpg" />
-<p>The classic Lenovo Thinkpad. 30% reduced cooldown on jobs.</p>
+<p>The classic Lenovo Thinkpad. 40% reduced cooldown on jobs.</p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl4" />
 <input type="submit" value="$hw4" $hw4disabled>
