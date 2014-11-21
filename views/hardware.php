@@ -10,6 +10,9 @@ echo <<<_END
 </div>
 
 
+<div class="pspace"> </div>
+
+
 <!-- hwlvl0 -->
 <div class="product">
 <h4>IBM 4Kilo</h4>
@@ -33,6 +36,8 @@ echo <<<_END
 </form>
 </div>
 
+<div class="pspace"> </div>
+
 
 <!-- hwlvl2 -->
 <div class="product">
@@ -55,6 +60,8 @@ echo <<<_END
 </form>
 </div>
 
+<div class="pspace"> </div>
+
 <!-- hwlvl4 -->
 <div class="product">
 <h4>Lenovo Thinkpad - $18000</h4>
@@ -66,6 +73,8 @@ echo <<<_END
 </form>
 </div>
 
+
+
 <!-- hwlvl5 -->
 <div class="product">
 <h4>Macbook Pro - $34000</h4>
@@ -76,6 +85,8 @@ echo <<<_END
 <input type="submit" value="$hw5" $hw5disabled>
 </form>
 </div>
+
+<div class="pspace"> </div>
 
 <!-- hwlvl6 -->
 <div class="product">

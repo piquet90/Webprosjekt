@@ -313,17 +313,14 @@ input[type=submit]:disabled {
 .product {
 	float:left;
 	box-sizing:border-box;
-	padding: 1.1rem;
-	width: 45.32%;
+	padding:1rem;
+	width: 48.5%;
 	font-size:0.9rem;
 	height:13rem;
 	background:#282828;
-	margin:1rem;
+	margin-bottom:1.75rem;
 }
 
-@media (min-width:120rem){
-	.product{margin:1.7rem 1rem 1.7rem 1rem;}
-}
 
 .product p {
 	margin: 0;
@@ -344,6 +341,12 @@ input[type=submit]:disabled {
 .product input {
 	float: right;
 	bottom:0;
+}
+
+.pspace{
+	width:3%;
+	float:left;
+	height:1px;
 }
 
 #yourCompany{
