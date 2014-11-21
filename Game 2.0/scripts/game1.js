@@ -1,7 +1,9 @@
-var run = true;
+var run = false;
+var speed = true;
 var text = {
 	line1: "",
-	line2: ""
+	line2: "",
+	line3: ""
 };
 
 var mousePosition = {
@@ -39,7 +41,7 @@ var goal = {
 	speed: 400,
 	height: 72,
 	width: 128,
-	x: canvas.width / 2,
+	x: 0,
 	y: canvas.height - 72
 };
 
@@ -64,29 +66,61 @@ addEventListener("keyup", function (e) {
 }, false);
 
 var gameOver = function () {
-	goal.x = ((canvas.width / 2) - (goal.width / 2));
+	resetGoal();
 	resetBall();
 	document.getElementById("knapp").style.visibility = "visible";
+	text.line1 = "GAME OVER!";
+	text.line3 = "Score: " + points;
+	text.line2 = "";
+	document.getElementById("knapp").innerHTML = "Try again!";
 	run = false;
+	goal.speed = 400;
+	ball.speed = 256;
+};
+
+var startSpill = function () {
+	resetGoal();
+	resetBall();
+	text.line1 = "Goalscorer!";
+	text.line2 = "Control the goal";
+	text.line3 = "and catch the ball!";
+};
+
+var resetGoal = function () {
+	goal.x = ((canvas.width / 2) - (goal.width / 2));
 };
 
 var resetBall = function () {
-	ball.x = Math.random() * canvas.width;
+	ball.x = 2 + (Math.random() * (canvas.width - ball.width - 4));
 	ball.y = -ball.height;
 };
 
 var update = function(modifier) {
 	if(run) {
 		if(37 in keysDown) {
-			goal.x -= goal.speed * modifier;
+			if(goal.x > 0) {
+				goal.x -= goal.speed * modifier;
+			}
 		}
 		if(39 in keysDown) {
-			goal.x += goal.speed * modifier;
+			if((goal.x + goal.width) < canvas.width) {
+				goal.x += goal.speed * modifier;
+			}
+		}
+
+		if(speed && points != 0 && points % 100 == 0) {
+			ball.speed += 100;
+			goal.speed += 100;
+			speed = false;
+		}
+		
+		if(points % 100 != 0) {
+			speed = true;
 		}
 
 		ball.y += ball.speed * modifier;
 
-		if(ball.y >= 500) {
+		if(ball.y >= canvas.height) {
 			if(ball.x >= goal.x && (ball.x + ball.width) <= (goal.x + goal.width)) {
 				points += 10;
 				resetBall();
@@ -97,8 +131,6 @@ var update = function(modifier) {
 		}
 	}
 	else {
-		text.line1 = "GAME OVER!";
-		text.line2 = "Score: " + points;
 		if(32 in keysDown) {
 			start();
 		}
@@ -130,6 +162,16 @@ var updatePoints = function () {
 };
 
 var updateText = function () {
+	ctx.fillStyle = "rgba(160, 160, 160, 0.2)";
+	ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+	ctx.fillStyle = "rgba(0, 153, 0, 0.7)";
+	ctx.strokeStyle = "rgba(0, 153, 0, 0.7)";
+	ctx.lineJoin = "round";
+	ctx.lineWidth = 20;
+	ctx.strokeRect(195, 80, 400, 300);
+	ctx.fillRect(205, 90, 380, 280);
+	
 	ctx.font = "50px 'Black Ops One'";
 	ctx.textAlign = "center";
 	ctx.fillStyle = "white";
@@ -137,6 +179,9 @@ var updateText = function () {
 
 	ctx.font = "30px 'Black Ops One'";
 	ctx.fillText(text.line2, canvas.width / 2, 200);
+	
+	ctx.font = "30px 'Black Ops One'";
+	ctx.fillText(text.line3, canvas.width / 2, 250);
 };
 
 var draw = function() {
@@ -173,5 +218,6 @@ var main = function () {
 
 requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.mozRequestAnimationFrame;
 
+startSpill();
 var then = Date.now();
 main();

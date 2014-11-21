@@ -9,16 +9,16 @@
 }
 
 #textBox {
-	position:absolute;
+	position:fixed;
 	background-color:#323232;
-	width:20rem;
+	width:66%;
+	left:15.9%;
 	padding:1rem;
 	overflow:auto;
-	left:30rem;
-	top:15rem;
+	bottom:0;
 	color:#11dd99;
 	border-radius:1rem;
-	box-shadow: 10px 10px 5px rgba(86, 86, 86, 0.5);
+
 	z-index:20;
 }
 
