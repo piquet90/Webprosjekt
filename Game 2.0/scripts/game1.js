@@ -120,7 +120,7 @@ var update = function(modifier) {
 
 		ball.y += ball.speed * modifier;
 
-		if(ball.y >= canvas.height) {
+		if((ball.y + ball.height) >= canvas.height) {
 			if(ball.x >= goal.x && (ball.x + ball.width) <= (goal.x + goal.width)) {
 				points += 10;
 				resetBall();
