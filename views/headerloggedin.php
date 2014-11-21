@@ -13,7 +13,7 @@ Silicon Valley Startup
 
 <link rel="stylesheet" href="$css" />
 <link rel="stylesheet" media="only screen and (min-devicewidth: 320px) and (max-width: 480px)" type="text/css" href="style/styleMobile.css" />
-
+<link href='http://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
 
 
 

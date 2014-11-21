@@ -158,7 +158,7 @@ var updatePoints = function () {
 	}
 	ctx.font = "30px 'Black Ops One'";
 	ctx.fillStyle = "white";
-	ctx.fillText(score, 650, 50);
+	ctx.fillText(score, 530, 40);
 };
 
 var updateText = function () {
