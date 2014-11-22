@@ -3,16 +3,15 @@
 echo <<<_END
 <div id="main" class="scroll">
 <h3>Spillstatistikk</h3>
-<p>Her kommer det leaderboards</p>
 
 <p>Det er totalt <h7>$usernumber</h7> registrerte spillere</p>
 
 
 
 <div class="usersOnline">
-<p>Det er <h7>2066</h7> spillere pålogget:</p>
+<p>Det er <h7>null</h7> spillere pålogget:</p>
 
-Jørgen, <div class="firmaeier">Erik</div>, Johan Erik Samuelsen, Somaliano, børge børresen, <div class="admin">Audun</div>, øyeschtein, ØYSTEIN, playstation 4, harry pothead, erik samuelsen, south park e best
+Denne funksjonen er under utvikling
 
 <ul>
 	<li>Spiller</li>

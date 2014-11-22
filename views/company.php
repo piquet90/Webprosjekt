@@ -28,7 +28,7 @@ function f(){
 
 <div id="main" class="scroll">
 
-
+<p>siden og funksjonen er under konstruksjon, ingenting fungerer som det skal!</p>
 
 <div id="yourCompany" class="company">
 
