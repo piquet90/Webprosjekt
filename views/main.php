@@ -8,17 +8,17 @@ echo <<<_END
 
 
 <div class="news">
-<h4>22. November - Mens du venter...</h4>
+<h4>22. November - <strong>Mens du venter...</strong></h4>
 <p>Det har nå blitt lagt til et minispill, så du har noe å gjøre mens du venter på at jobbene skal tikke seg ferdige. Sjekk det ut i Minispill-taben!</p>
 </div>
 
 <div class="news">
-<h4>20. November - Tilbakemeldinger</h4>
+<h4>20. November - <strong>Tilbakemeldinger</strong></h4>
 <p>Har du forslag til forbedringer eller har funnet en feil i spillet? Send en mail til <a href="mailto:mail@advm.no">mail@advm.no</a> med en kort beskrivelse, så er du en knupp!</p>
 </div>
 
 <div class="news">
-<h4>19. November - Brukertestingen har startet!</h4>
+<h4>19. November - <strong>Brukertestingen har startet!</strong></h4>
 <p>Brukertesting har begynt! Merk at mange av spillets funksjoner fortsatt er under konstruksjon og tekst/informasjon på siden kanskje ikke er riktig.
 </div>
 
