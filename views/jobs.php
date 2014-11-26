@@ -30,8 +30,8 @@ function update(id) {
 	}
 }
 </script>
+
 <div id="main" class="scroll">
-***tid brukt burde være dynamisk etter hvor mye redusert tid du får fra hardware
 <div id="space"></div>
 
 
