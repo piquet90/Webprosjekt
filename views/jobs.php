@@ -30,6 +30,7 @@ function update(id) {
 	}
 }
 </script>
+
 <div id="main" class="scroll">
 
 <div id="space"></div>
