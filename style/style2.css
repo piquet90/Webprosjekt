@@ -572,7 +572,7 @@ button {
 #src {
 	bottom:0;
 	right:0;
-	font-size:12px;
+	font-size: 60%;
 	color:#ccc;
 	position:absolute;
 	margin-bottom:0.5rem;
