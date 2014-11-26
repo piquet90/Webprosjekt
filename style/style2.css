@@ -471,6 +471,14 @@ button {
 	font-size:0.85rem;
 }
 
+#spillWrapper {
+	position:relative;
+	margin:0 auto;
+	width:600px;
+	height:auto;
+	font-family:"Black Ops One", sans-serif;
+}
+
 #ramme {
 	position:absolute;
 	z-index:1;
@@ -481,8 +489,8 @@ button {
 	height:50px;
 	width:250px;
 	z-index:2;
-	top:430px;
-	left:355px;
+	top:310px;
+	left:175px;
 	color:white;
 	font-size:40px;
 	text-align:center;

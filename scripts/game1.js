@@ -169,8 +169,8 @@ var updateText = function () {
 	ctx.strokeStyle = "rgba(0, 153, 0, 0.7)";
 	ctx.lineJoin = "round";
 	ctx.lineWidth = 20;
-	ctx.strokeRect(195, 80, 400, 300);
-	ctx.fillRect(205, 90, 380, 280);
+	ctx.strokeRect(95, 80, 400, 300);
+	ctx.fillRect(105, 90, 380, 280);
 	
 	ctx.font = "50px 'Black Ops One'";
 	ctx.textAlign = "center";

@@ -4,41 +4,64 @@
 		<title>
 			Silicon Valley Startup
 		</title>
-		<link rel="stylesheet" type="text/css" href="style/style2.css">
-		<link rel="stylesheet" type="text/css" href="style/boxes.css">
+		<link rel="stylesheet" type="text/css" href="style/style2.css" />
+		<link rel="stylesheet" type="text/css" href="style/boxes.css" />
 		<script src="scripts/hjem.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Glegoo' rel='stylesheet' type='text/css'>
 		<meta charset="UTF-8" />
 	</head>
 	<body onload="start()">
-		<div id="textBox"></div>
 		<div id="wrapper">
 			<div id="grayBox"></div>
+			<div id="textBox">
+				<div id="text"></div>
+				<div id="neste"></div>
+				<div id="forrige"></div>
+			</div>
 			<div id="topbar">
 				<ul>
-					<li><a>Hovedside</a></li
-					><li><a href="jobber.html">Jobber</a></li
-					><li><a>Hardware</a></li
-					><li><a>Firma</a></li
-					><li><a>Spillstatistikk</a></li
-					><li><a><strong>Logg ut</strong></a></li>
+					<li><a class="l">Hjem</a></li
+					><li><a href="jobber.html" class="l">Jobber</a></li
+					><li><a class="l">Hardware</a></li
+					><li><a class="l">Firma</a></li
+					><li><a class="l">Spillstatistikk</a></li
+					><li><a class="l">Minispill</a></li
+					><li><a class="r"><strong>Logg ut</strong></a></li>
 				</ul>
 			</div>
 			<div id="navbar">
 			<div class="userImg" style="background:url(img/agentsmith.jpg) no-repeat center;"></div>
 			<ul>
-
 				<li class="user"><a><strong>Admin</strong></a></li>
 				<li class="cell">Nybegynner</li>
-				<li class="cell"><strong>Konto</strong> <br>$15000</li>
-				<li class="cell"><strong>Firma</strong><br><a>ADMIN LEGION</a></li>
-				<li class=""><strong>Erfaringspoeng<br></strong> 1000 xp</li>
+				<li class="cell"><strong>Konto</strong><br />$1500</li>
+				<li class="cell"><strong>Firma</strong><br /><a>ADMIN LEGION</a></li>
+				<li class=""><strong>Erfaringspoeng<br /></strong> 1000 xp</li>
 			</ul>
 			</div><div id="main" class="scroll">
-			<h3>Welcome</h3>
-			<p>Welcome to Silicon Valley Startup. We are currently working on
-			improving this website. More functions can come at any time.</p>
-			</div>
+			
+				<h3>Velkommen!</h3>
+
+
+
+				<div class="news">
+				<h4>22. November - <strong>Mens du venter...</strong></h4>
+				<p>Det har nå blitt lagt til et minispill, så du har noe å gjøre mens du venter på at jobbene skal tikke seg ferdige. Sjekk det ut i Minispill-taben!</p>
+				</div>
+
+				<div class="news">
+				<h4>20. November - <strong>Tilbakemeldinger</strong></h4>
+				<p>Har du forslag til forbedringer eller har funnet en feil i spillet? Send en mail til <a href="mailto:mail@advm.no">mail@advm.no</a> med en kort beskrivelse, så er du en knupp!</p>
+				</div>
+
+				<div class="news">
+				<h4>19. November - <strong>Brukertestingen har startet!</strong></h4>
+				<p>Brukertesting har begynt! Merk at mange av spillets funksjoner fortsatt er under konstruksjon og tekst/informasjon på siden kanskje ikke er riktig.
+				</div>
+
+
+				</p>
+			</div>	
 		</div> <!--end of wrapper-->
 	</body>
 </html>
