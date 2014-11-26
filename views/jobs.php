@@ -31,19 +31,19 @@ function update(id) {
 }
 </script>
 <div id="main" class="scroll">
-***tid brukt burde være dynamisk etter hvor mye redusert tid du får fra hardware
+
 <div id="space"></div>
 
 
-<div class="desc"><h4>Enkel jobb</h4> Du skal kode en nettside for en kompis. Du bruker <h7>4</h7> minutter og du får 100 dollar for jobben.</div>
+<div class="desc">Du skal kode en enkel nettside for en kompis. Du bruker <h7>4</h7> minutter og du får 100 dollar for jobben. Du trenger ikke noe hardware.</div>
 <div class="buttonOuter"><a href="$simplepath"><div class="buttonInner">$simple</div></a></div>
 
-<div class="desc"><h4>Medium jobb</h4> Du skal kode noe annet. Du bruker <h7>8</h7> minutter og du får 400 dollar. Du må ha en
+<div class="desc">Du skal rette noen bugs for firmaet til kompisen din. Du bruker <h7>8</h7> minutter og du får 400 dollar. Du må ha en
 <a href="index.php?rt=hardware/index">Dell Latitude</a> eller bedre.</div>
 
 <div class="buttonOuter"><a href="$mediumpath"><div class="buttonInner">$medium</div></a></div>
 
-<div class="desc"><h4>Vanskelig jobb</h4> Du skal lage et system for et lite firma. Du bruker <h7>16</h7> minutter på jobben og du får 1600 dollar. Du må ha en <a href="index.php?rt=hardware/index">Macbook Pro</a> eller bedre.</div>
+<div class="desc">Du skal lage et system for et lite firma. Du bruker <h7>16</h7> minutter på jobben og du får 1600 dollar. Du må ha en <a href="index.php?rt=hardware/index">Macbook Pro</a> eller bedre.</div>
 <div class="buttonOuter"><a href="$hardpath"><div class="buttonInner">$hard</div></a></div>
 
 

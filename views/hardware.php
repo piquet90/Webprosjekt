@@ -5,7 +5,7 @@ echo <<<_END
 
 <!-- hwlvl1 -->
 <div id="productInfo" class="product">
-<h4>Hardware</h4>
+
 <p>Her kan du kjøpe bedre PC-utstyr for å kunne utføre vanskeligere jobber og for å få mer <strong>boost</strong>. Jo mer boost du har, jo kortere tid bruker du på jobben.
 <br><br>
 10% boost = 10% raskere jobber osv.</p>
@@ -18,7 +18,7 @@ echo <<<_END
 <!-- hwlvl0 -->
 <div class="product">
 <h4>IBM 4Kilo</h4>
-<img src="img/computer1.jpg" />
+<img src="img/computer1.jpg" alt="En gammel, tung og sliten datamaskin - IBM 4k. Toppmodell i 1980!" />
 <p>En PC du fant i kjellern. Denne hører hjemme på et museum!</p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl0" />
@@ -31,7 +31,7 @@ echo <<<_END
 <!-- hwlvl1 -->
 <div class="product">
 <h4>Asia LAPTOP FLEXI</h4>
-<img src="img/computer2.jpg" />
+<img src="img/computer2.jpg" alt="En billig-laptop fra Asia. Utformet i grønn og hvit hardplast oser ikke akkurat denne kvalitet." />
 <p>Asian creation of sensation.<br><br>Pris: $1500<br>Boost: 10%</p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl1" />
@@ -46,6 +46,7 @@ echo <<<_END
 <!-- hwlvl2 -->
 <div class="product">
 <h4>Amsung - $4500</h4>
+<img src="img/computer2.jpg" alt=""/>
 <p>Lagger akkurat lite nok til å være brukbar.<br><br>Pris: $4500<br>Boost: 20%</p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl2" />
@@ -57,7 +58,7 @@ echo <<<_END
 <!-- hwlvl3 -->
 <div class="product">
 <h4>Dell Latitude</h4>
-<img src="img/computer3.jpg" />
+<img src="img/computer3.jpg" alt="En typisk arbeidsPC. Enkel i design og t" />
 <p>En veldig gjennosnittlig laptop.<br><br>Pris: $9000<br>Boost: 30%</p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl3" />
