@@ -5,7 +5,7 @@ echo <<<_END
 
 <!-- hwlvl1 -->
 <div id="productInfo" class="product">
-<h4>Hardware</h4>
+
 <p>Her kan du kjøpe bedre PC-utstyr for å kunne utføre vanskeligere jobber og for å få mer <strong>boost</strong>. Jo mer boost du har, jo kortere tid bruker du på jobben.
 <br><br>
 10% boost = 10% raskere jobber osv.</p>
