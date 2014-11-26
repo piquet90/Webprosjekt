@@ -46,7 +46,7 @@ echo <<<_END
 <!-- hwlvl2 -->
 <div class="product">
 <h4>Amsung </h4>
-<img src="img/computer2.jpg" alt=""/>
+<img src="img/computer6.jpg" alt="Den svert så sjeldne Amsungen er en grå og tung datamaskin med akuratt nok maskinkraft til å takle hverdagsoppgaver. Må ikke forveksles med Samsung."/>
 <p>Lagger akkurat lite nok til å være brukbar.<br><br>Pris: <strong>$4500</strong><br>Boost: <strong>20%</strong></p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl2" />
@@ -58,7 +58,7 @@ echo <<<_END
 <!-- hwlvl3 -->
 <div class="product">
 <h4>Dell Latitude</h4>
-<img src="img/computer3.jpg" alt="En typisk arbeidsPC. Enkel i design og t" />
+<img src="img/computer3.jpg" alt="En typisk arbeidsPC. Kraftig bygd, skarpe kanter og tung. En skikkelig 90-talls PC." />
 <p>En veldig gjennosnittlig laptop.<br><br>Pris: <strong>$9000</strong><br>Boost: <strong>30%</strong></p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl3" />
@@ -73,7 +73,7 @@ echo <<<_END
 <!-- hwlvl4 -->
 <div class="product">
 <h4>Lenovo Thinkpad</h4>
-<img src="img/computer4.jpg" />
+<img src="img/computer4.jpg" alt="En nyere tynnere PC laget for dagens databruk. Tynnere, lettere og kjappere enn sin forgjenger."/>
 <p>Klassiske Lenovo Thinkpad.<br><br>Pris: <strong>$18000</strong><br>Boost: <strong>40%</strong></p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl4" />
@@ -86,7 +86,7 @@ echo <<<_END
 <!-- hwlvl5 -->
 <div class="product">
 <h4>Macbook Pro</h4>
-<img src="img/computer5.jpg" />
+<img src="img/computer5.jpg" alt="Liten, lett og nydelig desing. Polert aluminium med en selvlysende Apple-logo midt på."/>
 <p>Toppspecca Macbook Pro.<br><br>Pris: <strong>$34000</strong><br>Boost: <strong>50%</strong></p>
 
 
@@ -106,7 +106,7 @@ echo <<<_END
 <!-- hwlvl6 -->
 <div class="product">
 <h4>MLG</h4>
-<img src="img/computerMLG.jpg" />
+<img src="img/computerMLG.jpg" alt="Den største og tyngste på markedet. En stasjonær PC med enorm kraft og 3 flatskjermer som kan vise alt av kraft MLG har å by på."/>
 <p>Du har for mye penger!<br><br>Pris: <strong>$68000</strong><br>Boost: <strong>60%</strong></p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl6" />
