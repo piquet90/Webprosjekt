@@ -52,43 +52,6 @@ function f(){
 
 
 
-<div class="company">
-<div class="cLogo"></div>
-<h5>Firmanavn</h5>
-
-<p>Kort beskrivelse av firmaet</p>
-
-</div>
-<div id="f"> </div>
-<div id="space"> </div>
-
-
-
-<div class="company">
-
-<div class="cLogo"></div>
-<h5>Firmanavn</h5> 
-
-<p>Kort beskrivelse av firmaet</p>
-
-</div>
-<div id="f"> </div>
-<div id="space"> </div>
-
-
-<div class="company">
-
-<div class="cLogo"></div>
-<h5>Firmanavn</h5> 
-
-<p>Kort beskrivelse av firmaet</p>
-
-</div>
-<div id="f"> </div>
-<div id="space"> </div>
-
-
-
 
 
 </div>

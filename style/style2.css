@@ -340,11 +340,12 @@ input[type=submit]:disabled {
 .product p {
 	margin: 0;
 	height:8rem;
+	
 }
 
 .product img {
 	width:35%;
-	float:left;
+	float:right;
 	margin-right:2%;
 	border:solid 1px;
 
@@ -356,6 +357,10 @@ input[type=submit]:disabled {
 .product input {
 	float: right;
 	bottom:0;
+}
+
+.product h4 {
+	display:inline;
 }
 
 
