@@ -34,7 +34,7 @@ Silicon Valley Startup
 </ul>
 </div>
 <div id="navbar">
-<div class="userImg" style="background:url(img/agentsmith.jpg) no-repeat center;"></div>
+<div class="userImg" style="background:url(img/fawkes.jpg) no-repeat center;"></div>
 <ul>
 
 	<li class="user"><a href=""><strong>$username</strong></a></li>
