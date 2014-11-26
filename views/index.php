@@ -31,7 +31,7 @@ echo <<<_END
 
 
 
-<div id="src">IMAGE <a href="">SOURCE</a></div>
+
 
 </div>
 
