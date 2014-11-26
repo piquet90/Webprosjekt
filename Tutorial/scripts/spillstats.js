@@ -28,7 +28,7 @@ function statsOverview() {
 	document.getElementById("textBox").innerHTML = text;
 }
 
-function online () {
+function online() {
 	document.getElementById("grayMain").style.visibility = "visible";
 	document.getElementById("usersOnline").style.zIndex = "14";
 	
