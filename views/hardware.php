@@ -32,7 +32,7 @@ echo <<<_END
 <div class="product">
 <h4>Asia LAPTOP FLEXI</h4>
 <img src="img/computer2.jpg" alt="En billig-laptop fra Asia. Utformet i grønn og hvit hardplast oser ikke akkurat denne kvalitet." />
-<p>Asian creation of sensation.<br><br>Pris: $1500<br>Boost: 10%</p>
+<p>Asian creation of sensation.<br><br>Pris: <strong>$1500</strong><br>Boost: <strong>10%</strong></p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl1" />
 <input type="submit" value="$hw1" $hw1disabled>
@@ -45,9 +45,9 @@ echo <<<_END
 
 <!-- hwlvl2 -->
 <div class="product">
-<h4>Amsung - $4500</h4>
+<h4>Amsung </h4>
 <img src="img/computer2.jpg" alt=""/>
-<p>Lagger akkurat lite nok til å være brukbar.<br><br>Pris: $4500<br>Boost: 20%</p>
+<p>Lagger akkurat lite nok til å være brukbar.<br><br>Pris: <strong>$4500</strong><br>Boost: <strong>20%</strong></p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl2" />
 <input type="submit" value="$hw2" $hw2disabled>
@@ -59,7 +59,7 @@ echo <<<_END
 <div class="product">
 <h4>Dell Latitude</h4>
 <img src="img/computer3.jpg" alt="En typisk arbeidsPC. Enkel i design og t" />
-<p>En veldig gjennosnittlig laptop.<br><br>Pris: $9000<br>Boost: 30%</p>
+<p>En veldig gjennosnittlig laptop.<br><br>Pris: <strong>$9000</strong><br>Boost: <strong>30%</strong></p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl3" />
 <input type="submit" value="$hw3" $hw3disabled>
@@ -74,7 +74,7 @@ echo <<<_END
 <div class="product">
 <h4>Lenovo Thinkpad</h4>
 <img src="img/computer4.jpg" />
-<p>Klassiske Lenovo Thinkpad.<br><br>Pris: $18000<br>Boost: 40%</p>
+<p>Klassiske Lenovo Thinkpad.<br><br>Pris: <strong>$18000</strong><br>Boost: <strong>40%</strong></p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl4" />
 <input type="submit" value="$hw4" $hw4disabled>
@@ -87,7 +87,7 @@ echo <<<_END
 <div class="product">
 <h4>Macbook Pro</h4>
 <img src="img/computer5.jpg" />
-<p>Toppspecca Macbook Pro.<br><br>Pris: $34000<br>Boost: 50%</p>
+<p>Toppspecca Macbook Pro.<br><br>Pris: <strong>$34000</strong><br>Boost: <strong>50%</strong></p>
 
 
 
@@ -107,7 +107,7 @@ echo <<<_END
 <div class="product">
 <h4>MLG</h4>
 <img src="img/computerMLG.jpg" />
-<p>Du har for mye penger!<br><br>Pris: $68000<br>Boost: 60%</p>
+<p>Du har for mye penger!<br><br>Pris: <strong>$68000</strong><br>Boost: <strong>60%</strong></p>
 <form action="$formpath" method="post"> 
 <input type="hidden" name="hwlvl" value="$hwl6" />
 <input type="submit" value="$hw6" $hw6disabled>
