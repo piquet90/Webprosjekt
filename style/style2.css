@@ -569,7 +569,22 @@ button {
 	border:3px solid #282828;
 }
 
-
+#src {
+	bottom:0;
+	right:0;
+	font-size:12px;
+	color:#ccc;
+	position:absolute;
+	margin-bottom:0.5rem;
+	margin-right:0.5rem;
+}
+#src a {
+	color:#ccc;
+	text-decoration:underline;
+}
+#src a:hover {
+	text-decoration:none;
+}
 
 ::-webkit-scrollbar{background:#333;width:0.65rem;}
 ::-webkit-scrollbar-button{}
