@@ -2,7 +2,7 @@ function start() {
 	setInterval(boxSize, 1);
 	
 	var text =  "Dette er Spillstatistikk siden. Her kan du sjekke felles spillstatistikk for alle spillets brukere."
-				+ "<br /><br /><div onclick='statsOverview()' class='link'>Neste</div>";
+				+ "<br /><br /><div onclick='game()' class='link'>Neste</div>";
 	
 	document.getElementById("textBox").innerHTML = text;
 }
@@ -18,4 +18,8 @@ function boxSize() {
 	var grayMain = document.getElementById("grayMain");
 	grayMain.style.height = "0";
 	grayMain.style.height = document.getElementById("main").scrollHeight + "px";
+}
+
+function game() {
+	
 }
