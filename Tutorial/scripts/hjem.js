@@ -2,9 +2,10 @@ function start() {
 	setInterval(boxSize, 1);
 	
 	document.getElementById("navbar").style.zIndex = "1";
-	document.getElementById("text").innerHTML = "Dette er spillets hovedside. Dette er hovedsentralen for hele spillet!";
-	document.getElementById("forrige").style.visibility = "hidden";
+	document.getElementById("text").innerHTML = "Da har vi logget inn!<br />Dette er spillets hovedside. Her ville det komme oppdateringer angående spillet og annen nyttig info.";
+	document.getElementById("forrige").innerHTML = "Forrige side";
 	document.getElementById("neste").onclick = function() {navBar();};
+	document.getElementById("forrige").onclick = function() {window.location.replace("index.html");};
 }
 
 function boxSize() {
@@ -22,6 +23,7 @@ function navBar() {
 	document.getElementById("navbar").style.zIndex = "10";
 	document.getElementById("text").innerHTML = "Dette er navigasjonsbaren din. Her står all info om deg.";
 	document.getElementById("forrige").style.visibility = "visible";
+	document.getElementById("forrige").innerHTML = "Forrige";
 	document.getElementById("forrige").onclick = function() {start();};
 	document.getElementById("neste").onclick = function() {topBar();};
 }

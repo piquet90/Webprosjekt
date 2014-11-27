@@ -41,9 +41,15 @@ function boxSize() {
 	
 	gray.style.width = "0";
 	gray.style.width = document.body.scrollWidth + "px";
+	
+	var grayMain = document.getElementById("grayMain");
+	grayMain.style.height = "0";
+	grayMain.style.height = document.getElementById("main").scrollHeight + "px";
+	mainH = document.getElementById("main").scrollHeight;
 }
 
 function jobOverview() {
+	document.getElementById("grayMain").style.visibility = "hidden";
 	document.getElementById("neste").style.visibility = "visible";
 	document.getElementById("simple").onclick = function() {};
 	document.getElementById("main").style.zIndex = "10";
@@ -56,8 +62,12 @@ function jobOverview() {
 }
 
 function doJob() {
+	document.getElementById("grayMain").style.visibility = "visible";
 	document.getElementById("navbar").style.zIndex = "1";
 	document.getElementById("main").style.zIndex = "10";
+	document.getElementById("jobTxt").style.zIndex = "14";
+	document.getElementById("jobButton").style.zIndex = "14";
+	document.getElementById("simple").style.zIndex = "14";
 	document.getElementById("cash").innerHTML = "$1500";
 	document.getElementById("xp").innerHTML = "1000 xp";
 	document.getElementById("simple").onclick = function() {countDown();};
@@ -74,6 +84,7 @@ function countDown() {
 }
 
 function reward() {
+	document.getElementById("grayMain").style.visibility = "hidden";
 	document.getElementById("simple").innerHTML = "Simple Job";
 	document.getElementById("main").style.zIndex = "1";
 	document.getElementById("navbar").style.zIndex = "10";

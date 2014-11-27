@@ -17,9 +17,15 @@ function boxSize() {
 	
 	gray.style.width = "0";
 	gray.style.width = document.body.scrollWidth + "px";
+	
+	var grayMain = document.getElementById("grayMain");
+	grayMain.style.height = "0";
+	grayMain.style.height = document.getElementById("main").scrollHeight + "px";
+	mainH = document.getElementById("main").scrollHeight;
 }
 
 function hwOverview() {
+	document.getElementById("grayMain").style.visibility = "hidden";
 	document.getElementById("kjop").onclick = function() {};
 	document.getElementById("neste").style.visibility = "visible";
 	document.getElementById("main").style.zIndex = "10";
@@ -32,6 +38,8 @@ function hwOverview() {
 }
 
 function kjop() {
+	document.getElementById("grayMain").style.visibility = "visible";
+	document.getElementById("asia").style.zIndex = "14";
 	document.getElementById("kjop").disabled = false;
 	document.getElementById("kjop").value = "Kjøp";
 	document.getElementById("cash").innerHTML = "$1600";
@@ -45,6 +53,7 @@ function kjop() {
 }
 
 function reward() {
+	document.getElementById("grayMain").style.visibility = "hidden";
 	document.getElementById("neste").style.visibility = "visible";
 	document.getElementById("kjop").disabled = true;
 	document.getElementById("kjop").value = "Du eier denne";
@@ -62,7 +71,7 @@ function topBar() {
 	document.getElementById("navbar").style.zIndex = "1";
 	document.getElementById("main").style.zIndex = "1";
 	document.getElementById("topbar").style.zIndex = "10";
-	document.getElementById("text").innerHTML = "Da har vi sett på Hardware. La oss trykke på Firma og sjekke ut hva dette er!";
+	document.getElementById("text").innerHTML = "Da har vi sett på Hardware. La oss trykke på Spillstatistikk og sjekke ut hva dette er!";
 	document.getElementById("neste").style.visibility = "hidden";
 	document.getElementById("forrige").onclick = function() {reward();};
 }
