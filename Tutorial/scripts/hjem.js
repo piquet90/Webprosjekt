@@ -2,8 +2,8 @@ function start() {
 	setInterval(boxSize, 1);
 	
 	document.getElementById("navbar").style.zIndex = "1";
-	document.getElementById("text").innerHTML = "Da har vi logget inn!<br />Dette er spillets hovedside. Her ville det komme oppdateringer angående spillet og annen nyttig info.";
-	document.getElementById("forrige").innerHTML = "Forrige side";
+	document.getElementById("text").innerHTML = "<strong>Da har vi logget inn!</strong><br />Dette er spillets hovedside. Her ville det komme oppdateringer angående spillet og annen nyttig info.";
+	document.getElementById("forrige").innerHTML = "&#8592; Forrige";
 	document.getElementById("neste").onclick = function() {navBar();};
 	document.getElementById("forrige").onclick = function() {window.location.replace("index.html");};
 }
@@ -23,7 +23,7 @@ function navBar() {
 	document.getElementById("navbar").style.zIndex = "10";
 	document.getElementById("text").innerHTML = "Dette er navigasjonsbaren din. Her står all info om deg.";
 	document.getElementById("forrige").style.visibility = "visible";
-	document.getElementById("forrige").innerHTML = "Forrige";
+	document.getElementById("forrige").innerHTML = "&#8592; Forrige";
 	document.getElementById("forrige").onclick = function() {start();};
 	document.getElementById("neste").onclick = function() {topBar();};
 }
@@ -32,7 +32,7 @@ function topBar() {
 	document.getElementById("navbar").style.zIndex = "1";
 	document.getElementById("topbar").style.zIndex = "10";
 	var text = "Dette er hovedmenyen. Det er her du navigerer deg gjennom alle ting du kan gjøre i spillet."
-				+ "<br /><br />La oss trykke på Jobber og sjekke ut denne funksjonen!";
+				+ "<br />La oss trykke på <strong>Jobber</strong> og sjekke ut denne funksjonen!";
 	document.getElementById("text").innerHTML = text;
 	document.getElementById("neste").style.visibility = "hidden";
 	document.getElementById("forrige").onclick = function() {navBar();};

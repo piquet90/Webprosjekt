@@ -4,9 +4,9 @@ function start() {
 	setInterval(boxSize, 1);
 	
 	document.getElementById("main").style.zIndex = "1";
-	var text =  "Dette er Spillstatistikk siden. Her kan du sjekke felles spillstatistikk for alle spillets brukere."
+	var text =  "Dette er <strong>Spillstatistikk</strong>-siden. Her kan du sjekke felles spillstatistikk for alle spillets brukere."
 	document.getElementById("text").innerHTML = text;
-	document.getElementById("forrige").innerHTML = "Forrige side";
+	document.getElementById("forrige").innerHTML = "&#8592; Forrige";
 	document.getElementById("neste").onclick = function() {statsOverview();};
 	document.getElementById("forrige").onclick = function() {window.location.replace("hardware.html");};
 }
@@ -30,10 +30,10 @@ function statsOverview() {
 	document.getElementById("usersOnline").style.zIndex = "11";
 	
 	document.getElementById("main").style.zIndex = "10";
-	var text = "Dette er her all infoen står. Her ser du alt fra antall registrerte spillere til spillets rikeste spiller."
+	var text = "Her kan du se antall registrerte spillere, spillets rikeste spillere påloggede spiller med mer."
 				+ "<br />La oss ta en nærmere titt!";
 	document.getElementById("text").innerHTML = text;
-	document.getElementById("forrige").innerHTML = "Forrige";
+	document.getElementById("forrige").innerHTML = "&#8592; Forrige";
 	document.getElementById("neste").onclick = function() {online();};
 	document.getElementById("forrige").onclick = function() {start();};
 }
@@ -43,7 +43,7 @@ function online() {
 	document.getElementById("usersOnline").style.zIndex = "14";
 	document.getElementById("left").style.zIndex = "11";
 	
-	var text = "Her ser du hvor mange spillere og hvilke spilllere som er pålogget. Spillernes navn har forskjellige"
+	var text = "Her ser du hvor mange spillere og hvilke spillere som er pålogget. Spillernes navn har forskjellige"
 				+ " fargekoder som sier noe om spilleren. Grønn tekst vil si at det er en vanlig spiller,"
 				+ " hvit tekst vil si at det er en administrator og rød tekst vil si at det er en firmaeier.";
 	document.getElementById("text").innerHTML = text;
