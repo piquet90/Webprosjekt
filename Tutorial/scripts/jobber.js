@@ -28,8 +28,8 @@ function update(id) {
 function start() {
 	setInterval(boxSize, 1);
 	document.getElementById("main").style.zIndex = "1";
-	document.getElementById("text").innerHTML = "Dette er Jobber siden. Her utfører du jobber for å tjene penger og erfarinsgpoeng!";
-	document.getElementById("forrige").innerHTML = "Forrige side";
+	document.getElementById("text").innerHTML = "Dette er <strong>Jobber</strong>-siden. Her utfører du jobber for å tjene penger og erfaringsgpoeng!";
+	document.getElementById("forrige").innerHTML = "&#8592; Forrige";
 	document.getElementById("neste").onclick = function() {jobOverview();};
 	document.getElementById("forrige").onclick = function() {window.location.replace("hjem.html");};
 }
@@ -56,7 +56,7 @@ function jobOverview() {
 	var text = "Det er her du velger jobber. Som du ser trenger du bedre hardware for å gjøre jobber man tjener mer på."
 				+ " Men jo vanskeligere jobb, jo større cooldown. Denne blir mindre jo bedre hardware man har.";
 	document.getElementById("text").innerHTML = text;
-	document.getElementById("forrige").innerHTML = "Forrige";
+	document.getElementById("forrige").innerHTML = "&#8592; Forrige";
 	document.getElementById("neste").onclick = function() {doJob();};
 	document.getElementById("forrige").onclick = function() {start();};
 }
@@ -71,7 +71,7 @@ function doJob() {
 	document.getElementById("cash").innerHTML = "$1500";
 	document.getElementById("xp").innerHTML = "1000 xp";
 	document.getElementById("simple").onclick = function() {countDown();};
-	document.getElementById("text").innerHTML = "Prøv å trykke på Simple Job!";
+	document.getElementById("text").innerHTML = "Prøv å trykke på <strong>Simple Job</strong>!";
 	document.getElementById("neste").style.visibility = "hidden";
 	document.getElementById("forrige").onclick = function() {jobOverview();};
 }
@@ -90,7 +90,7 @@ function reward() {
 	document.getElementById("navbar").style.zIndex = "10";
 	document.getElementById("cash").innerHTML = "$1600";
 	document.getElementById("xp").innerHTML = "1050 xp";
-	var text = "Jobben er nå ferdig. Hvis du er observang ser du at du nå har tjent 100$ og 50 xp."
+	var text = "Jobben er nå ferdig. Hvis du er observant ser du at du nå har tjent $100 og 50 xp!"
 				+ " Vi skal se hva dette kan brukes til senere.";
 	document.getElementById("text").innerHTML = text;
 	document.getElementById("neste").style.visibility = "visible";

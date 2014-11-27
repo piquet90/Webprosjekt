@@ -75,6 +75,11 @@ h2 {
 	margin-bottom:1rem;
 }
 
+h3 {
+	display:inline;
+	font-size:1.1rem;
+}
+
 #src {
 	bottom:0;
 	right:0;

@@ -2,8 +2,8 @@ function start() {
 	setInterval(boxSize, 1);
 	
 	document.getElementById("frame").style.zIndex = "1";
-	var text = "Velkommen til Silicon Valley Startup Tutorial! Her skal vi gå igjennom alle funksjoner i spillet,"
-				+ " så du selv kan komme deg i gang så fort som mulig! La oss begynne med innlogging.";
+	var text = "Velkommen til <h3>Silicon Valley Startup Tutorial</h3>! Her skal vi gå igjennom alle funksjoner i spillet,"
+				+ " så du selv kan komme deg i gang så fort som mulig! La oss begynne med å logge inn.";
 	document.getElementById("text").innerHTML = text;
 	document.getElementById("forrige").style.visibility = "hidden";
 	document.getElementById("neste").onclick = function() {overView();};
