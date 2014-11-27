@@ -12,15 +12,19 @@
 	</head>
 	<body onload="start()">
 		<div id="wrapper">
-			<div id="textBox"></div>
+			<div id="textBox">
+				<div id="text"></div>
+				<div id="forrige" class="link">Forrige side</div>
+				<div id="neste" class="link">Neste</div>
+			</div>
 			<div id="grayBox"></div>
 			<div id="topbar">
 				<ul>
 					<li><a class="l">Hjem</a></li
 					><li><a class="l">Jobber</a></li
 					><li><a class="l">Hardware</a></li
-					><li><a href="firma.html" class="l">Firma</a></li
-					><li><a class="l">Spillstatistikk</a></li
+					><li><a class="l">Firma</a></li
+					><li><a href="spillstats.html" class="l">Spillstatistikk</a></li
 					><li><a class="l">Minispill</a></li
 					><li><a class="r"><strong>Logg ut</strong></a></li>
 				</ul>
@@ -36,7 +40,7 @@
 				</ul>
 			</div>
 			<div id="main" class="scroll">
-				<!-- hwlvl1 -->
+				<div id="grayMain"></div>
 				<div id="productInfo" class="product">
 					<h4>Hardware</h4>
 					<p>Her kan du kjøpe bedre PC-utstyr for å kunne utføre vanskeligere jobber og for å få mer <strong>boost</strong>. Jo mer boost du har, jo kortere tid bruker du på jobben.
@@ -55,7 +59,7 @@
 				</div>
 
 				<!-- hwlvl1 -->
-				<div class="product">
+				<div class="product" id="asia">
 					<h4>Asia LAPTOP FLEXI</h4>
 					<img src="img/computer2.jpg" />
 					<p>Asian creation of sensation.<br><br>Pris: $1500<br>Boost: 10%</p>

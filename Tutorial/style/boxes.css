@@ -24,12 +24,22 @@
 	position:relative;
 	background-color:#323232;
 	margin-bottom:1rem;
-	height:7.5rem;
+	height:8.5rem;
 	padding:1rem;
 	overflow:auto;
 	color:#11dd99;
 	border-radius:1rem;
 	z-index:20;
+}
+
+#text {
+	position:absolute;
+	top:0.5rem;
+	left:1rem;
+}
+
+#neste {
+	right:1rem;
 }
 
 .link {

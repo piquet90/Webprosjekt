@@ -1,8 +1,8 @@
 <?php
 echo <<<_END
-<h1>$blog_heading</h1>
-<p>This is a custom 404 error page.</p>
-<p>You can put whatever content you like here such as search for your site</p>
+<h1>Error</h1>
+<p>404: This page was not found.</p>
+<p>This page was not found. Please check the entered URL.</p>
 
 
 _END;
