@@ -62,7 +62,7 @@ function topBar() {
 	document.getElementById("navbar").style.zIndex = "1";
 	document.getElementById("main").style.zIndex = "1";
 	document.getElementById("topbar").style.zIndex = "10";
-	document.getElementById("text").innerHTML = "Da har vi sett på Hardware. La oss trykke på Firma og sjekke ut hva dette er!";
+	document.getElementById("text").innerHTML = "Da har vi sett på Hardware. La oss trykke på Spillstatistikk og sjekke ut hva dette er!";
 	document.getElementById("neste").style.visibility = "hidden";
 	document.getElementById("forrige").onclick = function() {reward();};
 }
