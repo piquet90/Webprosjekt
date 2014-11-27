@@ -216,8 +216,8 @@ var main = function () {
 	requestAnimationFrame(main);
 };
 
-requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.mozRequestAnimationFrame;
+	requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || window.mozRequestAnimationFrame;
 
-startSpill();
-var then = Date.now();
-main();
+	startSpill();
+	var then = Date.now();
+	main();

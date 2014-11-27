@@ -8,7 +8,7 @@ function start() {
 	document.getElementById("text").innerHTML = text;
 	document.getElementById("forrige").innerHTML = "Forrige side";
 	document.getElementById("neste").onclick = function() {statsOverview();};
-	document.getElementById("forrige").onclick = function() {window.location.replace("firma.html");};
+	document.getElementById("forrige").onclick = function() {window.location.replace("hardware.html");};
 }
 
 function boxSize() {
