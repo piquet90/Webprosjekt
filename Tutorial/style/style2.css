@@ -529,6 +529,7 @@ button {
 }
 
 .game {
+	position:relative;
 	width:48.5%;
 	float:left;
 	background:#282828;

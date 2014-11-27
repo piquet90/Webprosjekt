@@ -10,8 +10,14 @@
 		<link href='http://fonts.googleapis.com/css?family=Glegoo' rel='stylesheet' type='text/css'>
 		<meta charset="UTF-8" />
 	</head>
-	<body>
+	<body onload="start()">
 		<div id="wrapper">
+			<div id="textBox">
+				<div id="text"></div>
+				<div id="forrige" class="link">Forrige side</div>
+				<div id="neste" class="link">Neste</div>
+			</div>
+			<div id="grayBox"></div>
 			<div id="topbar">
 				<ul>
 					<li><a class="l">Hjem</a></li
@@ -20,13 +26,12 @@
 					><li><a class="l">Firma</a></li
 					><li><a class="l">Spillstatistikk</a></li
 					><li><a class="l">Minispill</a></li
-					><li><a href="http://advm.no/index.php?rt=index/register" class="r"><strong>Logg ut</strong></a></li>
+					><li><a class="r"><strong>Logg ut</strong></a></li>
 				</ul>
 			</div>
 			<div id="navbar">
 				<div class="userImg" style="background:url(img/agentsmith.jpg) no-repeat center;"></div>
 				<ul>
-
 					<li class="user"><a><strong>Admin</strong></a></li>
 					<li class="cell">Nybegynner</li>
 					<li class="cell"><strong>Konto</strong><br />$100</li>
@@ -34,13 +39,14 @@
 					<li class=""><strong>Erfaringspoeng<br /></strong> 1050 xp</li>
 				</ul>
 			</div><div id="main" class="scroll">
-				<div class="game">
+				<div id="grayMain"></div>
+				<div class="game" id="game1">
 					<div class="gamewrapper">
 						<h4>fobbalspillet</h4>
 						<img src="img/fotballspillet.jpg" alt="Skjermdump av fotballspillet" />
 						<p>Prøv ut hvordan det er å være en fotballkeeper! Få alle ballene i målet, som du styrer med piltastene. Spillet er laget i JavaScript.</p>
 					</div>
-					<a href="fobbalspillet.html"><div class="run">Trykk her for å spille</div></a>
+					<a id="startGame"><div class="run">Trykk her for å spille</div></a>
 				</div>
 				
 				<div class="pspace"> </div>
