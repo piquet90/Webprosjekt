@@ -84,9 +84,19 @@ Dette ville gi en større utfordring med tanke på JavaScript i forhold til en sim
 <h3>Ren html/javascript-versjon</h3>
 <p>Som skrevet over måtte vi, med ganske dårlig tid, lage en ny idé med tanke på kun html, javascript og css. Dette endte opp i en guide/tutorial av funksjonene i det php-baserte spillet vårt.
 Måten denne guiden fungerer på er at det øverst på siden vil være en tekstboks med informasjon. Denne informasjon består av alt fra hva forskjellige ting på siden betyr, til konkrete ting brukeren skal trykke på.
-Den samme boksen består også av to knapper. Én knapp for å gå til neste instruks og én for å gå tilbake. Noen ganger vil en av eller begge knappene være borte. Da er det enten noe brukeren må gjøre et annet sted på skjerme, eller så er det en nedtelling som brukeren må vente på.</p>
+Den samme boksen består også av to knapper. Én knapp for å gå til neste instruks og én for å gå tilbake. Noen ganger vil en av eller begge knappene være borte. Da er det enten noe brukeren må gjøre et annet sted på skjermen, eller så er det en nedtelling som brukeren må vente på.</p>
 
-<p>I den ene delen av guiden vil brukeren komme til et minispill. Dette minispillet er også noe vi lagde på grunn av begrensingene vi fikk med å bare bruke html, css og javascript, men det endte også opp med å bli en veldig viktig del av det php-baserte spillet også.
+<p>Når vi utviklet tutorial delen prøvde vi ut en del forskjellige måter å plasser informasjonsboksen på. Etter mye prøving og diskusjon, kom vi fram til at det var 3 måter som var best. Den som egentlig var favoritten var en tekstboks vi flyttet rundt på skjermen etter hva informasjonen var om.
+Denne ble brukt først, men så fant vi ut at boksens posisjon varierte veldig mye fra skjermoppløsning til skjermoppløsning. Dermed måtte denne måten droppes fordi det ble alt for avansert å skulle plassere boksen nøyaktig riktig ut ifra brukerens skjermoppløsning. Dermed stod vi igjen med 2 måter:
+en avlang tekstboks på bunnen av siden, eller en avlang tekstboks på toppen av siden. Etter en liten diskusjon i gruppa ble alle enige om at en tekstboks på toppen av siden var det beste, og derfor endte vi opp med denne løsningen.</p>
+
+<p>I den ene delen av guiden vil brukeren komme til et minispill. Dette minispillet er også noe vi kom på på grunn av begrensingene vi fikk, men det endte også opp med å bli en viktig del av det php-baserte spillet. Dette spillet er laget kun ved hjelp av canvas og javasript, pluss en div og litt css.
+Hovedfunksjonen til dette minispillet har blitt å underholde brukere, som spiller det php-baserte spillet vårt, mens de venter på at cooldown på jobber skal bli ferdig. Ellers er det også bare et spill som brukerne kan spille hvis de kjeder seg.
+Spillet går kort forklart ut på at du kontrollerer et fotballmål som du skal bruke til å fange opp baller som blir skutt mot målet. Det er et ganske så enkelt spill, men det er avhengighetsskapende også, noe som er positivt for oss som har laget spillet.</p>
+
+<p>Under utvikling av minispillet byttet vi fremgangsmåte flere ganger. Det første utkastet gikk ut på å fange fallende firkanter med en avlang boks. Første utkast var også bygd opp av mange div'er og i javascript koden ble det brukt setInterval for å time fallet av firkanter og bevegelse av boks.
+Dette fant vi ganske fort ut at ikke var en god løsning. Spillet hadde forskjellige hastigheter i forskjellige nettlesere, og i tillegg var spillet veldig hakkete. Etter en del research, prøving og feiling kom vi fram til å bruke canvas og requestAnimationFrame. Dette førte til en mye smoothere opplevelse,
+og hastigheten var alltid den samme fordi vi justerte den etter hvor ofte requestAnimationFrame klarte å oppdatere tegningene. Helt til slutt kom vi på ideen å lage et fotball basert spill, bare med en litt annen skru. Nå var poenget å flytte målet for å fange ballen, ikke skyte ballen etter målet.</p>
 
 
 <h2>Bildebruk/lisenser</h2>
