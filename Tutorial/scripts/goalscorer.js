@@ -1,13 +1,15 @@
 function start() {
+	var forrige = document.getElementById("forrige");
+
 	setInterval(boxSize, 1);
 	
 	document.getElementById("main").style.zIndex = "1";
 	var text = "Dette er minispillet <strong>Goalscorer</strong>! Poenget med spillet er å fange så mange baller som mulig med målet."
 				+ " Du bruker piltastene for å styre.<br>Trykk <strong>Neste</strong> når du er klar!";
 	document.getElementById("text").innerHTML = text;
-	document.getElementById("forrige").innerHTML = "&#8592; Forrige";
+	forrige.innerHTML = "&#8592; Forrige side";
+	forrige.onclick = function() {window.location.replace("minispill.html");};
 	document.getElementById("neste").onclick = function() {game();};
-	document.getElementById("forrige").onclick = function() {window.location.replace("minispill.html");};
 }
 
 function boxSize() {
@@ -20,13 +22,16 @@ function boxSize() {
 }
 
 function game() {
-	document.getElementById("neste").style.visibility = "visible";
+	var forrige = document.getElementById("forrige");
+	var neste = document.getElementById("neste");
+
 	document.getElementById("topbar").style.zIndex = "1";
 	document.getElementById("main").style.zIndex = "10";
 	document.getElementById("text").innerHTML = "Trykk <strong>Neste</strong> når du har spilt ferdig!";
-	document.getElementById("forrige").innerHTML = "&#8592; Forrige";
-	document.getElementById("neste").onclick = function() {done();};
-	document.getElementById("forrige").onclick = function() {start();};
+	forrige.innerHTML = "&#8592; Forrige";
+	forrige.onclick = function() {start();};
+	neste.style.visibility = "visible";
+	neste.onclick = function() {done();};
 }
 
 function done() {

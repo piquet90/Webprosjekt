@@ -19,15 +19,18 @@ function boxSize() {
 }
 
 function overView() {
+	var forrige = document.getElementById("forrige");
+	var neste = document.getElementById("neste");
+
 	document.getElementById("error").innerHTML = "";
-	document.getElementById("neste").style.visibility = "visible";
 	document.getElementById("frame").style.zIndex = "10";
 	var text = "Dette er innloggingsmodulen. I tillegg til å logge inn, kan du også herfra komme til andre sider"
 				+ " ved å trykke på knappene nederst. For nå skal vi bare logge inn.";
 	document.getElementById("text").innerHTML = text;
-	document.getElementById("forrige").style.visibility = "visible";
-	document.getElementById("neste").onclick = function() {info();};
-	document.getElementById("forrige").onclick = function() {start();};
+	forrige.style.visibility = "visible";
+	forrige.onclick = function() {start();};
+	neste.style.visibility = "visible";
+	neste.onclick = function() {info();};
 	document.getElementById("submit").disabled = true;
 }
 
@@ -55,15 +58,6 @@ function logIn() {
 	}
 	else{
 		error.innerHTML = "Wrong username or password";
-	}
-	return false;
-}
-
-function validate() {
-	var user = document.forms["input"]["username"].value;
-	var password = document.forms["input"]["password"].value;
-	if(user == "admin" && password == "12345") {
-		return true;
 	}
 	return false;
 }

@@ -26,12 +26,14 @@ function update(id) {
 }
 
 function start() {
+	var forrige = document.getElementById("forrige");
+
 	setInterval(boxSize, 1);
 	document.getElementById("main").style.zIndex = "1";
 	document.getElementById("text").innerHTML = "Dette er <strong>Jobber</strong>-siden. Her utfører du jobber for å tjene penger og erfaringsgpoeng!";
-	document.getElementById("forrige").innerHTML = "&#8592; Forrige";
 	document.getElementById("neste").onclick = function() {jobOverview();};
-	document.getElementById("forrige").onclick = function() {window.location.replace("hjem.html");};
+	forrige.innerHTML = "&#8592; Forrige side";
+	forrige.onclick = function() {window.location.replace("hjem.html");};
 }
 
 function boxSize() {
@@ -43,34 +45,39 @@ function boxSize() {
 	gray.style.width = document.body.scrollWidth + "px";
 	
 	var grayMain = document.getElementById("grayMain");
+	var main = document.getElementById("main");
 	grayMain.style.height = "0";
-	grayMain.style.height = document.getElementById("main").scrollHeight + "px";
-	mainH = document.getElementById("main").scrollHeight;
+	grayMain.style.height = main.scrollHeight + "px";
 }
 
 function jobOverview() {
+	var forrige = document.getElementById("forrige");
+	var neste = document.getElementById("neste");
+
 	document.getElementById("grayMain").style.visibility = "hidden";
-	document.getElementById("neste").style.visibility = "visible";
 	document.getElementById("simple").onclick = function() {};
 	document.getElementById("main").style.zIndex = "10";
 	var text = "Det er her du velger jobber. Som du ser trenger du bedre hardware for å gjøre jobber man tjener mer på."
 				+ " Men jo vanskeligere jobb, jo større cooldown. Denne blir mindre jo bedre hardware man har.";
 	document.getElementById("text").innerHTML = text;
-	document.getElementById("forrige").innerHTML = "&#8592; Forrige";
-	document.getElementById("neste").onclick = function() {doJob();};
-	document.getElementById("forrige").onclick = function() {start();};
+	neste.style.visibility = "visible";
+	forrige.innerHTML = "&#8592; Forrige";
+	forrige.onclick = function() {start();};
+	neste.onclick = function() {doJob();};
 }
 
 function doJob() {
+	var simple = document.getElementById("simple");
+
 	document.getElementById("grayMain").style.visibility = "visible";
 	document.getElementById("navbar").style.zIndex = "1";
 	document.getElementById("main").style.zIndex = "10";
 	document.getElementById("jobTxt").style.zIndex = "14";
 	document.getElementById("jobButton").style.zIndex = "14";
-	document.getElementById("simple").style.zIndex = "14";
 	document.getElementById("cash").innerHTML = "$1500";
 	document.getElementById("xp").innerHTML = "1000 xp";
-	document.getElementById("simple").onclick = function() {countDown();};
+	simple.style.zIndex = "14";
+	simple.onclick = function() {countDown();};
 	document.getElementById("text").innerHTML = "Prøv å trykke på <strong>Simple Job</strong>!";
 	document.getElementById("neste").style.visibility = "hidden";
 	document.getElementById("forrige").onclick = function() {jobOverview();};
@@ -84,6 +91,9 @@ function countDown() {
 }
 
 function reward() {
+	var neste = document.getElementById("neste");
+	var forrige = document.getElementById("forrige");
+
 	document.getElementById("grayMain").style.visibility = "hidden";
 	document.getElementById("simple").innerHTML = "Simple Job";
 	document.getElementById("main").style.zIndex = "1";
@@ -93,16 +103,16 @@ function reward() {
 	var text = "Jobben er nå ferdig. Hvis du er observant ser du at du nå har tjent $100 og 50 xp!"
 				+ " Vi skal se hva dette kan brukes til senere.";
 	document.getElementById("text").innerHTML = text;
-	document.getElementById("neste").style.visibility = "visible";
-	document.getElementById("forrige").style.visibility = "visible";
-	document.getElementById("neste").onclick = function() {topBar();};
-	document.getElementById("forrige").onclick = function() {doJob();};
+	neste.style.visibility = "visible";
+	neste.onclick = function() {topBar();};
+	forrige.style.visibility = "visible";
+	forrige.onclick = function() {doJob();};
 }
 
 function topBar() {
 	document.getElementById("navbar").style.zIndex = "1";
 	document.getElementById("topbar").style.zIndex = "10";
-	document.getElementById("text").innerHTML = "Da har vi sett på Jobber. La oss trykke på Hardware og sjekke ut hva dette er!";
+	document.getElementById("text").innerHTML = "Da har vi sett på <strong>Jobber</strong>. La oss trykke på <strong>Hardware</strong> og sjekke ut hva dette er!";
 	document.getElementById("neste").style.visibility = "hidden";
 	document.getElementById("forrige").onclick = function() {reward();};
 }
