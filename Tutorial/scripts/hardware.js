@@ -33,7 +33,7 @@ function hwOverview() {
 	document.getElementById("grayMain").style.visibility = "hidden";
 	document.getElementById("kjop").onclick = function() {};
 	document.getElementById("main").style.zIndex = "10";
-	var text = "Det er her du kjøper hardware. Som du ser er koster PC-utstyret mer jo bedre det er."
+	var text = "Det er her du kjøper hardware. Som du ser koster PC-utstyret mer jo bedre det er."
 				+  " IBM 4Kilo er standard PC'en som alle starter med.<br /><strong>Det vil da også si deg!</strong>";
 	document.getElementById("text").innerHTML = text;
 	neste.style.visibility = "visible";
