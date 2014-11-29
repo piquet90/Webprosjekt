@@ -446,7 +446,7 @@ button {
 
 .stats p {margin:0;padding:0;}
 
-.usersOnline{
+#usersOnline{
 	position:relative;
 	width:100%;
 	background:#282828;
@@ -536,7 +536,7 @@ button {
 
 .gamewrapper {
 	width:100%;
-	min-height:24rem;
+	min-height:26rem;
 }
 
 .game {

@@ -1,11 +1,13 @@
 function start() {
+	var forrige = document.getElementById("forrige");
+
 	setInterval(boxSize, 1);
 	
 	document.getElementById("navbar").style.zIndex = "1";
 	document.getElementById("text").innerHTML = "<strong>Da har vi logget inn!</strong><br />Dette er spillets hovedside. Her ville det komme oppdateringer angående spillet og annen nyttig info.";
-	document.getElementById("forrige").innerHTML = "&#8592; Forrige";
+	forrige.innerHTML = "&#8592; Forrige side";
+	forrige.onclick = function() {window.location.replace("index.html");};
 	document.getElementById("neste").onclick = function() {navBar();};
-	document.getElementById("forrige").onclick = function() {window.location.replace("index.html");};
 }
 
 function boxSize() {
@@ -18,13 +20,15 @@ function boxSize() {
 }
 
 function navBar() {
+	var forrige = document.getElementById("forrige");
+
 	document.getElementById("topbar").style.zIndex = "1";
 	document.getElementById("neste").style.visibility = "visible";
 	document.getElementById("navbar").style.zIndex = "10";
 	document.getElementById("text").innerHTML = "Dette er navigasjonsbaren din. Her står all info om deg.";
-	document.getElementById("forrige").style.visibility = "visible";
-	document.getElementById("forrige").innerHTML = "&#8592; Forrige";
-	document.getElementById("forrige").onclick = function() {start();};
+	forrige.style.visibility = "visible";
+	forrige.innerHTML = "&#8592; Forrige";
+	forrige.onclick = function() {start();};
 	document.getElementById("neste").onclick = function() {topBar();};
 }
 
