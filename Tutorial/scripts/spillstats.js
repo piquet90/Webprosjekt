@@ -35,7 +35,7 @@ function statsOverview() {
 	document.getElementById("usersOnline").style.zIndex = "11";
 	
 	document.getElementById("main").style.zIndex = "10";
-	var text = "Her kan du se antall registrerte spillere, spillets rikeste spillere påloggede spiller med mer."
+	var text = "Her kan du se antall registrerte spillere, spillets rikeste spillere, spillets påloggede spiller med mer."
 				+ "<br />La oss ta en nærmere titt!";
 	document.getElementById("text").innerHTML = text;
 	forrige.innerHTML = "&#8592; Forrige";
