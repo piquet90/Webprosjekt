@@ -105,7 +105,7 @@ Class jobsController Extends baseController {
 		$row = $result->fetch_assoc();
 		if($row['hwlevel']<$this->{$type."hwlevel"})
 		{
-			$this->registry->template->{$type} = 'Upgrade to unlock';
+			$this->registry->template->{$type} = 'Du trenger bedre hardware';
 			$this->registry->template->{$type."path"} = makePath('jobs/index');
 		}
 		else if($diff>$this->getCooldown($this->{$type."Cooldown"}))

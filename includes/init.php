@@ -1,5 +1,7 @@
 <?php
 
+
+// include mvc classes
 include __SITE_PATH . '/application/' . 'controller_base.class.php';
 include __SITE_PATH . '/application/' . 'registry.class.php';
 include __SITE_PATH . '/application/' . 'router.class.php';

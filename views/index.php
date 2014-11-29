@@ -22,9 +22,8 @@ echo <<<_END
 </form>
 
 	<p><a href="$registerpath">Bli medlem</a
-	> | <a href="$forgotpath">Glemt passord</a
-	> | <a href="">FAQ</a
-	> | <a href="">Kontakt oss</a></p>
+	> | <a href="../tutorial/index.html">Lær å spille</a
+	> | <a href="mailto:mail@advm.no">Kontakt oss</a></p>
 </ul></center>
 </div>
 

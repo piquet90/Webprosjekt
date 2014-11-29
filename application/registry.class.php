@@ -1,5 +1,6 @@
 <?php
 
+// Registry class for passing variables. This lets us avoid GLOBALS and it uses the magic functions __set and __get.
 Class Registry {
 
  /*

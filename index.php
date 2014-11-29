@@ -1,9 +1,6 @@
 <?php
 
-// error reporting on
- error_reporting(E_ALL);
-
-// start session()
+// start session for usermanagement
  session_start();
 
 // define sitepath constant

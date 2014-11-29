@@ -18,7 +18,7 @@ echo <<<_END
 <span class="inputlabel">&nbsp</span><input type="submit" value="Bli medlem">
 </form>
 <div id="error">$registererror</div>
-<p class="center"><a href="$loginpath">Already have a user?</a></p>
+<p class="center"><a href="$loginpath">Allerede registrert? Trykk her!</a></p>
 </div>
 </div></div>
 

@@ -1,5 +1,13 @@
 <?php
+/*
+By the most important class for our MVC. 
 
+The Router
+
+The router has the responsibility for making sure that the right controller is loaded. 
+It also handles sessions by redirecting to the login page if the user has tried to enter a route that doesnt exist or the user doesnt have access to.
+It makes use of the GET method in http. By using a GET variable that we have named rt we can determine what page the user requests.
+*/
 class router {
 
 	private $registry;
@@ -75,7 +83,7 @@ class router {
 
 		$route = (empty($_GET['rt'])) ? '' : $_GET['rt'];
 
-		// load check loginstatus and set correct header
+		
 		include $this->path.'/loginController.php';
 		$loginController = new loginController($this->registry);
 		if(isset($_SESSION['uid']))
@@ -86,7 +94,6 @@ class router {
 		{
 			$loginController->index();
 		}
-		///////////////////////////////////////////////////
 
 		if (empty($route))
 		{
