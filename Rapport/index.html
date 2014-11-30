@@ -1,135 +1,125 @@
 <!DOCTYPE html>
 <html>
-<head>
+	<head>
+		<title>Sluttrapport for The Obscene Jellyfishes</title>
+		<link href="rapport.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<h1>Sluttrapport: The Obscene Jellyfishes</h1>
+		<h2>Medlemmer</h2>
 
-<title>Sluttrapport for The Obscene Jellyfishes</title>
-<link href="rapport.css" rel="stylesheet" type="text/css">
-</head>
+		<ul>
+		<li>Rudi Yu Haugan (s231776)</li>
+		<li>Thomas Kristiansen (s236321)</li>
+		<li>Audun Brustad (s236341)</li>
+		<li>Olav Elnan (s236370)</li>
+		</ul>
 
+		<h2>Prosjektbeskrivelse: IT-wars</h2>
+		<p>Ideen vår gikk ut på å lage et tekstbasert rollespill hvor du starter som en utvikler og gjør "jobber"
+		for å tjene erfaring og penger. Vi hentet inspirasjon fra Nordicmafia.com, men med vår egen vri hvor man heller er i IT-verdenen. Spillet tok sikte på gi morsom underholdning til IT-studenter primært.
+		 Ideen ville også gi oss en mulighet til å vise fram mestring av brukte teknologier.</p>
+		 <p>Etter vi mottok meldingen om at siden måtte fungere uten PHP og MySQL, var planen å lage en ekstra versjon i ren HTML hvor du kunne se design og layout. 
+		 Etter litt idemyldring kom vi fram til at vi heller skulle lage en interaktiv veiledning i Javascript som viste noe av basic funksjonene til spillet. Dette ville gi en større utfordring og mer bruk av JavaScript.</p>
+		 <p>Under samme idemyldring kom også ideen om et minispill fram. Ideen ble jobbet med og utviklet seg til å bli minispillet "Goalscorer!". 
+		 Minispillet passet utmerket som et komplement til rollespillet da det vil være ventetid på grunn av "cooldowns" på visse funksjoner.</p>
+		 <h2>Teknisk info</h2>
+		 <p>Prosjektside : <a href="http://student.cs.hioa.no/~s231776/">http://student.cs.hioa.no/~s231776/</a><br /></p>
+		  	For ren html/javascript "Tutorial" av siden, trykk på "Lær å spille", eller trykk <a href="http://student.cs.hioa.no/~s231776/tutorial">her</a>.</p>
+		 <p>Forprosjektside: <a href="http://student.cs.hioa.no/~s231776/forprosjekt/forprosjekt.html">http://student.cs.hioa.no/~s231776/forprosjekt/</a>
+		 <p>Rapportside: <a href="http://student.cs.hioa.no/~s231776/rapport/">http://student.cs.hioa.no/~s231776/rapport/</a>
+		 </p>
+		<h2>Verktøy</h2>
+		<h3>Git</h3>
+		<p>Gruppen valgte å bruke git. Valget vårt falt derfor på tjenesten GitHub fordi det var det mest kjente. Dette betydde at vi ville ha lett tilgang til guider for å lære oss Git med bruk av GitHub.</p>
+		<p>I starten virket Git forvirrende for samtlige gruppemedlemmer. Det virket lettere å bruke for eksempel Dropbox, men etter en uke så vi fort nytteverdien. Den detaljerte historikken over endringer og mulighetene for branching,
+		merging og sikkerhetskopiering av hver eneste versjon gjør det enkelt å samarbeide.</p>
+		<h3>WAMP/XAMPP</h3>
+		<p>På grunn av at vil skulle bruke PHP brukte vi WAMP eller XAMPP på hver vår pc. Dette gjorde at vi kunne raskt teste siden og gjøre endringer lokalt.</p>
+		<h2>Kommunikasjon og samarbeid</h2>
+		<p>I starten av prosjektet ble vi fort enige om kommunikasjon og samarbeid. Vi satte opp faste dager i uken hvor gruppen skulle jobbe sammen og laget en gruppechat på Facebook. Vi satte også opp hva gruppen forventet av arbeid og innsats.
+		De første dagene gikk vi gjennom GitHub i fellesskap, satte opp WAMP/XAMPP, lagde en git-repositry og utforsket mulighetene for prosjektet og hvordan vi skulle gjennomføre disse. Dette skapte et godt grunnlag for arbeid og samarbeid.</p>
 
+		<!--  En tidslinje som viser hva som ble gjennomført når, sett i sammenheng med milepælsplanen i forprosjektet. -->
+		<h2>Arbeidsforløp</h2>
+		<h3>Uke 1</h3>
+		<p>For uke 1 hadde vi som plan å:
+		<ul>
+			<li>Utforske hvordan vi kan bruke teknologiene vi har valgt til å lage en løsning.</li>
+			<li>Utforske MVC og implementere et basis for hjemmesiden</li>
+		</ul>
+		I forhold til denne planen gikk  det meste ganske bra. Flittig innsats fra samtlige gruppemedlemmer gjorde at vi fikk en bra start på prosjektet.
+		Med tanke på milepælsplanen vår fikk vi gjort unna:
+		<ul>
+			<li>MVC Basis</li>
+			<li>CSS for navigasjon</li>
+		</ul>
+		Vi fikk utforsket mange ideer som baserte seg kun på HTML, CSS og JavaScript som vi kunne ha i tillegg til selve siden. Blant annet ideen om et minispill og en tutorial istede for en statisk side i ren HTML. 
+		</p>
+		<h3>Uke 2</h3>
+		<p>For uke 2 hadde vi som plan å:
+		<ul>
+			<li>Få laget login-modul</li>
+			<li>Utvikle CSS for nettsiden</li>
+		</ul>
+		Gruppearbeidet gikk veldig bra. Alle visste hvilken vei gruppen ville gå og alle var kommet inn i god arbeidsperiode. På grunn av dette fikk vi gjort en god del av målene vi hadde for uken.
+		Et loginsystem og registreringssystem ble laget, samt at CSS for loginsiden ble ferdig. Etter å ha kikket på milepælsplanen ble gruppen enige om at AJAX måtte byttes ut med minispill og tutorial.
+		Minispillet var kommet en god vei og ideer for hvordan tutorialen skulle formes ble vurdert.
+		</p>
 
+		<h2>Teknologier</h2>
+		<h3>PHP-versjon</h3>
+		<p>
+		Når vi startet var vi sikre på at vi ville ha MVC i bunnen av siden. Vi visste egentlig ikke fordelene med dette i praksis, men hadde fått høre fra både lærere, bedrifter og internet at dette var lurt. 
+		Fordeling av ansvar, separering av kode og at det var lett å bygge på var noen av fordelene vi fant nyttige med MVC. Vi fant en guide for hvordan man skal bygge et MVC basis fra bunnen av(ref: "<a href="http://www.phpro.org/tutorials/Model-View-Controller-MVC.html">src</a>").
+		Denne basisen ble modifisert til vårt bruk, blant annet ved å implementere loginfunksjonen, så måtte basisen bli kraftig modifisert.
+		</p>
+		<p>
+		Vi så fort nytten av MVC når vi skulle legge til nye sider. Det ble veldig enkelt å legge til en ny side, mens logikken til hver av sidene ble separert. Dette gjorde at en bug i en ny side ikke hadde påvirking på noen gamle sider.
+		</p>
+		<h3>Ren html/javascript-versjon</h3>
+		<p>Som skrevet over måtte vi, med ganske dårlig tid, lage en ny idé med tanke på kun HTML, Javascript og CSS. Dette endte opp i en guide/tutorial av funksjonene i det php-baserte spillet vårt.
+		Måten denne guiden fungerer på er at det øverst på siden vil være en tekstboks med informasjon. Denne guiden informerer om alt fra hvordan man bruker de forskjellige funksjonene til hva alt man ser betyr.
+		Den samme boksen består også av to knapper. Én knapp for å gå til neste instruks og én for å gå tilbake. Noen ganger vil en av eller begge knappene være borte. Da er det enten noe brukeren må gjøre et annet sted på skjermen, eller så er det en nedtelling som brukeren må vente på.</p>
 
-<body>
-<h1>Sluttrapport: The Obscene Jellyfishes</h1>
-<h2>Medlemmer</h2>
+		<p>Når vi utviklet guiden prøvde vi ut en del forskjellige måter å plasser informasjonsboksen på. Etter mye prøving og diskusjon, kom vi fram til at det var 3 måter som var best. Den som egentlig var favoritten var en tekstboks vi flyttet rundt på skjermen etter hva informasjonen var om.
+		Denne ble brukt først, men så fant vi ut at boksens posisjon varierte veldig mye fra skjermoppløsning til skjermoppløsning. Dermed måtte denne måten droppes fordi det ble alt for avansert å plassere boksen nøyaktig riktig ut ifra brukerens skjermoppløsning. Dermed stod vi igjen med 2 måter:
+		en avlang tekstboks på bunnen av siden, eller en avlang tekstboks på toppen av siden. Etter en liten diskusjon i gruppa ble alle enige om at en tekstboks på toppen av siden var det beste, og derfor endte vi opp med denne løsningen.</p>
 
-<ul>
-<li>Rudi Yu Haugan (s231776)</li>
-<li>Thomas Kristiansen (s236321)</li>
-<li>Audun Brustad (s236341)</li>
-<li>Olav Elnan (s236370)</li>
-</ul>
+		<p>I den ene delen av guiden vil brukeren komme til et minispill. Dette minispillet er også noe vi kom på på grunn av begrensingene vi fikk, men det endte også opp med å bli en viktig del av det php-baserte spillet. Dette spillet er laget kun ved hjelp av canvas og javasript, pluss en div og litt css.
+		Hovedfunksjonen til dette minispillet er å underholde brukere mens de venter på at cooldown på jobber skal bli ferdig. Ellers er det også bare et spill som brukerne kan spille hvis de kjeder seg.
+		Spillet går kort forklart ut på at du kontrollerer et fotballmål som du skal bruke til å fange baller som faller nedover på skjermen. Det er et ganske så enkelt spill, men det er veldig avhengighetsskapende. Noe som også er positivt for oss som har laget spillet.</p>
 
-<h2>Prosjektbeskrivelse: IT-wars</h2>
-<p>Ideen vår gikk ut på å lage et tekstbasert rollespill hvor du starter som en utvikler og gjør "jobber"
-for å tjene erfaring og penger. Vi hentet inspirasjon fra Nordicmafia.com, men med vår egen vri hvor man heller er i IT-verdenen. Spillet tok sikte på gi morsom underholdning til IT-studenter primært.
- Ideen ville også gi oss en mulighet til å vise fram mestring av brukte teknologier.</p>
- <p>Etter vi mottok meldingen om at siden måtte fungere uten PHP og MySQL, var planen å lage en ekstra versjon i ren HTML hvor du kunne se design og layout. 
- Etter litt idemyldring kom vi fram til at vi heller skulle lage en interaktiv veiledning i Javascript som viste noe av basic funksjonene til spillet. Dette ville gi en større utfordring og mer bruk av JavaScript.</p>
- <p>Under samme idemyldring kom også ideen om et minispill fram. Ideen ble jobbet med og utviklet seg til å bli minispillet "Goalscorer!". 
- Minispillet passet utmerket som et komplement til rollespillet da det vil være ventetid på grunn av "cooldowns" på visse funksjoner.</p>
- <h2>Teknisk info</h2>
- <p>Prosjektside : <a href="http://student.cs.hioa.no/~s231776/">http://student.cs.hioa.no/~s231776/</a><br /></p>
-  	For ren html/javascript "Tutorial" av siden, trykk på "Lær å spille", eller trykk <a href="http://student.cs.hioa.no/~s231776/tutorial">her</a>.</p>
- <p>Forprosjektside: <a href="http://student.cs.hioa.no/~s231776/forprosjekt/forprosjekt.html">http://student.cs.hioa.no/~s231776/forprosjekt/</a>
- <p>Rapportside: <a href="http://student.cs.hioa.no/~s231776/rapport/">http://student.cs.hioa.no/~s231776/rapport/</a>
- </p>
-<h2>Verktøy</h2>
-<h3>Git</h3>
-<p>Gruppen valgte å bruke git. Valget vårt falt derfor på tjenesten GitHub fordi det var det mest kjente. Dette betydde at vi ville ha lett tilgang til guider for å lære oss Git med bruk av GitHub.</p>
-<p>I starten virket Git forvirrende for samtlige gruppemedlemmer. Det virket lettere å bruke for eksempel Dropbox, men etter en uke så vi fort nytteverdien. Den detaljerte historikken over endringer og mulighetene for branching,
-merging og sikkerhetskopiering av hver eneste versjon gjør det enkelt å samarbeide.</p>
-<h3>WAMP/XAMPP</h3>
-<p>På grunn av at vil skulle bruke PHP brukte vi WAMP eller XAMPP på hver vår pc. Dette gjorde at vi kunne raskt teste siden og gjøre endringer lokalt.</p>
-<h2>Kommunikasjon og samarbeid</h2>
-<p>I starten av prosjektet ble vi fort enige om kommunikasjon og samarbeid. Vi satte opp faste dager i uken hvor gruppen skulle jobbe sammen og laget en gruppechat på Facebook. Vi satte også opp hva gruppen forventet av arbeid og innsats.
-De første dagene gikk vi gjennom GitHub i fellesskap, satte opp WAMP/XAMPP, lagde en git-repositry og utforsket mulighetene for prosjektet og hvordan vi skulle gjennomføre disse. Dette skapte et godt grunnlag for arbeid og samarbeid.</p>
+		<p>Under utvikling av minispillet byttet vi fremgangsmåte flere ganger. Det første utkastet gikk ut på å fange fallende firkanter med en avlang boks. Første utkast var også bygd opp av mange div'er og i javascript koden ble det brukt setInterval for å time fallet av firkanter og bevegelse av boks.
+		Dette fant vi ganske fort ut at ikke var en god løsning. Spillet hadde forskjellige hastigheter i forskjellige nettlesere, og i tillegg var spillet veldig hakkete. Etter en del research, prøving og feiling kom vi fram til å bruke canvas og requestAnimationFrame. Dette førte til en mye smoothere opplevelse,
+		og hastigheten var alltid den samme fordi vi justerte den etter hvor ofte requestAnimationFrame klarte å oppdatere tegningene. Helt til slutt kom vi på ideen å lage et fotball basert spill, bare med en litt annen skru: nå var poenget å flytte målet for å fange ballen, ikke skyte ballen etter målet.
+		Spillets utseende ble designet av oss i Photoshop.</p>
 
-<!--  En tidslinje som viser hva som ble gjennomført når, sett i sammenheng med milepælsplanen i forprosjektet. -->
-<h2>Arbeidsforløp</h2>
-<h3>Uke 1</h3>
-<p>For uke 1 hadde vi som plan å:
-<ul>
-	<li>Utforske hvordan vi kan bruke teknologiene vi har valgt til å lage en løsning.</li>
-	<li>Utforske MVC og implementere et basis for hjemmesiden</li>
-</ul>
-I forhold til denne planen gikk  det meste ganske bra. Flittig innsats fra samtlige gruppemedlemmer gjorde at vi fikk en bra start på prosjektet.
-Med tanke på milepælsplanen vår fikk vi gjort unna:
-<ul>
-	<li>MVC Basis</li>
-	<li>CSS for navigasjon</li>
-</ul>
-Vi fikk utforsket mange ideer som baserte seg kun på HTML, CSS og JavaScript som vi kunne ha i tillegg til selve siden. Blant annet ideen om et minispill og en tutorial istede for en statisk side i ren HTML. 
-</p>
-<h3>Uke 2</h3>
-<p>For uke 2 hadde vi som plan å:
-<ul>
-	<li>Få laget login-modul</li>
-	<li>Utvikle CSS for nettsiden</li>
-</ul>
-Gruppearbeidet gikk veldig bra. Alle visste hvilken vei gruppen ville gå og alle var kommet inn i god arbeidsperiode. På grunn av dette fikk vi gjort en god del av målene vi hadde for uken.
-Et loginsystem og registreringssystem ble laget, samt at CSS for loginsiden ble ferdig. Etter å ha kikket på milepælsplanen ble gruppen enige om at AJAX måtte byttes ut med minispill og tutorial.
-Minispillet var kommet en god vei og ideer for hvordan tutorialen skulle formes ble vurdert.
-</p>
+		<h2>Bildebruk/lisenser</h2>
 
-<h2>Teknologier</h2>
-<h3>PHP-versjon</h3>
-<p>
-Når vi startet var vi sikre på at vi ville ha MVC i bunnen av siden. Vi visste egentlig ikke fordelene med dette i praksis, men hadde fått høre fra både lærere, bedrifter og internet at dette var lurt. 
-Fordeling av ansvar, separering av kode og at det var lett å bygge på var noen av fordelene vi fant nyttige med MVC. Vi fant en guide for hvordan man skal bygge et MVC basis fra bunnen av(ref: "<a href="http://www.phpro.org/tutorials/Model-View-Controller-MVC.html">src</a>").
-Denne basisen ble modifisert til vårt bruk, blant annet ved å implementere loginfunksjonen, så måtte basisen bli kraftig modifisert.
-</p>
-<p>
-Vi så fort nytten av MVC når vi skulle legge til nye sider. Det ble veldig enkelt å legge til en ny side, mens logikken til hver av sidene ble separert. Dette gjorde at en bug i en ny side ikke hadde påvirking på noen gamle sider.
-</p>
-<h3>Ren html/javascript-versjon</h3>
-<p>Som skrevet over måtte vi, med ganske dårlig tid, lage en ny idé med tanke på kun HTML, Javascript og CSS. Dette endte opp i en guide/tutorial av funksjonene i det php-baserte spillet vårt.
-Måten denne guiden fungerer på er at det øverst på siden vil være en tekstboks med informasjon. Denne guiden informerer om alt fra hvordan man bruker de forskjellige funksjonene til hva alt man ser betyr.
-Den samme boksen består også av to knapper. Én knapp for å gå til neste instruks og én for å gå tilbake. Noen ganger vil en av eller begge knappene være borte. Da er det enten noe brukeren må gjøre et annet sted på skjermen, eller så er det en nedtelling som brukeren må vente på.</p>
+		<p>I stedet for å bare ha en farge som bakgrunn, valgte vi å bruke et bilde. Dette gjorde vi for å skape mer dynamikk og dybde i designet, og for å klart skille sidens forskjellige elementer. Bildet er hentet fra flickr og er funnet ved hjelp av Creative Commons Search, en søkemotor for å finne bilder uten eller med få reserverte rettigheter. Det vil si at vi står fritt til å bruke og privatpersoners verk uten å måtte betale eller spørre om lov, så lenge eier blir riktig kreditert. Bildets motiv er en graf som beveger seg oppover, samt en stabel med mynter øverst i høyre hjørnet. Siden spillet handler om å bygge seg opp i IT-bransjen, følte vi at dette passet ypperlig, i tillegg til at det fremstår seriøst og ordentlig. Som du kan se er fotograf kreditert etter ønske nederst i høyre hjørne, samt en link til Creative Commons-lisensen bildet ligger under.</p>
 
-<p>Når vi utviklet guiden prøvde vi ut en del forskjellige måter å plasser informasjonsboksen på. Etter mye prøving og diskusjon, kom vi fram til at det var 3 måter som var best. Den som egentlig var favoritten var en tekstboks vi flyttet rundt på skjermen etter hva informasjonen var om.
-Denne ble brukt først, men så fant vi ut at boksens posisjon varierte veldig mye fra skjermoppløsning til skjermoppløsning. Dermed måtte denne måten droppes fordi det ble alt for avansert å plassere boksen nøyaktig riktig ut ifra brukerens skjermoppløsning. Dermed stod vi igjen med 2 måter:
-en avlang tekstboks på bunnen av siden, eller en avlang tekstboks på toppen av siden. Etter en liten diskusjon i gruppa ble alle enige om at en tekstboks på toppen av siden var det beste, og derfor endte vi opp med denne løsningen.</p>
+		<p>I tillegg til bakgrunnsbildet, har vi brukt et bilde av Guy Fawkes. Bildet ligger ved brukerinformasjonen på høyre, og er et placeholderbilde for brukerens egenvalgte avatar/personlige bilde. Denne funksjonen er dog ikke implementert. Vi valgte å bruke Guy Fawkes siden han i senere tid har blitt et ikon for internettsamfunnet Anonymous, som aktivt kjemper mot det de mener er urett, misbruk og bedrageri – på internett. Bildet er også hentet fra Creative Commons søketjeneste, og er også kreditert nederst i høyre hjørne.</p>
 
-<p>I den ene delen av guiden vil brukeren komme til et minispill. Dette minispillet er også noe vi kom på på grunn av begrensingene vi fikk, men det endte også opp med å bli en viktig del av det php-baserte spillet. Dette spillet er laget kun ved hjelp av canvas og javasript, pluss en div og litt css.
-Hovedfunksjonen til dette minispillet er å underholde brukere mens de venter på at cooldown på jobber skal bli ferdig. Ellers er det også bare et spill som brukerne kan spille hvis de kjeder seg.
-Spillet går kort forklart ut på at du kontrollerer et fotballmål som du skal bruke til å fange baller som faller nedover på skjermen. Det er et ganske så enkelt spill, men det er veldig avhengighetsskapende. Noe som også er positivt for oss som har laget spillet.</p>
+		<h2>Fargevalg</h2>
+		<br>
+		Farge 1, turkis | #11dd99 <div id="turkis"> </div><br>
+		Farge 2, grå | #282828 <div id="grå1"> </div>
+		<p>Vi har i hovedsak brukt to farger på prosjektet vårt, turkis og mørkegrå. Den grå fargen er i hovedsak brukt, i forskjellige nyanser/synbarhet, som bakgrunn på elementene, mens den turkise stort setter brukt som brødtekstfarge. 
+		Dette er to farger som står sterkt i kontrast til hverandre, og det skaper derfor god lesbarhet med den turkise over den grå.</p>
 
-<p>Under utvikling av minispillet byttet vi fremgangsmåte flere ganger. Det første utkastet gikk ut på å fange fallende firkanter med en avlang boks. Første utkast var også bygd opp av mange div'er og i javascript koden ble det brukt setInterval for å time fallet av firkanter og bevegelse av boks.
-Dette fant vi ganske fort ut at ikke var en god løsning. Spillet hadde forskjellige hastigheter i forskjellige nettlesere, og i tillegg var spillet veldig hakkete. Etter en del research, prøving og feiling kom vi fram til å bruke canvas og requestAnimationFrame. Dette førte til en mye smoothere opplevelse,
-og hastigheten var alltid den samme fordi vi justerte den etter hvor ofte requestAnimationFrame klarte å oppdatere tegningene. Helt til slutt kom vi på ideen å lage et fotball basert spill, bare med en litt annen skru: nå var poenget å flytte målet for å fange ballen, ikke skyte ballen etter målet.
-Spillets utseende ble designet av oss i Photoshop.</p>
+		<p>Vi valgte å ha turkis som hovedfarge. Det er en kjølig farge, men likevel ikke kald. Gruppen følte at fargen akkurat fremstår seriøs nok uten å være kjedelig, og vi var innom flere andre farger, spesielt blånyanser, før vi falt på fargen vi gjorde. I utgangspunktet var planen å bruke en mer noen-grønn farge (se skissene i forprosjektet), noe vi senere fant ut ble for lys og framsto som noe useriøs. Fargen er også sterk nok til å fange brukerens oppmerksomhet, samtidig som det er en balansert og harmonisk farge som er lett å se på. </p>
 
+		<h2>Hva fungerte? Hva fungerte ikke?</h2>
+		<h2>Brukertesting</h2>
+		<p>Etter vi hadde fått på plass endel av hovedfunksjonene, åpnet vi siden for at medelever kunne registrere seg på siden og komme med tilbakemeldinger. 
+		En epost for tilbakemeldinger ble satt opp, men desverre fikk vi ingen tilbakemeldinger fra brukerne. 
+		Derimot fikk vi se hvordan databasen oppførte seg og vi fikk over 50 registrerte brukere.</p>
 
-<h2>Bildebruk/lisenser</h2>
+		<h2>Refleksjon</h2>
+		Hele siden er en refleksjon, trenger vi en refleksjonsdel?
 
-<p>I stedet for å bare ha en farge som bakgrunn, valgte vi å bruke et bilde. Dette gjorde vi for å skape mer dynamikk og dybde i designet, og for å klart skille sidens forskjellige elementer. Bildet er hentet fra flickr og er funnet ved hjelp av Creative Commons Search, en søkemotor for å finne bilder uten eller med få reserverte rettigheter. Det vil si at vi står fritt til å bruke og privatpersoners verk uten å måtte betale eller spørre om lov, så lenge eier blir riktig kreditert. Bildets motiv er en graf som beveger seg oppover, samt en stabel med mynter øverst i høyre hjørnet. Siden spillet handler om å bygge seg opp i IT-bransjen, følte vi at dette passet ypperlig, i tillegg til at det fremstår seriøst og ordentlig. Som du kan se er fotograf kreditert etter ønske nederst i høyre hjørne, samt en link til Creative Commons-lisensen bildet ligger under.</p>
-
-<p>I tillegg til bakgrunnsbildet, har vi brukt et bilde av Guy Fawkes. Bildet ligger ved brukerinformasjonen på høyre, og er et placeholderbilde for brukerens egenvalgte avatar/personlige bilde. Denne funksjonen er dog ikke implementert. Vi valgte å bruke Guy Fawkes siden han i senere tid har blitt et ikon for internettsamfunnet Anonymous, som aktivt kjemper mot det de mener er urett, misbruk og bedrageri – på internett. Bildet er også hentet fra Creative Commons søketjeneste, og er også kreditert nederst i høyre hjørne.</p>
-
-<h2>Fargevalg</h2>
-<br>
-Farge 1, turkis | #11dd99 <div id="turkis"> </div><br>
-Farge 2, grå | #282828 <div id="grå1"> </div>
-<p>Vi har i hovedsak brukt to farger på prosjektet vårt, turkis og mørkegrå. Den grå fargen er i hovedsak brukt, i forskjellige nyanser/synbarhet, som bakgrunn på elementene, mens den turkise stort setter brukt som brødtekstfarge. 
-Dette er to farger som står sterkt i kontrast til hverandre, og det skaper derfor god lesbarhet med den turkise over den grå.</p>
-
-<p>Vi valgte å ha turkis som hovedfarge. Det er en kjølig farge, men likevel ikke kald. Gruppen følte at fargen akkurat fremstår seriøs nok uten å være kjedelig, og vi var innom flere andre farger, spesielt blånyanser, før vi falt på fargen vi gjorde. I utgangspunktet var planen å bruke en mer noen-grønn farge (se skissene i forprosjektet), noe vi senere fant ut ble for lys og framsto som noe useriøs. Fargen er også sterk nok til å fange brukerens oppmerksomhet, samtidig som det er en balansert og harmonisk farge som er lett å se på. </p>
-
-<h2>Hva fungerte? Hva fungerte ikke?</h2>
-<h2>Brukertesting</h2>
-<p>Etter vi hadde fått på plass endel av hovedfunksjonene, åpnet vi siden for at medelever kunne registrere seg på siden og komme med tilbakemeldinger. 
-En epost for tilbakemeldinger ble satt opp, men desverre fikk vi ingen tilbakemeldinger fra brukerne. 
-Derimot fikk vi se hvordan databasen oppførte seg og vi fikk over 50 registrerte brukere.</p>
-
-<h2>Refleksjon</h2>
-Hele siden er en refleksjon, trenger vi en refleksjonsdel?
-
-
-
-<h2>Konklusjon</h2>
-<p>Til og begynne med hadde gruppa ganske delte kunnskaper når det kom til å lage nettsider. Alle hadde vært borti dette før, men noen hadde ganske mye mer erfaring en de andre.</p>
-
-
-</body>
+		<h2>Konklusjon</h2>
+		<p>Til og begynne med hadde gruppa ganske delte kunnskaper når det kom til å lage nettsider. Alle hadde vært borti dette før, men noen hadde ganske mye mer erfaring en de andre.</p>
+	</body>
 </html>
