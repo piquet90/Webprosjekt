@@ -34,7 +34,7 @@ body{
 
 
 .userImg{
-	background-img:url(img/user.png)  no-repeat center;
+	background:#282828;
 	width:125px;
 	height:125px;
 	margin:0 auto;
@@ -578,6 +578,7 @@ button {
 	margin-bottom:0.5rem;
 	margin-right:0.5rem;
 }
+
 #src a {
 	color:#ccc;
 	text-decoration:underline;
