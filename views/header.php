@@ -2,7 +2,7 @@
 
 echo <<<_END
 <!DOCTYPE html>
-<html>
+<html lang="NO">
 <head>
 <title>
 Silicon Valley Startup
