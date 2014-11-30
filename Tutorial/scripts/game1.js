@@ -21,21 +21,21 @@ var bgImage = new Image();
 bgImage.onload = function () {
 	bgReady = true;
 };
-bgImage.src = "Img/background.jpg";
+bgImage.src = "img/background.jpg";
 
 var goalReady = false;
 var goalImage = new Image();
 goalImage.onload = function () {
 	goalReady = true;
 };
-goalImage.src = "Img/goal.png";
+goalImage.src = "img/goal.png";
 
 var ballReady = false;
 var ballImage = new Image();
 ballImage.onload = function () {
 	ballReady = true;
 };
-ballImage.src = "Img/football.png";
+ballImage.src = "img/football.png";
 
 var goal = {
 	speed: 400,
