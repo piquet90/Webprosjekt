@@ -15,10 +15,20 @@ function start() {
 function boxSize() {
 	var gray = document.getElementById("grayBox");
 	gray.style.height = "0";
-	gray.style.height = document.body.scrollHeight + "px";
+	var height = Math.max(
+        Math.max(document.body.scrollHeight, document.documentElement.scrollHeight),
+        Math.max(document.body.offsetHeight, document.documentElement.offsetHeight),
+        Math.max(document.body.clientHeight, document.documentElement.clientHeight)
+    );
+	gray.style.height = height + "px";
 	
 	gray.style.width = "0";
-	gray.style.width = document.body.scrollWidth + "px";
+	var width = Math.max(
+        Math.max(document.body.scrollWidth, document.documentElement.scrollWidth),
+        Math.max(document.body.offsetWidth, document.documentElement.offsetWidth),
+        Math.max(document.body.clientWidth, document.documentElement.clientWidth)
+    );
+	gray.style.width = width + "px";
 	
 	var grayMain = document.getElementById("grayMain");
 	var main = document.getElementById("main");
